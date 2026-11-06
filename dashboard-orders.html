@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<!-- @head {"title": "Order History | Millstone & Co.", "description": "Review Anita Sharma's past and upcoming Millstone & Co. orders, download sample invoices, reorder favourites and track each delivery. Front-end demo with sample data.", "file": "dashboard-orders.html", "robots": "noindex"} -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order History | Millstone &amp; Co.</title>
+<meta name="description" content="Review Anita Sharma&#x27;s past and upcoming Millstone &amp; Co. orders, download sample invoices, reorder favourites and track each delivery. Front-end demo with sample data.">
+<meta name="theme-color" content="#9a5b0e">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%239a5b0e'/%3E%3Cpath d='M32 50V20' stroke='%23fff7e8' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='25' cy='28' rx='5' ry='9' transform='rotate(-25 25 28)' fill='%23fff7e8'/%3E%3Cellipse cx='39' cy='28' rx='5' ry='9' transform='rotate(25 39 28)' fill='%23fff7e8'/%3E%3Cellipse cx='32' cy='17' rx='4.5' ry='8' fill='%23fff7e8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Pre-paint script: applies saved theme + text direction BEFORE first paint (no flash) and writes
+     the matching Bootstrap build (LTR or RTL). Keys: mm-theme (light|dark), mm-dir (ltr|rtl).
+     Legacy values "ar"/"he" are treated as RTL. -->
+<script>
+(function () {
+  var d = document.documentElement, t = null, r = 'ltr';
+  try { t = localStorage.getItem('mm-theme'); r = localStorage.getItem('mm-dir') || 'ltr'; } catch (e) {}
+  if (r === 'ar' || r === 'he') r = 'rtl';
+  if (r !== 'ltr' && r !== 'rtl') r = 'ltr';
+  if (t !== 'dark' && t !== 'light') t = (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+  var rtl = r === 'rtl';
+  d.setAttribute('data-bs-theme', t); d.setAttribute('lang', 'en'); d.setAttribute('dir', rtl ? 'rtl' : 'ltr');
+  document.write('<link rel="stylesheet" id="bs-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap' + (rtl ? '.rtl' : '') + '.min.css">');
+})();
+</script>
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></noscript>
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- @head:end -->
+</head>
+<body>
+<div class="app-layout">
+  <!-- @appnav {"active": "orders"} -->
+<aside class="offcanvas-lg offcanvas-start app-sidebar" tabindex="-1" id="appSidebar" aria-labelledby="appSidebarLabel">
+  <div class="offcanvas-header border-bottom">
+    <div class="d-flex align-items-center gap-2">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 29V10"/><ellipse cx="11" cy="15" rx="3" ry="5" transform="rotate(-25 11 15)" fill="currentColor"/><ellipse cx="21" cy="15" rx="3" ry="5" transform="rotate(25 21 15)" fill="currentColor"/><ellipse cx="16" cy="7" rx="2.6" ry="4.6" fill="currentColor"/><ellipse cx="11.5" cy="23" rx="2.6" ry="4" transform="rotate(-25 11.5 23)" fill="currentColor"/><ellipse cx="20.5" cy="23" rx="2.6" ry="4" transform="rotate(25 20.5 23)" fill="currentColor"/></svg></span>
+      <span class="h5 mb-0 fw-bold" id="appSidebarLabel">Customer Portal</span>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#appSidebar" aria-label="Close menu"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a class="navbar-brand d-none d-lg-inline-flex" href="index.html" aria-label="Millstone &amp; Co. — back to website">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 29V10"/><ellipse cx="11" cy="15" rx="3" ry="5" transform="rotate(-25 11 15)" fill="currentColor"/><ellipse cx="21" cy="15" rx="3" ry="5" transform="rotate(25 21 15)" fill="currentColor"/><ellipse cx="16" cy="7" rx="2.6" ry="4.6" fill="currentColor"/><ellipse cx="11.5" cy="23" rx="2.6" ry="4" transform="rotate(-25 11.5 23)" fill="currentColor"/><ellipse cx="20.5" cy="23" rx="2.6" ry="4" transform="rotate(25 20.5 23)" fill="currentColor"/></svg></span>
+      <span class="brand-text">Millstone<small>Customer portal</small></span>
+    </a>
+    <nav aria-label="Dashboard">
+      <ul class="app-nav">
+        <li class="nav-label" aria-hidden="true">My Deliveries</li>
+        <li><a href="dashboard.html" data-key="overview"><i class="bi bi-grid-1x2" aria-hidden="true"></i><span>Overview</span></a></li>
+        <li><a href="dashboard-schedule.html" data-key="schedule"><i class="bi bi-calendar-check" aria-hidden="true"></i><span>Schedule grinding</span></a></li>
+        <li><a href="dashboard-recurring.html" data-key="recurring"><i class="bi bi-arrow-repeat" aria-hidden="true"></i><span>Recurring orders</span></a></li>
+        <li><a href="dashboard-orders.html" data-key="orders" class="nav-active" aria-current="page"><i class="bi bi-receipt" aria-hidden="true"></i><span>Order history</span></a></li>
+        <li><a href="dashboard-billing.html" data-key="billing"><i class="bi bi-credit-card" aria-hidden="true"></i><span>Billing &amp; Invoices</span></a></li>
+        <li class="nav-label pt-3" aria-hidden="true">Account &amp; Care</li>
+        <li><a href="dashboard-profile.html" data-key="profile"><i class="bi bi-person-gear" aria-hidden="true"></i><span>Profile &amp; Settings</span></a></li>
+        <li><a href="dashboard-support.html" data-key="support"><i class="bi bi-headset" aria-hidden="true"></i><span>Customer Support</span></a></li>
+        <li class="nav-label pt-3" aria-hidden="true">Navigation</li>
+        <li><a href="index.html"><i class="bi bi-house" aria-hidden="true"></i><span>Back to website</span></a></li>
+        <li><a href="login.html" class="text-danger"><i class="bi bi-box-arrow-left" aria-hidden="true"></i><span>Log out</span></a></li>
+      </ul>
+    </nav>
+    <div class="demo-banner mt-auto"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo: sample customer account.</span></div>
+  </div>
+</aside>
+<!-- @appnav:end -->
+  <div class="app-main">
+    <!-- @apptop -->
+<div class="app-topbar">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <button class="icon-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#appSidebar" aria-controls="appSidebar" aria-label="Open dashboard menu"><i class="bi bi-list" aria-hidden="true"></i></button>
+  <div class="d-none d-sm-block min-w-0">
+    <div class="fw-bold text-truncate lh-1 mb-1">Customer Portal Overview</div>
+    <div class="small text-muted text-truncate">Family Plan • Customer MM-20418</div>
+  </div>
+  <div class="ms-auto d-flex align-items-center gap-2">
+    <a href="dashboard-schedule.html" class="btn btn-primary btn-sm d-none d-md-inline-flex align-items-center gap-1.5 shadow-sm">
+      <i class="bi bi-calendar-plus" aria-hidden="true"></i>
+      <span>Schedule Grind</span>
+    </a>
+    <button type="button" class="icon-btn" data-dir-toggle aria-label="Text direction: left-to-right (LTR). Switch to right-to-left (RTL)" title="Switch to RTL layout">
+      <i class="bi bi-text-left dir-icon-ltr" aria-hidden="true"></i><i class="bi bi-text-right dir-icon-rtl" aria-hidden="true"></i><span class="dir-code" data-dir-code aria-hidden="true">LTR</span>
+    </button>
+    <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
+      <i class="bi bi-moon-stars-fill theme-icon-moon" aria-hidden="true"></i><i class="bi bi-sun-fill theme-icon-sun" aria-hidden="true"></i>
+    </button>
+    <div class="dropdown">
+      <button class="icon-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+        <i class="bi bi-bell" aria-hidden="true"></i>
+        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"><span class="visually-hidden">New alerts</span></span>
+      </button>
+      <div class="dropdown-menu dropdown-menu-end p-3 shadow-lg" style="width: 20rem; max-width: calc(100vw - 2rem);">
+        <div class="d-flex justify-content-between align-items-center pb-2 mb-2 border-bottom">
+          <span class="fw-bold small text-uppercase text-muted">Notifications</span>
+          <span class="badge text-bg-warning">2 New</span>
+        </div>
+        <div class="d-flex flex-column gap-2 small">
+          <a href="dashboard.html" class="d-flex gap-2 p-2 rounded text-decoration-none text-body hover-bg">
+            <i class="bi bi-truck text-primary fs-5 mt-1" aria-hidden="true"></i>
+            <div>
+              <div class="fw-semibold">Thursday delivery scheduled</div>
+              <div class="text-muted small">Thu 5 Nov · Morning 7–10 am</div>
+            </div>
+          </a>
+          <a href="dashboard-billing.html" class="d-flex gap-2 p-2 rounded text-decoration-none text-body hover-bg">
+            <i class="bi bi-file-earmark-check text-success fs-5 mt-1" aria-hidden="true"></i>
+            <div>
+              <div class="fw-semibold">Invoice MM-48210 ready</div>
+              <div class="text-muted small">$39.80 paid · View PDF</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-ghost d-flex align-items-center gap-2 py-1 px-2 rounded-3 border" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu for Anita Sharma">
+        <span class="avatar" style="--c1:#c98a4a;--c2:#7a4a22;width:2.2rem;height:2.2rem;font-size:.85rem" aria-hidden="true">AS</span>
+        <span class="d-none d-md-block text-start lh-sm">
+          <span class="d-block fw-bold small text-body">Anita Sharma</span>
+          <span class="d-block text-muted" style="font-size: .75rem;">Family Plan · MM-20418</span>
+        </span>
+        <i class="bi bi-chevron-down small text-muted" aria-hidden="true"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow-lg p-2 rounded-3">
+        <li><a class="dropdown-item rounded-2" href="dashboard-profile.html"><i class="bi bi-person me-2" aria-hidden="true"></i>Profile &amp; Settings</a></li>
+        <li><a class="dropdown-item rounded-2" href="dashboard-billing.html"><i class="bi bi-credit-card me-2" aria-hidden="true"></i>Billing &amp; Invoices</a></li>
+        <li><a class="dropdown-item rounded-2" href="index.html"><i class="bi bi-globe me-2" aria-hidden="true"></i>Back to Website</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item rounded-2 text-danger" href="login.html"><i class="bi bi-box-arrow-left me-2" aria-hidden="true"></i>Log out</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- @apptop:end -->
+    <main id="main" class="app-content">
+      <div class="demo-banner mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — sample data, nothing is saved or sent</span></div>
+
+      <div class="d-flex flex-wrap align-items-start justify-content-between gap-3 mb-4">
+        <div>
+          <h1 class="display-font mb-1">Order history</h1>
+          <p class="text-muted mb-0">Every bag we have milled and delivered for you, plus what is coming next. Customer MM-20418, Family plan.</p>
+        </div>
+        <button type="button" class="btn btn-primary" data-demo-toast="Demo only: your last delivery (10 kg Sharbati + 5 kg 7-Grain) would be added to your next order."><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Reorder last delivery</button>
+      </div>
+
+      <section aria-labelledby="orders-summary-h" class="mb-4">
+        <h2 class="h5 visually-hidden" id="orders-summary-h">Order summary for 2026</h2>
+        <div class="row g-3">
+          <div class="col-sm-6 col-xl-3">
+            <div class="mm-card stat-card">
+              <span class="icon-tile" aria-hidden="true"><i class="bi bi-receipt"></i></span>
+              <div><div class="value">41</div><div class="label">Orders this year</div></div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="mm-card stat-card">
+              <span class="icon-tile green" aria-hidden="true"><i class="bi bi-basket3"></i></span>
+              <div><div class="value">312 kg</div><div class="label">Milled for you</div></div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="mm-card stat-card">
+              <span class="icon-tile blue" aria-hidden="true"><i class="bi bi-wallet2"></i></span>
+              <div><div class="value">$1,486.20</div><div class="label">Total spent in 2026</div></div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="mm-card stat-card">
+              <span class="icon-tile red" aria-hidden="true"><i class="bi bi-star-fill"></i></span>
+              <div><div class="value">4.9 / 5</div><div class="label">Average delivery rating</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="orders-list-h">
+        <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
+          <div>
+            <h2 class="h4 mb-1" id="orders-list-h">Latest 12 orders</h2>
+            <p class="small text-muted mb-0">Type an order number, date, product or status to filter the table. Older orders are not included in this demo.</p>
+          </div>
+          <div class="input-icon mw-form w-100">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <label class="visually-hidden" for="orders-search">Search orders</label>
+            <input type="search" class="form-control" id="orders-search" placeholder="Search orders, e.g. Delivered or ragi" data-table-filter="#orders-table" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table table-hover align-middle" id="orders-table">
+            <caption class="visually-hidden">Order history for Anita Sharma, newest first, with date, items, total, status and invoice download</caption>
+            <thead>
+              <tr>
+                <th scope="col">Order #</th>
+                <th scope="col">Date</th>
+                <th scope="col">Items</th>
+                <th scope="col">Total</th>
+                <th scope="col">Status</th>
+                <th scope="col">Invoice</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">MM-20418-0926</th>
+                <td>Thu 12 Nov 2026</td>
+                <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
+                <td>$39.80</td>
+                <td><span class="status status-info">Scheduled</span></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" disabled aria-label="Invoice for order MM-20418-0926 not available until delivery"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">MM-20418-0925</th>
+                <td>Thu 5 Nov 2026</td>
+                <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
+                <td>$39.80</td>
+                <td><span class="status status-warn">Processing</span></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" disabled aria-label="Invoice for order MM-20418-0925 not available until delivery"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">MM-20418-0924</th>
+                <td>Tue 3 Nov 2026</td>
+                <td>1 kg Ragi Flour, 1 kg Fresh Besan</td>
+                <td>$12.30</td>
+                <td><span class="status status-ok">Delivered</span></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0924 would download here." aria-label="Download invoice for order MM-20418-0924"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row"><button type="button" class="btn btn-link p-0 fw-semibold" data-bs-toggle="modal" data-bs-target="#orderModal" aria-label="View details for order MM-20418-0923">MM-20418-0923</button></th>
+                <td>Thu 29 Oct 2026</td>
+                <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
+                <td>$39.80</td>
+                <td><span class="status status-ok">Delivered</span></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0923 would download here." aria-label="Download invoice for order MM-20418-0923"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">MM-20418-0922</th>
+                <td>Thu 22 Oct 2026</td>
+                <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
+                <td>$39.80</td>
+                <td><span class="status status-ok">Delivered</span></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0922 would download here." aria-label="Download invoice for order MM-20418-0922"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">MM-20418-0921</th>
+                <td>Sat 17 Oct 2026</td>
+                <td>5 kg Puri &amp; Paratha Blend</td>
+                <td>$13.90</td>
+                <td><span class="status status-bad">Cancelled</span></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" disabled aria-label="No invoice for cancelled order MM-20418-0921"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">MM-20418-0920</th>
+                <td>Thu 15 Oct 2026</td>
+                <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
+                <td>$39.80</td>
+                <td><span class="status status-ok">Delivered</span></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0920 would download here." aria-label="Download invoice for order MM-20418-0920"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">MM-20418-0919</th>
+                <td>Thu 8 Oct 2026</td>
+                <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
+                <td>$39.80</td>
+                <td><span class="status status-ok">Delivered</span></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0919 would download here." aria-label="Download invoice for order MM-20418-0919"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">MM-20418-0918</th>
+                <td>Tue 6 Oct 2026</td>
+                <td>2 kg Khapli Emmer Wheat Atta, 1 kg Moong Dal Flour</td>
+                <td>$16.70</td>
+                <td><span class="status status-ok">Delivered</span></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0918 would download here." aria-label="Download invoice for order MM-20418-0918"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">MM-20418-0917</th>
+                <td>Thu 1 Oct 2026</td>
+                <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
+                <td>$39.80</td>
+                <td><span class="status status-ok">Delivered</span></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0917 would download here." aria-label="Download invoice for order MM-20418-0917"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">MM-20418-0916</th>
+                <td>Thu 24 Sep 2026</td>
+                <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
+                <td>$39.80</td>
+                <td><span class="status status-ok">Delivered</span></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0916 would download here." aria-label="Download invoice for order MM-20418-0916"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+              </tr>
+              <tr>
+                <th scope="row">MM-20418-0915</th>
+                <td>Thu 17 Sep 2026</td>
+                <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
+                <td>$39.80</td>
+                <td><span class="status status-ok">Delivered</span></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0915 would download here." aria-label="Download invoice for order MM-20418-0915"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="demo-note mt-3"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — invoices do not download and reorders are not placed. Select order MM-20418-0923 to see the detail view.</span></p>
+      </section>
+    </main>
+  </div>
+</div>
+
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h2 class="modal-title h5 mb-1" id="orderModalLabel">Order MM-20418-0923</h2>
+          <span class="status status-ok">Delivered</span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close order details"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <h3 class="h6">Line items</h3>
+            <div class="table-wrap">
+              <table class="table">
+                <caption class="visually-hidden">Line items in order MM-20418-0923</caption>
+                <thead>
+                  <tr><th scope="col">Product</th><th scope="col">Qty</th><th scope="col">Price</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">Sharbati Whole Wheat Atta, 10 kg</th><td>1</td><td>$23.90</td></tr>
+                  <tr><th scope="row">7-Grain Multigrain Atta, 5 kg</th><td>1</td><td>$15.90</td></tr>
+                  <tr><th scope="row">Delivery (free on every plan)</th><td>1</td><td>$0.00</td></tr>
+                </tbody>
+                <tfoot>
+                  <tr><th scope="row" colspan="2">Total</th><td class="fw-bold">$39.80</td></tr>
+                </tfoot>
+              </table>
+            </div>
+            <p class="small text-muted mt-3 mb-0">Delivered to 48 Orchard Row, Sunridge, Morning window 7–10 am. Rated 5 of 5 by you.</p>
+          </div>
+          <div class="col-lg-5">
+            <h3 class="h6">Delivery timeline</h3>
+            <ol class="timeline">
+              <li><span class="year">Wed 28 Oct, 7:40 am</span><br>Stone-ground in the mill, below 40 °C</li>
+              <li><span class="year">Wed 28 Oct, 9:15 am</span><br>Packed and sealed in batch bags</li>
+              <li><span class="year">Thu 29 Oct, 7:05 am</span><br>Out for delivery with Daniel's team</li>
+              <li><span class="year">Thu 29 Oct, 8:12 am</span><br>Delivered to your door</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-demo-toast="Demo only: this order would be added to your next delivery."><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Reorder</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- @scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js?v=2"></script>
+<!-- @scripts:end -->
+</body>
+</html>

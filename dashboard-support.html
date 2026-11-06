@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<!-- @head {"title": "Support & Help Centre | Millstone & Co.", "description": "Contact Millstone & Co. customer care, track open tickets, send a new support request and browse delivery, grind and billing answers. Front-end demo with sample data.", "file": "dashboard-support.html", "robots": "noindex"} -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support &amp; Help Centre | Millstone &amp; Co.</title>
+<meta name="description" content="Contact Millstone &amp; Co. customer care, track open tickets, send a new support request and browse delivery, grind and billing answers. Front-end demo with sample data.">
+<meta name="theme-color" content="#9a5b0e">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%239a5b0e'/%3E%3Cpath d='M32 50V20' stroke='%23fff7e8' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='25' cy='28' rx='5' ry='9' transform='rotate(-25 25 28)' fill='%23fff7e8'/%3E%3Cellipse cx='39' cy='28' rx='5' ry='9' transform='rotate(25 39 28)' fill='%23fff7e8'/%3E%3Cellipse cx='32' cy='17' rx='4.5' ry='8' fill='%23fff7e8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Pre-paint script: applies saved theme + text direction BEFORE first paint (no flash) and writes
+     the matching Bootstrap build (LTR or RTL). Keys: mm-theme (light|dark), mm-dir (ltr|rtl).
+     Legacy values "ar"/"he" are treated as RTL. -->
+<script>
+(function () {
+  var d = document.documentElement, t = null, r = 'ltr';
+  try { t = localStorage.getItem('mm-theme'); r = localStorage.getItem('mm-dir') || 'ltr'; } catch (e) {}
+  if (r === 'ar' || r === 'he') r = 'rtl';
+  if (r !== 'ltr' && r !== 'rtl') r = 'ltr';
+  if (t !== 'dark' && t !== 'light') t = (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+  var rtl = r === 'rtl';
+  d.setAttribute('data-bs-theme', t); d.setAttribute('lang', 'en'); d.setAttribute('dir', rtl ? 'rtl' : 'ltr');
+  document.write('<link rel="stylesheet" id="bs-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap' + (rtl ? '.rtl' : '') + '.min.css">');
+})();
+</script>
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></noscript>
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- @head:end -->
+</head>
+<body>
+<div class="app-layout">
+  <!-- @appnav {"active": "support"} -->
+<aside class="offcanvas-lg offcanvas-start app-sidebar" tabindex="-1" id="appSidebar" aria-labelledby="appSidebarLabel">
+  <div class="offcanvas-header border-bottom">
+    <div class="d-flex align-items-center gap-2">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 29V10"/><ellipse cx="11" cy="15" rx="3" ry="5" transform="rotate(-25 11 15)" fill="currentColor"/><ellipse cx="21" cy="15" rx="3" ry="5" transform="rotate(25 21 15)" fill="currentColor"/><ellipse cx="16" cy="7" rx="2.6" ry="4.6" fill="currentColor"/><ellipse cx="11.5" cy="23" rx="2.6" ry="4" transform="rotate(-25 11.5 23)" fill="currentColor"/><ellipse cx="20.5" cy="23" rx="2.6" ry="4" transform="rotate(25 20.5 23)" fill="currentColor"/></svg></span>
+      <span class="h5 mb-0 fw-bold" id="appSidebarLabel">Customer Portal</span>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#appSidebar" aria-label="Close menu"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a class="navbar-brand d-none d-lg-inline-flex" href="index.html" aria-label="Millstone &amp; Co. — back to website">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 29V10"/><ellipse cx="11" cy="15" rx="3" ry="5" transform="rotate(-25 11 15)" fill="currentColor"/><ellipse cx="21" cy="15" rx="3" ry="5" transform="rotate(25 21 15)" fill="currentColor"/><ellipse cx="16" cy="7" rx="2.6" ry="4.6" fill="currentColor"/><ellipse cx="11.5" cy="23" rx="2.6" ry="4" transform="rotate(-25 11.5 23)" fill="currentColor"/><ellipse cx="20.5" cy="23" rx="2.6" ry="4" transform="rotate(25 20.5 23)" fill="currentColor"/></svg></span>
+      <span class="brand-text">Millstone<small>Customer portal</small></span>
+    </a>
+    <nav aria-label="Dashboard">
+      <ul class="app-nav">
+        <li class="nav-label" aria-hidden="true">My Deliveries</li>
+        <li><a href="dashboard.html" data-key="overview"><i class="bi bi-grid-1x2" aria-hidden="true"></i><span>Overview</span></a></li>
+        <li><a href="dashboard-schedule.html" data-key="schedule"><i class="bi bi-calendar-check" aria-hidden="true"></i><span>Schedule grinding</span></a></li>
+        <li><a href="dashboard-recurring.html" data-key="recurring"><i class="bi bi-arrow-repeat" aria-hidden="true"></i><span>Recurring orders</span></a></li>
+        <li><a href="dashboard-orders.html" data-key="orders"><i class="bi bi-receipt" aria-hidden="true"></i><span>Order history</span></a></li>
+        <li><a href="dashboard-billing.html" data-key="billing"><i class="bi bi-credit-card" aria-hidden="true"></i><span>Billing &amp; Invoices</span></a></li>
+        <li class="nav-label pt-3" aria-hidden="true">Account &amp; Care</li>
+        <li><a href="dashboard-profile.html" data-key="profile"><i class="bi bi-person-gear" aria-hidden="true"></i><span>Profile &amp; Settings</span></a></li>
+        <li><a href="dashboard-support.html" data-key="support" class="nav-active" aria-current="page"><i class="bi bi-headset" aria-hidden="true"></i><span>Customer Support</span></a></li>
+        <li class="nav-label pt-3" aria-hidden="true">Navigation</li>
+        <li><a href="index.html"><i class="bi bi-house" aria-hidden="true"></i><span>Back to website</span></a></li>
+        <li><a href="login.html" class="text-danger"><i class="bi bi-box-arrow-left" aria-hidden="true"></i><span>Log out</span></a></li>
+      </ul>
+    </nav>
+    <div class="demo-banner mt-auto"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo: sample customer account.</span></div>
+  </div>
+</aside>
+<!-- @appnav:end -->
+  <div class="app-main">
+    <!-- @apptop -->
+<div class="app-topbar">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <button class="icon-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#appSidebar" aria-controls="appSidebar" aria-label="Open dashboard menu"><i class="bi bi-list" aria-hidden="true"></i></button>
+  <div class="d-none d-sm-block min-w-0">
+    <div class="fw-bold text-truncate lh-1 mb-1">Customer Portal Overview</div>
+    <div class="small text-muted text-truncate">Family Plan • Customer MM-20418</div>
+  </div>
+  <div class="ms-auto d-flex align-items-center gap-2">
+    <a href="dashboard-schedule.html" class="btn btn-primary btn-sm d-none d-md-inline-flex align-items-center gap-1.5 shadow-sm">
+      <i class="bi bi-calendar-plus" aria-hidden="true"></i>
+      <span>Schedule Grind</span>
+    </a>
+    <button type="button" class="icon-btn" data-dir-toggle aria-label="Text direction: left-to-right (LTR). Switch to right-to-left (RTL)" title="Switch to RTL layout">
+      <i class="bi bi-text-left dir-icon-ltr" aria-hidden="true"></i><i class="bi bi-text-right dir-icon-rtl" aria-hidden="true"></i><span class="dir-code" data-dir-code aria-hidden="true">LTR</span>
+    </button>
+    <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
+      <i class="bi bi-moon-stars-fill theme-icon-moon" aria-hidden="true"></i><i class="bi bi-sun-fill theme-icon-sun" aria-hidden="true"></i>
+    </button>
+    <div class="dropdown">
+      <button class="icon-btn position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+        <i class="bi bi-bell" aria-hidden="true"></i>
+        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"><span class="visually-hidden">New alerts</span></span>
+      </button>
+      <div class="dropdown-menu dropdown-menu-end p-3 shadow-lg" style="width: 20rem; max-width: calc(100vw - 2rem);">
+        <div class="d-flex justify-content-between align-items-center pb-2 mb-2 border-bottom">
+          <span class="fw-bold small text-uppercase text-muted">Notifications</span>
+          <span class="badge text-bg-warning">2 New</span>
+        </div>
+        <div class="d-flex flex-column gap-2 small">
+          <a href="dashboard.html" class="d-flex gap-2 p-2 rounded text-decoration-none text-body hover-bg">
+            <i class="bi bi-truck text-primary fs-5 mt-1" aria-hidden="true"></i>
+            <div>
+              <div class="fw-semibold">Thursday delivery scheduled</div>
+              <div class="text-muted small">Thu 5 Nov · Morning 7–10 am</div>
+            </div>
+          </a>
+          <a href="dashboard-billing.html" class="d-flex gap-2 p-2 rounded text-decoration-none text-body hover-bg">
+            <i class="bi bi-file-earmark-check text-success fs-5 mt-1" aria-hidden="true"></i>
+            <div>
+              <div class="fw-semibold">Invoice MM-48210 ready</div>
+              <div class="text-muted small">$39.80 paid · View PDF</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-ghost d-flex align-items-center gap-2 py-1 px-2 rounded-3 border" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu for Anita Sharma">
+        <span class="avatar" style="--c1:#c98a4a;--c2:#7a4a22;width:2.2rem;height:2.2rem;font-size:.85rem" aria-hidden="true">AS</span>
+        <span class="d-none d-md-block text-start lh-sm">
+          <span class="d-block fw-bold small text-body">Anita Sharma</span>
+          <span class="d-block text-muted" style="font-size: .75rem;">Family Plan · MM-20418</span>
+        </span>
+        <i class="bi bi-chevron-down small text-muted" aria-hidden="true"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow-lg p-2 rounded-3">
+        <li><a class="dropdown-item rounded-2" href="dashboard-profile.html"><i class="bi bi-person me-2" aria-hidden="true"></i>Profile &amp; Settings</a></li>
+        <li><a class="dropdown-item rounded-2" href="dashboard-billing.html"><i class="bi bi-credit-card me-2" aria-hidden="true"></i>Billing &amp; Invoices</a></li>
+        <li><a class="dropdown-item rounded-2" href="index.html"><i class="bi bi-globe me-2" aria-hidden="true"></i>Back to Website</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item rounded-2 text-danger" href="login.html"><i class="bi bi-box-arrow-left me-2" aria-hidden="true"></i>Log out</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- @apptop:end -->
+    <main id="main" class="app-content">
+      <div class="demo-banner mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — sample data, nothing is saved or sent</span></div>
+
+      <div class="mb-4">
+        <h1 class="display-font mb-1">Support</h1>
+        <p class="text-muted mb-0">Talk to Layla Haddad and the customer care team, track your requests or find a quick answer below.</p>
+      </div>
+
+      <section class="mb-4" aria-labelledby="contact-h">
+        <h2 class="h4 mb-3" id="contact-h">Contact us</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="mm-card">
+              <span class="icon-tile green mb-3" aria-hidden="true"><i class="bi bi-chat-dots"></i></span>
+              <h3 class="h6">Live chat</h3>
+              <p class="small text-muted">Average reply in under 5 minutes during opening hours.</p>
+              <button type="button" class="btn btn-primary btn-sm" data-demo-toast="Demo only: live chat is not connected."><i class="bi bi-chat-text" aria-hidden="true"></i> Start a chat</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mm-card">
+              <span class="icon-tile blue mb-3" aria-hidden="true"><i class="bi bi-envelope"></i></span>
+              <h3 class="h6">Email support</h3>
+              <p class="small text-muted">We answer within one working day.</p>
+              <a class="btn btn-ghost btn-sm" href="mailto:support@millstone.example">support@millstone.example</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mm-card">
+              <span class="icon-tile" aria-hidden="true"><i class="bi bi-telephone"></i></span>
+              <h3 class="h6">Phone</h3>
+              <p class="small text-muted">Mon–Sat, 7:00 am – 7:00 pm.</p>
+              <a class="btn btn-ghost btn-sm" href="tel:+15550142290">+1 (555) 014-2290</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="row g-4 mb-4">
+        <div class="col-lg-5">
+          <section class="mm-card" aria-labelledby="tickets-h">
+            <h2 class="h5 mb-2" id="tickets-h">Your requests</h2>
+            <ul class="list-clean">
+              <li>
+                <div class="flex-grow-1">
+                  <p class="fw-semibold mb-0">Torn seam on a 5 kg 7-Grain bag</p>
+                  <p class="small text-muted mb-0">#T-3187, updated Wed 4 Nov 2026</p>
+                </div>
+                <span class="status status-warn">Open</span>
+              </li>
+              <li>
+                <div class="flex-grow-1">
+                  <p class="fw-semibold mb-0">Swap my multigrain for ragi flour</p>
+                  <p class="small text-muted mb-0">#T-3162, updated Mon 2 Nov 2026</p>
+                </div>
+                <span class="status status-info">Answered</span>
+              </li>
+              <li>
+                <div class="flex-grow-1">
+                  <p class="fw-semibold mb-0">Refund for cancelled Saturday order</p>
+                  <p class="small text-muted mb-0">#T-3104, updated Mon 19 Oct 2026</p>
+                </div>
+                <span class="status status-muted">Closed</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="col-lg-7">
+          <section class="mm-card" aria-labelledby="new-h">
+            <h2 class="h5 mb-3" id="new-h">New support request</h2>
+            <form data-demo-form data-demo-message="Demo only: your request was not sent." novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="sr-topic">Topic</label>
+                  <select class="form-select" id="sr-topic" required>
+                    <option value="" selected disabled>Choose a topic</option>
+                    <option>Missed or late delivery</option>
+                    <option>Wrong grind or product</option>
+                    <option>Damaged bag</option>
+                    <option>Change address or window</option>
+                    <option>Plan, billing or refund</option>
+                    <option>Something else</option>
+                  </select>
+                  <div class="invalid-feedback">Please choose a topic.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="sr-order">Related order</label>
+                  <select class="form-select" id="sr-order">
+                    <option value="" selected>Not about a specific order</option>
+                    <option>MM-20418-0925, Thu 5 Nov 2026</option>
+                    <option>MM-20418-0924, Tue 3 Nov 2026</option>
+                    <option>MM-20418-0923, Thu 29 Oct 2026</option>
+                    <option>MM-20418-0922, Thu 22 Oct 2026</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <fieldset>
+                    <legend class="form-label">Priority</legend>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="priority" id="sr-pri-low" value="low">
+                      <label class="form-check-label" for="sr-pri-low">Low</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="priority" id="sr-pri-normal" value="normal" checked>
+                      <label class="form-check-label" for="sr-pri-normal">Normal</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="priority" id="sr-pri-high" value="high">
+                      <label class="form-check-label" for="sr-pri-high">Urgent, delivery tomorrow</label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="sr-message">Message</label>
+                  <textarea class="form-control" id="sr-message" rows="4" placeholder="Tell us what happened, e.g. which bag, and when it arrived." required></textarea>
+                  <div class="invalid-feedback">Please describe the problem.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="sr-file">Attach a photo (optional)</label>
+                  <input type="file" class="form-control" id="sr-file" accept="image/*" aria-describedby="sr-file-help">
+                  <div class="form-text" id="sr-file-help">Demo only: files are not uploaded. In a live service we would accept JPG or PNG up to 5 MB.</div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary mt-4">Send request</button>
+              <p class="demo-note mt-3 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — nothing is sent or saved.</span></p>
+            </form>
+          </section>
+        </div>
+      </div>
+
+      <section class="mm-card mb-4" aria-labelledby="chat-h">
+        <h2 class="h5 mb-1" id="chat-h">Conversation example: #T-3187</h2>
+        <p class="small text-muted mb-3">A sample thread about the torn bag seam.</p>
+        <div class="d-grid gap-3 mb-4" role="log" aria-label="Sample conversation between Anita Sharma and Layla Haddad">
+          <div class="chat-bubble me">
+            <strong>Anita</strong><br>Hi, the 5 kg 7-Grain bag from this morning's order has a torn seam and some flour has leaked into the crate. The flour itself looks fine.
+            <small>Wed 4 Nov 2026, 9:42 am</small>
+          </div>
+          <div class="chat-bubble">
+            <strong>Layla Haddad, Customer Care</strong><br>Thanks for the photo, Anita, and sorry about the mess. I have added a replacement 5 kg bag to your Thursday delivery, milled fresh tomorrow morning.
+            <small>Wed 4 Nov 2026, 9:58 am</small>
+          </div>
+          <div class="chat-bubble me">
+            <strong>Anita</strong><br>That works, thank you. Should I keep the damaged bag?
+            <small>Wed 4 Nov 2026, 10:03 am</small>
+          </div>
+          <div class="chat-bubble">
+            <strong>Layla Haddad, Customer Care</strong><br>If the flour is clean, use it within a week. Hand the empty bag to your driver and we will add a bag-return credit.
+            <small>Wed 4 Nov 2026, 10:10 am</small>
+          </div>
+        </div>
+        <form data-demo-form data-demo-message="Demo only: your reply was not sent." novalidate>
+          <label class="form-label" for="chat-reply">Your reply</label>
+          <textarea class="form-control" id="chat-reply" rows="3" placeholder="Write a reply to Layla" required></textarea>
+          <div class="invalid-feedback">Please write a reply first.</div>
+          <button type="submit" class="btn btn-primary mt-3"><i class="bi bi-send" aria-hidden="true"></i> Send reply</button>
+          <p class="demo-note mt-3 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — nothing is sent or saved.</span></p>
+        </form>
+      </section>
+
+      <section aria-labelledby="faq-h">
+        <h2 class="h4 mb-3" id="faq-h">Help centre</h2>
+        <div class="accordion" id="supportFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sf1" aria-expanded="true" aria-controls="sf1">What if my delivery did not arrive?</button></h3>
+            <div id="sf1" class="accordion-collapse collapse show" data-bs-parent="#supportFaq"><div class="accordion-body">Check your delivery window first: Morning 7–10 am, Midday 11 am–2 pm or Evening 5–8 pm. If nothing has arrived by the end of the window, message us and we will re-deliver the same day or credit the order.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sf2" aria-expanded="false" aria-controls="sf2">The grind is wrong. Can I change it?</button></h3>
+            <div id="sf2" class="accordion-collapse collapse" data-bs-parent="#supportFaq"><div class="accordion-body">Yes. Send us a photo and the order number. We re-mill the next batch to your chosen fine, medium or coarse setting and update your default under Profile.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sf3" aria-expanded="false" aria-controls="sf3">My bag arrived damaged. What now?</button></h3>
+            <div id="sf3" class="accordion-collapse collapse" data-bs-parent="#supportFaq"><div class="accordion-body">Take a photo of the bag and the label, then open a request. We send a free replacement with your next delivery, and your driver collects the damaged bag.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sf4" aria-expanded="false" aria-controls="sf4">How do I change my delivery address?</button></h3>
+            <div id="sf4" class="accordion-collapse collapse" data-bs-parent="#supportFaq"><div class="accordion-body">Open Profile, then Delivery addresses, and edit or add an address. Changes made before 6 pm the evening before apply to your next delivery.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sf5" aria-expanded="false" aria-controls="sf5">Can I pause my plan?</button></h3>
+            <div id="sf5" class="accordion-collapse collapse" data-bs-parent="#supportFaq"><div class="accordion-body">Yes. Pause or skip any delivery up to 6 pm the evening before. Your plan keeps its place and billing resumes when deliveries do.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sf6" aria-expanded="false" aria-controls="sf6">How do refunds work?</button></h3>
+            <div id="sf6" class="accordion-collapse collapse" data-bs-parent="#supportFaq"><div class="accordion-body">Approved refunds go back to your original payment method, or stay as account credit if you prefer. Credit is applied to your next invoice straight away.</div></div>
+          </div>
+        </div>
+        <p class="mt-4 mb-0">Cannot find your answer? <a href="contact.html">Visit our contact page</a> for the mill address and opening hours.</p>
+      </section>
+    </main>
+  </div>
+</div>
+
+<!-- @scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js?v=2"></script>
+<!-- @scripts:end -->
+</body>
+</html>

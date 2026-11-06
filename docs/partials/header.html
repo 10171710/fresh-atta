@@ -1,0 +1,54 @@
+<!-- PARTIAL: public site header (skip link + sticky navbar). Pages mark it with an
+     @header marker carrying {"nav": "home1"}; sync-partials.py adds nav-active / aria-current.
+     Nav keys: home1 home2 about products plans pricing blog contact dashboard none.
+     To add a nav item: copy a <li class="nav-item"> below AND add its key to NAV_HREF in sync-partials.py. -->
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header sticky-top">
+  <nav class="navbar navbar-expand-xl" aria-label="Primary">
+    <div class="container-xxl">
+      <a class="navbar-brand" href="index.html" aria-label="Millstone &amp; Co. — home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 29V10"/><ellipse cx="11" cy="15" rx="3" ry="5" transform="rotate(-25 11 15)" fill="currentColor"/><ellipse cx="21" cy="15" rx="3" ry="5" transform="rotate(25 21 15)" fill="currentColor"/><ellipse cx="16" cy="7" rx="2.6" ry="4.6" fill="currentColor"/><ellipse cx="11.5" cy="23" rx="2.6" ry="4" transform="rotate(-25 11.5 23)" fill="currentColor"/><ellipse cx="20.5" cy="23" rx="2.6" ry="4" transform="rotate(25 20.5 23)" fill="currentColor"/></svg>
+        </span>
+        <span class="brand-text">Millstone<small>&amp; Co. Fresh Atta</small></span>
+      </a>
+
+      <!-- Always-visible controls (stay outside the collapse so they work on mobile) -->
+      <div class="d-flex align-items-center gap-2 order-xl-last">
+        <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
+          <i class="bi bi-moon-stars-fill theme-icon-moon" aria-hidden="true"></i>
+          <i class="bi bi-sun-fill theme-icon-sun" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="icon-btn" data-dir-toggle aria-label="Text direction: left-to-right (LTR). Switch to right-to-left (RTL)" title="Switch to RTL layout">
+          <i class="bi bi-text-left dir-icon-ltr" aria-hidden="true"></i><i class="bi bi-text-right dir-icon-rtl" aria-hidden="true"></i><span class="dir-code" data-dir-code aria-hidden="true">LTR</span>
+        </button>
+        <a class="btn btn-primary btn-login d-none d-md-inline-flex align-items-center gap-2" href="login.html">
+          <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i><span>Login Portal</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle main menu">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-xl-auto align-items-xl-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Home</span></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"><span>Home 1</span><small>Fresh flour &amp; the mill</small></a></li>
+              <li><a class="dropdown-item" href="home-2.html"><span>Home 2</span><small>Order online, subscribe, schedule</small></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="delivery-plans.html">Delivery Plans</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <a class="btn btn-primary d-md-none mt-3 w-100" href="login.html"><i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i><span>Login Portal</span></a>
+      </div>
+    </div>
+  </nav>
+</header>
