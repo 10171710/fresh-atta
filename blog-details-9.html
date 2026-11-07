@@ -43,7 +43,6 @@
 <!-- @head:end -->
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to main content</a>
 <!-- @header {"nav": "blog"} -->
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header sticky-top">
@@ -99,51 +98,49 @@
 
 <main id="main">
 
-  <!-- Hero section featuring the exact card front image -->
-  <section class="page-hero article-hero" style="background-image: linear-gradient(rgba(42, 26, 13, .75), rgba(42, 26, 13, .75)), url('assets/images/photo-024.jpg');" aria-labelledby="article-title">
+  <!-- Article header -->
+  <section class="article-header" aria-labelledby="article-title">
     <div class="container-xxl">
-      <nav aria-label="Breadcrumb" class="mb-3">
-        <a href="blog.html" class="hero-back-link text-decoration-none fw-semibold">
-          <i class="bi bi-arrow-left" aria-hidden="true"></i> Back to all articles
-        </a>
-      </nav>
-      <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-        <span class="badge-soft">Company news</span>
-        <span class="text-muted d-none d-sm-inline">•</span>
-        <span class="meta-item"><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>6 Aug 2026</span>
-        <span class="text-muted d-none d-sm-inline">•</span>
-        <span class="meta-item"><i class="bi bi-clock me-1" aria-hidden="true"></i>4 min read</span>
-      </div>
-      <h1 id="article-title" class="h-section mb-3">Meet the team behind Granary Lane</h1>
-      <div class="meta d-flex align-items-center gap-3 mt-4 pt-3 border-top border-secondary-subtle">
-        <span class="avatar avatar-md" style="--c1:#8b5a2b;--c2:#4a2f13" aria-hidden="true">HB</span>
-        <div>
-          <div class="fw-bold">Harold Becker</div>
-          <small class="text-muted">Founder & Master Miller</small>
+      <div class="article-header-inner">
+        <nav class="article-crumbs" aria-label="Breadcrumb">
+          <a href="blog.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> All articles</a>
+          <span class="article-crumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">Company news</span>
+        </nav>
+        <p class="article-kicker"><span class="badge-soft">Company news</span><span class="article-kicker-text">From the journal</span></p>
+        <h1 id="article-title" class="article-title">Meet the team behind Granary Lane</h1>
+        <p class="article-dek">When people discover Millstone & Co., they often assume we are either a hundred-person corporate food brand or a tiny hobby workshop. In reality, we are five dedicated people working out of a historic brick mill on Granary Lane, grinding grain every morning for more than 3,200 neighborhood households.</p>
+        <div class="article-byline">
+          <img class="avatar avatar-md" src="assets/images/photo-034.jpg" alt="" aria-hidden="true" style="object-position:100% 20%">
+          <span class="article-byline-copy">
+            <span class="article-author">Harold Becker</span>
+            <span class="article-role">Founder & Master Miller</span>
+          </span>
+          <span class="article-byline-sep" aria-hidden="true"></span>
+          <span class="article-date">6 Aug 2026</span>
+          <span class="article-byline-sep" aria-hidden="true"></span>
+          <span class="article-read">4 min read</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Article Body and Sidebar -->
-  <section class="section-sm" aria-label="Article content and blog sidebar">
+  <!-- Cover image -->
+  <div class="container-xxl">
+    <figure class="article-cover">
+      <div class="ph ph-wide rounded-4 overflow-hidden shadow-sm" role="img" aria-label="Two bakers prepare traditional Middle Eastern bread in a brick oven."><img class="ph-photo" src="assets/images/photo-024.jpg" alt="Two bakers prepare traditional Middle Eastern bread in a brick oven."></div>
+      <figcaption class="article-cover-caption">Harold Becker and the milling crew inspecting stone alignment before the morning grind at Granary Lane.</figcaption>
+    </figure>
+  </div>
+
+  <!-- Article body and sidebar rail -->
+  <section class="section-sm article-layout" aria-label="Article content and blog sidebar">
     <div class="container-xxl">
-      <div class="row g-5">
+      <div class="row g-4 g-xl-5">
 
         <div class="col-lg-8">
-          <article class="article" aria-labelledby="article-title">
-            <p class="lead-lg">When people discover Millstone & Co., they often assume we are either a hundred-person corporate food brand or a tiny hobby workshop. In reality, we are five dedicated people working out of a historic brick mill on Granary Lane, grinding grain every morning for more than 3,200 neighborhood households.</p>
-
-            <!-- Prominently showcase the exact front container image as the featured photo -->
-            <figure class="featured-article-figure mb-5">
-              <div class="ph ph-wide rounded-4 overflow-hidden shadow-sm" role="img" aria-label="Two bakers prepare traditional Middle Eastern bread in a brick oven.">
-                <img class="ph-photo w-100 object-fit-cover" src="assets/images/photo-024.jpg" alt="Two bakers prepare traditional Middle Eastern bread in a brick oven." loading="eager" style="max-height: 500px;">
-              </div>
-              <figcaption class="meta mt-2 text-center text-muted">Harold Becker and the milling crew inspecting stone alignment before the morning grind at Granary Lane.</figcaption>
-            </figure>
-
-            
-            <h2>The five faces of Granary Lane</h2>
+          <article class="article article-prose" aria-labelledby="article-title">
+            <h2 id="the-five-faces-of-granary-lane">The five faces of Granary Lane</h2>
             <p>Every bag of flour that leaves our doorstep has been touched, checked, and approved by our tight-knit team:</p>
 
             <div class="row g-4 my-3">
@@ -199,27 +196,24 @@
 
             <blockquote>We don't want to become a nationwide mega-conglomerate. We want to be your family's trusted neighborhood flour miller for the next forty years.</blockquote>
 
-            <h2>A morning at the mill</h2>
+            <h2 id="a-morning-at-the-mill">A morning at the mill</h2>
             <p>Our day starts at 5:00 am. Harold and Meera check the morning humidity and inspect the grain hoppers. By 5:30 am, the low, soothing hum of the heavy granite stones fills Granary Lane. As fresh flour streams into the cooling bins, the aroma of warm toasted wheat drifts down the street.</p>
             <p>By 8:00 am, Daniel has routes mapped and electric vans loaded. By noon, the flour that was a whole wheat kernel at dawn is already in your kitchen, waiting to be kneaded for family dinner.</p>
 
-            <h2>Come say hello on Granary Lane</h2>
+            <h2 id="come-say-hello-on-granary-lane">Come say hello on Granary Lane</h2>
             <p>Our mill doors are open to visitors Monday through Saturday, from 7:00 am to 7:00 pm. Whether you want to pick up a warm 5 kg bag directly or watch Meera dress the stone furrows, the kettle is always on.</p>
-        
           </article>
 
-          <!-- Share section -->
-          <div class="d-flex flex-wrap align-items-center gap-2 mt-5 pt-3 border-top">
-            <strong class="me-2">Share this story:</strong>
-            <button type="button" class="icon-btn" aria-label="Share on Facebook" data-demo-toast="Demo only: sharing is not connected."><i class="bi bi-facebook" aria-hidden="true"></i></button>
-            <button type="button" class="icon-btn" aria-label="Share on WhatsApp" data-demo-toast="Demo only: sharing is not connected."><i class="bi bi-whatsapp" aria-hidden="true"></i></button>
-            <button type="button" class="icon-btn" aria-label="Copy link to this story" data-demo-toast="Demo only: link not copied."><i class="bi bi-link-45deg" aria-hidden="true"></i></button>
-          </div>
+          <footer class="article-end">
+            <div class="article-tags">
+              <span class="article-end-label">Tagged</span>
+              <div class="article-tag-list"><a class="tag" href="blog.html">Sharbati</a><a class="tag" href="blog.html">Chakki</a><a class="tag" href="blog.html">Whole grain</a><a class="tag" href="blog.html">Millets</a><a class="tag" href="blog.html">Rotis</a><a class="tag" href="blog.html">Stone cold</a></div>
+            </div>
+          </footer>
 
-          <!-- Author Bio -->
-          <aside class="mm-card p-4 mt-4" aria-labelledby="author-title">
+          <aside class="author-bio" aria-labelledby="author-title">
             <div class="d-flex gap-3 align-items-start">
-              <span class="avatar avatar-lg flex-shrink-0" style="--c1:#8b5a2b;--c2:#4a2f13" aria-hidden="true">HB</span>
+              <img class="avatar avatar-lg flex-shrink-0" src="assets/images/photo-034.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" style="object-position:100% 20%">
               <div>
                 <h2 id="author-title" class="h5 mb-1">About Harold Becker</h2>
                 <p class="text-muted mb-0">Harold founded Millstone & Co. with a single chakki unit in 1987. Nearly four decades later, he continues to work the morning milling shift alongside Meera.</p>
@@ -227,39 +221,32 @@
             </div>
           </aside>
 
-          <!-- Next & Previous Navigation Links -->
-          <nav class="row g-3 mt-4" aria-label="Previous and next posts">
-            <div class="col-sm-6">
-              <a class="mm-card mm-card-hover p-3 d-block text-decoration-none h-100" href="blog-details-8.html">
-                <span class="meta d-block mb-1"><i class="bi bi-arrow-left" aria-hidden="true"></i> Previous Article</span>
-                <strong class="text-body">Millets: jowar, bajra and ragi</strong>
-              </a>
-            </div>
-            <div class="col-sm-6">
-              <a class="mm-card mm-card-hover p-3 d-block text-decoration-none h-100" href="blog-details.html">
-                <span class="meta d-block mb-1">Next Article <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                <strong class="text-body">Why we still dress our millstones by hand</strong>
-              </a>
-            </div>
+          <nav class="article-pager" aria-label="Previous and next posts">
+            <a class="article-pager-card" href="blog-details-8.html">
+              <span class="article-pager-label"><i class="bi bi-arrow-left" aria-hidden="true"></i> Previous</span>
+              <strong>Millets: jowar, bajra and ragi</strong>
+            </a>
+            <a class="article-pager-card article-pager-next" href="blog-details.html">
+              <span class="article-pager-label">Next <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+              <strong>Why we still dress our millstones by hand</strong>
+            </a>
           </nav>
         </div>
 
-        <!-- Sidebar -->
         <div class="col-lg-4">
-          <aside aria-label="Blog sidebar" class="d-grid gap-4">
-
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Search the blog</h2>
-              <form role="search" data-demo-form data-demo-message="Search filters available on the main blog page." aria-label="Search posts">
-                <label for="side-search" class="visually-hidden">Search posts</label>
-                <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" id="side-search" class="form-control" placeholder="Search posts" required autocomplete="off"></div>
-              </form>
-              <p class="demo-note mt-2 mb-0">Front-end demo — search is active on the <a href="blog.html">main blog</a>.</p>
+          <aside class="article-rail" aria-label="Article sidebar">
+            <div class="rail-card">
+              <h2 class="rail-title">On this page</h2>
+              <ol class="toc-list">
+                <li><a href="#the-five-faces-of-granary-lane">The five faces of Granary Lane</a></li>
+                <li><a href="#a-morning-at-the-mill">A morning at the mill</a></li>
+                <li><a href="#come-say-hello-on-granary-lane">Come say hello on Granary Lane</a></li>
+              </ol>
             </div>
 
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Categories</h2>
-              <ul class="list-clean">
+            <div class="rail-card">
+              <h2 class="rail-title">Browse by topic</h2>
+              <ul class="list-clean rail-topics">
                 <li class="d-flex justify-content-between py-1"><a href="blog.html">Milling</a><span class="text-muted">2</span></li>
                 <li class="d-flex justify-content-between py-1"><a href="blog.html">Nutrition</a><span class="text-muted">2</span></li>
                 <li class="d-flex justify-content-between py-1"><a href="blog.html">Recipes</a><span class="text-muted">2</span></li>
@@ -268,9 +255,16 @@
               </ul>
             </div>
 
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Recent stories</h2>
-              <ul class="list-clean d-grid gap-3">
+            <div class="rail-card rail-cta text-center">
+              <span class="icon-tile mb-3"><i class="bi bi-truck" aria-hidden="true"></i></span>
+              <h2 class="h5">Fresh atta at your door</h2>
+              <p class="text-muted small">Stone-ground this morning, delivered fresh tomorrow. Free delivery on every subscription plan.</p>
+              <a class="btn btn-primary w-100" href="delivery-plans.html">Explore delivery plans</a>
+            </div>
+
+            <div class="rail-card">
+              <h2 class="rail-title">Recent stories</h2>
+              <ul class="list-clean rail-posts d-grid gap-3">
                 <li class="d-flex gap-3 align-items-center">
                   <a href="blog-details-3.html" class="flex-shrink-0" aria-label="Read Soft phulka rotis">
                     <img src="assets/images/photo-067.jpg" alt="Phulka rotis on tawa" class="rounded object-fit-cover" width="60" height="60" loading="lazy">
@@ -300,21 +294,6 @@
                 </li>
               </ul>
             </div>
-
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Tags</h2>
-              <div class="d-flex flex-wrap gap-2">
-                <a class="tag" href="blog.html">Sharbati</a><a class="tag" href="blog.html">Chakki</a><a class="tag" href="blog.html">Whole grain</a><a class="tag" href="blog.html">Millets</a><a class="tag" href="blog.html">Rotis</a><a class="tag" href="blog.html">Stone cold</a>
-              </div>
-            </div>
-
-            <div class="mm-card p-4 text-center">
-              <span class="icon-tile mb-3"><i class="bi bi-truck" aria-hidden="true"></i></span>
-              <h2 class="h5">Fresh atta at your door</h2>
-              <p class="text-muted small">Stone-ground this morning, delivered fresh tomorrow. Free delivery on every subscription plan.</p>
-              <a class="btn btn-primary w-100" href="delivery-plans.html">Explore delivery plans</a>
-            </div>
-
           </aside>
         </div>
 

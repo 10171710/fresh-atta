@@ -43,7 +43,6 @@
 <!-- @head:end -->
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to main content</a>
 <!-- @header {"nav": "blog"} -->
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header sticky-top">
@@ -99,60 +98,58 @@
 
 <main id="main">
 
-  <!-- Hero section featuring the exact card front image -->
-  <section class="page-hero article-hero" style="background-image: linear-gradient(rgba(42, 26, 13, .75), rgba(42, 26, 13, .75)), url('assets/images/photo-019.jpg');" aria-labelledby="article-title">
+  <!-- Article header -->
+  <section class="article-header" aria-labelledby="article-title">
     <div class="container-xxl">
-      <nav aria-label="Breadcrumb" class="mb-3">
-        <a href="blog.html" class="hero-back-link text-decoration-none fw-semibold">
-          <i class="bi bi-arrow-left" aria-hidden="true"></i> Back to all articles
-        </a>
-      </nav>
-      <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-        <span class="badge-soft">Sourcing</span>
-        <span class="text-muted d-none d-sm-inline">•</span>
-        <span class="meta-item"><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>19 Sep 2026</span>
-        <span class="text-muted d-none d-sm-inline">•</span>
-        <span class="meta-item"><i class="bi bi-clock me-1" aria-hidden="true"></i>8 min read</span>
-      </div>
-      <h1 id="article-title" class="h-section mb-3">Visiting farms behind our Sharbati wheat</h1>
-      <div class="meta d-flex align-items-center gap-3 mt-4 pt-3 border-top border-secondary-subtle">
-        <span class="avatar avatar-md" style="--c1:#5b7c4b;--c2:#2f4e22" aria-hidden="true">NL</span>
-        <div>
-          <div class="fw-bold">Noa Levi</div>
-          <small class="text-muted">Grain Sourcing & Nutrition Lead</small>
+      <div class="article-header-inner">
+        <nav class="article-crumbs" aria-label="Breadcrumb">
+          <a href="blog.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> All articles</a>
+          <span class="article-crumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">Sourcing</span>
+        </nav>
+        <p class="article-kicker"><span class="badge-soft">Sourcing</span><span class="article-kicker-text">From the journal</span></p>
+        <h1 id="article-title" class="article-title">Visiting farms behind our Sharbati wheat</h1>
+        <p class="article-dek">Every March and April, the black soil of the Sehore plateau in Madhya Pradesh turns into an endless sea of amber. This is the home of Sharbati wheat — often called the 'golden grain of India'. Last month, I spent seven days with the three farming families who supply over 60% of Millstone's wheat.</p>
+        <div class="article-byline">
+          <img class="avatar avatar-md" src="assets/images/photo-007.jpg" alt="" aria-hidden="true">
+          <span class="article-byline-copy">
+            <span class="article-author">Noa Levi</span>
+            <span class="article-role">Grain Sourcing & Nutrition Lead</span>
+          </span>
+          <span class="article-byline-sep" aria-hidden="true"></span>
+          <span class="article-date">19 Sep 2026</span>
+          <span class="article-byline-sep" aria-hidden="true"></span>
+          <span class="article-read">8 min read</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Article Body and Sidebar -->
-  <section class="section-sm" aria-label="Article content and blog sidebar">
+  <!-- Cover image -->
+  <div class="container-xxl">
+    <figure class="article-cover">
+      <div class="ph ph-wide rounded-4 overflow-hidden shadow-sm" role="img" aria-label="A wide rural landscape of wheat fields beneath a blue sky."><img class="ph-photo" src="assets/images/photo-019.jpg" alt="A wide rural landscape of wheat fields beneath a blue sky."></div>
+      <figcaption class="article-cover-caption">The deep black cotton soil of the Malwa plateau, where rain-fed Sharbati wheat develops its distinctive golden lustre.</figcaption>
+    </figure>
+  </div>
+
+  <!-- Article body and sidebar rail -->
+  <section class="section-sm article-layout" aria-label="Article content and blog sidebar">
     <div class="container-xxl">
-      <div class="row g-5">
+      <div class="row g-4 g-xl-5">
 
         <div class="col-lg-8">
-          <article class="article" aria-labelledby="article-title">
-            <p class="lead-lg">Every March and April, the black soil of the Sehore plateau in Madhya Pradesh turns into an endless sea of amber. This is the home of Sharbati wheat — often called the 'golden grain of India'. Last month, I spent seven days with the three farming families who supply over 60% of Millstone's wheat.</p>
-
-            <!-- Prominently showcase the exact front container image as the featured photo -->
-            <figure class="featured-article-figure mb-5">
-              <div class="ph ph-wide rounded-4 overflow-hidden shadow-sm" role="img" aria-label="A wide rural landscape of wheat fields beneath a blue sky.">
-                <img class="ph-photo w-100 object-fit-cover" src="assets/images/photo-019.jpg" alt="A wide rural landscape of wheat fields beneath a blue sky." loading="eager" style="max-height: 500px;">
-              </div>
-              <figcaption class="meta mt-2 text-center text-muted">The deep black cotton soil of the Malwa plateau, where rain-fed Sharbati wheat develops its distinctive golden lustre.</figcaption>
-            </figure>
-
-            
-            <h2>The soil that makes wheat naturally sweet</h2>
+          <article class="article article-prose" aria-labelledby="article-title">
+            <h2 id="the-soil-that-makes-wheat-naturally-sweet">The soil that makes wheat naturally sweet</h2>
             <p>Why does Sharbati wheat taste distinctly sweeter and yield softer dough than grain grown in canal-irrigated plains? The secret is in the geology of the Malwa plateau. The soil here is heavy black basaltic clay (vertisol), formed from ancient volcanic lava flows.</p>
             <p>This soil has extraordinary moisture-holding capacity. Our partner farmers do not flood their fields with chemical tube-well water; instead, the wheat roots drink deeply from the moisture trapped deep in the black earth during the monsoon. The slow, water-stressed ripening period forces the plant to concentrate natural sucrose and complex oligosaccharides in the berry.</p>
 
-            <h2>Meeting farmer Rameshwar and his third-generation fields</h2>
+            <h2 id="meeting-farmer-rameshwar-and-his-third-generation-fields">Meeting farmer Rameshwar and his third-generation fields</h2>
             <p>On our second morning in Ashta, Rameshwar Patel walked us through his 24-acre heirloom parcel. Rameshwar's grandfather began farming with native indigenous seeds in 1964. Today, Rameshwar uses zero synthetic chemical insecticides, relying instead on neem-cake manure, cow dung bio-slurry, and companion pulses that fix atmospheric nitrogen naturally.</p>
 
             <blockquote>When you touch the soil and it smells like sweet rain rather than synthetic ammonia, you know the flour will nourish the child who eats it.</blockquote>
 
-            <h2>What we test in every harvest lot</h2>
+            <h2 id="what-we-test-in-every-harvest-lot">What we test in every harvest lot</h2>
             <p>Before any grain truck departs the village for Granary Lane, we run a rigorous 5-point quality audit right in the farmyard:</p>
             <ol>
               <li><strong>Moisture Content:</strong> Must test between 10.5% and 11.8%. Higher moisture causes mold; lower makes grain shatter during milling.</li>
@@ -167,23 +164,20 @@
               <figcaption class="meta mt-2 text-center text-muted">Cleaned, sun-dried Sharbati grains ready for transport in breathable jute sacks.</figcaption>
             </figure>
 
-            <h2>Direct trade: fair pricing for regenerative care</h2>
+            <h2 id="direct-trade-fair-pricing-for-regenerative-care">Direct trade: fair pricing for regenerative care</h2>
             <p>By buying directly from twelve family farms without middlemen or mandi commissions, Millstone pays 25% above the government minimum support price. In return, our farmers commit to regenerative cover cropping, preserving the heritage soil for the generations to come.</p>
-        
           </article>
 
-          <!-- Share section -->
-          <div class="d-flex flex-wrap align-items-center gap-2 mt-5 pt-3 border-top">
-            <strong class="me-2">Share this story:</strong>
-            <button type="button" class="icon-btn" aria-label="Share on Facebook" data-demo-toast="Demo only: sharing is not connected."><i class="bi bi-facebook" aria-hidden="true"></i></button>
-            <button type="button" class="icon-btn" aria-label="Share on WhatsApp" data-demo-toast="Demo only: sharing is not connected."><i class="bi bi-whatsapp" aria-hidden="true"></i></button>
-            <button type="button" class="icon-btn" aria-label="Copy link to this story" data-demo-toast="Demo only: link not copied."><i class="bi bi-link-45deg" aria-hidden="true"></i></button>
-          </div>
+          <footer class="article-end">
+            <div class="article-tags">
+              <span class="article-end-label">Tagged</span>
+              <div class="article-tag-list"><a class="tag" href="blog.html">Sharbati</a><a class="tag" href="blog.html">Chakki</a><a class="tag" href="blog.html">Whole grain</a><a class="tag" href="blog.html">Millets</a><a class="tag" href="blog.html">Rotis</a><a class="tag" href="blog.html">Stone cold</a></div>
+            </div>
+          </footer>
 
-          <!-- Author Bio -->
-          <aside class="mm-card p-4 mt-4" aria-labelledby="author-title">
+          <aside class="author-bio" aria-labelledby="author-title">
             <div class="d-flex gap-3 align-items-start">
-              <span class="avatar avatar-lg flex-shrink-0" style="--c1:#5b7c4b;--c2:#2f4e22" aria-hidden="true">NL</span>
+              <img class="avatar avatar-lg flex-shrink-0" src="assets/images/photo-007.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async">
               <div>
                 <h2 id="author-title" class="h5 mb-1">About Noa Levi</h2>
                 <p class="text-muted mb-0">Noa oversees our direct-farm procurement contracts, soil microbiome partnerships, and regenerative grain quality audits across Central India.</p>
@@ -191,39 +185,33 @@
             </div>
           </aside>
 
-          <!-- Next & Previous Navigation Links -->
-          <nav class="row g-3 mt-4" aria-label="Previous and next posts">
-            <div class="col-sm-6">
-              <a class="mm-card mm-card-hover p-3 d-block text-decoration-none h-100" href="blog-details-3.html">
-                <span class="meta d-block mb-1"><i class="bi bi-arrow-left" aria-hidden="true"></i> Previous Article</span>
-                <strong class="text-body">Soft phulka rotis: the 70% hydration method</strong>
-              </a>
-            </div>
-            <div class="col-sm-6">
-              <a class="mm-card mm-card-hover p-3 d-block text-decoration-none h-100" href="blog-details-5.html">
-                <span class="meta d-block mb-1">Next Article <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                <strong class="text-body">Saturday evening windows are now open</strong>
-              </a>
-            </div>
+          <nav class="article-pager" aria-label="Previous and next posts">
+            <a class="article-pager-card" href="blog-details-3.html">
+              <span class="article-pager-label"><i class="bi bi-arrow-left" aria-hidden="true"></i> Previous</span>
+              <strong>Soft phulka rotis: the 70% hydration method</strong>
+            </a>
+            <a class="article-pager-card article-pager-next" href="blog-details-5.html">
+              <span class="article-pager-label">Next <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+              <strong>Saturday evening windows are now open</strong>
+            </a>
           </nav>
         </div>
 
-        <!-- Sidebar -->
         <div class="col-lg-4">
-          <aside aria-label="Blog sidebar" class="d-grid gap-4">
-
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Search the blog</h2>
-              <form role="search" data-demo-form data-demo-message="Search filters available on the main blog page." aria-label="Search posts">
-                <label for="side-search" class="visually-hidden">Search posts</label>
-                <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" id="side-search" class="form-control" placeholder="Search posts" required autocomplete="off"></div>
-              </form>
-              <p class="demo-note mt-2 mb-0">Front-end demo — search is active on the <a href="blog.html">main blog</a>.</p>
+          <aside class="article-rail" aria-label="Article sidebar">
+            <div class="rail-card">
+              <h2 class="rail-title">On this page</h2>
+              <ol class="toc-list">
+                <li><a href="#the-soil-that-makes-wheat-naturally-sweet">The soil that makes wheat naturally sweet</a></li>
+                <li><a href="#meeting-farmer-rameshwar-and-his-third-generation-fields">Meeting farmer Rameshwar and his third-generation fields</a></li>
+                <li><a href="#what-we-test-in-every-harvest-lot">What we test in every harvest lot</a></li>
+                <li><a href="#direct-trade-fair-pricing-for-regenerative-care">Direct trade: fair pricing for regenerative care</a></li>
+              </ol>
             </div>
 
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Categories</h2>
-              <ul class="list-clean">
+            <div class="rail-card">
+              <h2 class="rail-title">Browse by topic</h2>
+              <ul class="list-clean rail-topics">
                 <li class="d-flex justify-content-between py-1"><a href="blog.html">Milling</a><span class="text-muted">2</span></li>
                 <li class="d-flex justify-content-between py-1"><a href="blog.html">Nutrition</a><span class="text-muted">2</span></li>
                 <li class="d-flex justify-content-between py-1"><a href="blog.html">Recipes</a><span class="text-muted">2</span></li>
@@ -232,9 +220,16 @@
               </ul>
             </div>
 
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Recent stories</h2>
-              <ul class="list-clean d-grid gap-3">
+            <div class="rail-card rail-cta text-center">
+              <span class="icon-tile mb-3"><i class="bi bi-truck" aria-hidden="true"></i></span>
+              <h2 class="h5">Fresh atta at your door</h2>
+              <p class="text-muted small">Stone-ground this morning, delivered fresh tomorrow. Free delivery on every subscription plan.</p>
+              <a class="btn btn-primary w-100" href="delivery-plans.html">Explore delivery plans</a>
+            </div>
+
+            <div class="rail-card">
+              <h2 class="rail-title">Recent stories</h2>
+              <ul class="list-clean rail-posts d-grid gap-3">
                 <li class="d-flex gap-3 align-items-center">
                   <a href="blog-details-3.html" class="flex-shrink-0" aria-label="Read Soft phulka rotis">
                     <img src="assets/images/photo-067.jpg" alt="Phulka rotis on tawa" class="rounded object-fit-cover" width="60" height="60" loading="lazy">
@@ -264,21 +259,6 @@
                 </li>
               </ul>
             </div>
-
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Tags</h2>
-              <div class="d-flex flex-wrap gap-2">
-                <a class="tag" href="blog.html">Sharbati</a><a class="tag" href="blog.html">Chakki</a><a class="tag" href="blog.html">Whole grain</a><a class="tag" href="blog.html">Millets</a><a class="tag" href="blog.html">Rotis</a><a class="tag" href="blog.html">Stone cold</a>
-              </div>
-            </div>
-
-            <div class="mm-card p-4 text-center">
-              <span class="icon-tile mb-3"><i class="bi bi-truck" aria-hidden="true"></i></span>
-              <h2 class="h5">Fresh atta at your door</h2>
-              <p class="text-muted small">Stone-ground this morning, delivered fresh tomorrow. Free delivery on every subscription plan.</p>
-              <a class="btn btn-primary w-100" href="delivery-plans.html">Explore delivery plans</a>
-            </div>
-
           </aside>
         </div>
 

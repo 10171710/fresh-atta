@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Overflow diagnostic 2</title>
+<style>body{font:13px/1.45 monospace;white-space:pre-wrap}</style>
+</head>
+<body>
+<pre id="out">RUNNING</pre>
+<script>
+(async () => {
+  const out = document.getElementById('out');
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const results = {};
+  async function diag(page, width) {
+    try { localStorage.setItem('mm-dir', 'ltr'); localStorage.setItem('mm-theme', 'light'); } catch (e) {}
+    const f = document.createElement('iframe');
+    f.style.cssText = 'position:fixed;left:0;top:0;border:0;width:' + width + 'px;height:900px';
+    f.src = page + '?diag=' + Date.now();
+    document.body.appendChild(f);
+    await new Promise(r => { f.onload = r; });
+    await wait(400);
+    const d = f.contentDocument, w = f.contentWindow;
+    const vw = w.innerWidth;
+    const all = [];
+    for (const el of d.querySelectorAll('body *')) {
+      const r = el.getBoundingClientRect();
+      if (r.width === 0 && r.height === 0) continue;
+      all.push({
+        tag: el.tagName.toLowerCase(),
+        cls: (el.className || '').toString().slice(0, 55),
+        id: el.id || '',
+        left: Math.round(r.left),
+        right: Math.round(r.right),
+        w: Math.round(r.width)
+      });
+    }
+    const byRight = all.slice().sort((a, b) => b.right - a.right).slice(0, 8);
+    const byLeft = all.slice().sort((a, b) => a.left - b.left).slice(0, 5);
+    f.remove();
+    return {
+      page, viewport: vw,
+      bodyScrollWidth: d.body.scrollWidth,
+      docScrollWidth: d.documentElement.scrollWidth,
+      byRight, byLeft
+    };
+  }
+  results.delivery = await diag('delivery-plans.html', 375);
+  results.index = await diag('index.html', 375);
+  results.pricing = await diag('pricing.html', 375);
+  out.textContent = 'RESULTS:' + JSON.stringify(results, null, 2);
+})().catch(err => {
+  document.getElementById('out').textContent = 'ERROR:' + (err && err.stack || err);
+});
+</script>
+</body>
+</html>

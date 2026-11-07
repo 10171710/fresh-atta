@@ -43,7 +43,6 @@
 <!-- @head:end -->
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to main content</a>
 <!-- @header {"nav": "blog"} -->
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header sticky-top">
@@ -99,55 +98,53 @@
 
 <main id="main">
 
-  <!-- Hero section featuring the exact card front image -->
-  <section class="page-hero article-hero" style="background-image: linear-gradient(rgba(42, 26, 13, .75), rgba(42, 26, 13, .75)), url('assets/images/photo-020.jpg');" aria-labelledby="article-title">
+  <!-- Article header -->
+  <section class="article-header" aria-labelledby="article-title">
     <div class="container-xxl">
-      <nav aria-label="Breadcrumb" class="mb-3">
-        <a href="blog.html" class="hero-back-link text-decoration-none fw-semibold">
-          <i class="bi bi-arrow-left" aria-hidden="true"></i> Back to all articles
-        </a>
-      </nav>
-      <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-        <span class="badge-soft">Company news</span>
-        <span class="text-muted d-none d-sm-inline">•</span>
-        <span class="meta-item"><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>10 Sep 2026</span>
-        <span class="text-muted d-none d-sm-inline">•</span>
-        <span class="meta-item"><i class="bi bi-clock me-1" aria-hidden="true"></i>3 min read</span>
-      </div>
-      <h1 id="article-title" class="h-section mb-3">Saturday evening windows are now open</h1>
-      <div class="meta d-flex align-items-center gap-3 mt-4 pt-3 border-top border-secondary-subtle">
-        <span class="avatar avatar-md" style="--c1:#3b6e8c;--c2:#1d4257" aria-hidden="true">DO</span>
-        <div>
-          <div class="fw-bold">Daniel Okafor</div>
-          <small class="text-muted">Logistics & Customer Operations</small>
+      <div class="article-header-inner">
+        <nav class="article-crumbs" aria-label="Breadcrumb">
+          <a href="blog.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> All articles</a>
+          <span class="article-crumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">Company news</span>
+        </nav>
+        <p class="article-kicker"><span class="badge-soft">Company news</span><span class="article-kicker-text">From the journal</span></p>
+        <h1 id="article-title" class="article-title">Saturday evening windows are now open</h1>
+        <p class="article-dek">Over the past six months, the most common feedback from our working subscribers has been clear: weekday morning deliveries can be tough to coordinate when leaving for the office. We listened. Starting Saturday, 7 November 2026, we are officially opening our new Saturday Evening (5:00 pm – 8:00 pm) delivery slot.</p>
+        <div class="article-byline">
+          <img class="avatar avatar-md" src="assets/images/photo-006.jpg" alt="" aria-hidden="true">
+          <span class="article-byline-copy">
+            <span class="article-author">Daniel Okafor</span>
+            <span class="article-role">Logistics & Customer Operations</span>
+          </span>
+          <span class="article-byline-sep" aria-hidden="true"></span>
+          <span class="article-date">10 Sep 2026</span>
+          <span class="article-byline-sep" aria-hidden="true"></span>
+          <span class="article-read">3 min read</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Article Body and Sidebar -->
-  <section class="section-sm" aria-label="Article content and blog sidebar">
+  <!-- Cover image -->
+  <div class="container-xxl">
+    <figure class="article-cover">
+      <div class="ph ph-wide rounded-4 overflow-hidden shadow-sm" role="img" aria-label="A white delivery van parked under a tree on a sunny day in an urban area."><img class="ph-photo" src="assets/images/photo-020.jpg" alt="A white delivery van parked under a tree on a sunny day in an urban area."></div>
+      <figcaption class="article-cover-caption">Our temperature-controlled electric delivery vans now cover weekend evening routes throughout the metro area.</figcaption>
+    </figure>
+  </div>
+
+  <!-- Article body and sidebar rail -->
+  <section class="section-sm article-layout" aria-label="Article content and blog sidebar">
     <div class="container-xxl">
-      <div class="row g-5">
+      <div class="row g-4 g-xl-5">
 
         <div class="col-lg-8">
-          <article class="article" aria-labelledby="article-title">
-            <p class="lead-lg">Over the past six months, the most common feedback from our working subscribers has been clear: weekday morning deliveries can be tough to coordinate when leaving for the office. We listened. Starting Saturday, 7 November 2026, we are officially opening our new Saturday Evening (5:00 pm – 8:00 pm) delivery slot.</p>
-
-            <!-- Prominently showcase the exact front container image as the featured photo -->
-            <figure class="featured-article-figure mb-5">
-              <div class="ph ph-wide rounded-4 overflow-hidden shadow-sm" role="img" aria-label="A white delivery van parked under a tree on a sunny day in an urban area.">
-                <img class="ph-photo w-100 object-fit-cover" src="assets/images/photo-020.jpg" alt="A white delivery van parked under a tree on a sunny day in an urban area." loading="eager" style="max-height: 500px;">
-              </div>
-              <figcaption class="meta mt-2 text-center text-muted">Our temperature-controlled electric delivery vans now cover weekend evening routes throughout the metro area.</figcaption>
-            </figure>
-
-            
-            <h2>Why evening delivery was tricky to engineer</h2>
+          <article class="article article-prose" aria-labelledby="article-title">
+            <h2 id="why-evening-delivery-was-tricky-to-engineer">Why evening delivery was tricky to engineer</h2>
             <p>Because Millstone is committed to delivering within 24 hours of grinding, we don't hold standing inventory in a distribution depot. Grains ground at 6:00 am on Saturday morning must be rested, packed into our breathable unbleached paper bags, and loaded onto refrigerated vans by 3:30 pm.</p>
             <p>To enable the Saturday evening window, we have adjusted our weekend milling shift. Head Miller Meera and her team now run an early-morning Saturday milling batch dedicated entirely to evening subscriptions.</p>
 
-            <h2>Available delivery slots overview</h2>
+            <h2 id="available-delivery-slots-overview">Available delivery slots overview</h2>
             <div class="table-responsive my-4">
               <table class="table compare-table">
                 <thead><tr><th scope="col">Delivery Day</th><th scope="col">Morning Slot</th><th scope="col">Evening Slot</th><th scope="col">Milled On</th></tr></thead>
@@ -161,7 +158,7 @@
 
             <blockquote>When fresh warm flour arrives on Saturday evening, Sunday morning parathas and puris become a family ritual.</blockquote>
 
-            <h2>How to switch your recurring delivery slot</h2>
+            <h2 id="how-to-switch-your-recurring-delivery-slot">How to switch your recurring delivery slot</h2>
             <p>If you already have an active bi-weekly or monthly delivery plan, switching to the new Saturday evening window takes ten seconds:</p>
             <ol>
               <li>Log in to your account via the <a href="login.html">Login Portal</a>.</li>
@@ -170,23 +167,20 @@
               <li>Confirm changes. Your next delivery on or after 7 November will automatically follow the new time.</li>
             </ol>
 
-            <h2>Eco-friendly delivery vans</h2>
+            <h2 id="eco-friendly-delivery-vans">Eco-friendly delivery vans</h2>
             <p>All Saturday evening deliveries will be serviced by our new fleet of 100% electric delivery vans. The cargo areas are kept insulated under 20 °C, ensuring that even during summer heatwaves, your flour arrives cool, fragrant, and ready for your dinner preparations.</p>
-        
           </article>
 
-          <!-- Share section -->
-          <div class="d-flex flex-wrap align-items-center gap-2 mt-5 pt-3 border-top">
-            <strong class="me-2">Share this story:</strong>
-            <button type="button" class="icon-btn" aria-label="Share on Facebook" data-demo-toast="Demo only: sharing is not connected."><i class="bi bi-facebook" aria-hidden="true"></i></button>
-            <button type="button" class="icon-btn" aria-label="Share on WhatsApp" data-demo-toast="Demo only: sharing is not connected."><i class="bi bi-whatsapp" aria-hidden="true"></i></button>
-            <button type="button" class="icon-btn" aria-label="Copy link to this story" data-demo-toast="Demo only: link not copied."><i class="bi bi-link-45deg" aria-hidden="true"></i></button>
-          </div>
+          <footer class="article-end">
+            <div class="article-tags">
+              <span class="article-end-label">Tagged</span>
+              <div class="article-tag-list"><a class="tag" href="blog.html">Sharbati</a><a class="tag" href="blog.html">Chakki</a><a class="tag" href="blog.html">Whole grain</a><a class="tag" href="blog.html">Millets</a><a class="tag" href="blog.html">Rotis</a><a class="tag" href="blog.html">Stone cold</a></div>
+            </div>
+          </footer>
 
-          <!-- Author Bio -->
-          <aside class="mm-card p-4 mt-4" aria-labelledby="author-title">
+          <aside class="author-bio" aria-labelledby="author-title">
             <div class="d-flex gap-3 align-items-start">
-              <span class="avatar avatar-lg flex-shrink-0" style="--c1:#3b6e8c;--c2:#1d4257" aria-hidden="true">DO</span>
+              <img class="avatar avatar-lg flex-shrink-0" src="assets/images/photo-006.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async">
               <div>
                 <h2 id="author-title" class="h5 mb-1">About Daniel Okafor</h2>
                 <p class="text-muted mb-0">Daniel manages delivery fleets, route dispatch, and subscriber scheduling at Millstone. He ensures every bag is delivered within 24 hours of milling.</p>
@@ -194,39 +188,33 @@
             </div>
           </aside>
 
-          <!-- Next & Previous Navigation Links -->
-          <nav class="row g-3 mt-4" aria-label="Previous and next posts">
-            <div class="col-sm-6">
-              <a class="mm-card mm-card-hover p-3 d-block text-decoration-none h-100" href="blog-details-4.html">
-                <span class="meta d-block mb-1"><i class="bi bi-arrow-left" aria-hidden="true"></i> Previous Article</span>
-                <strong class="text-body">Visiting farms behind our Sharbati wheat</strong>
-              </a>
-            </div>
-            <div class="col-sm-6">
-              <a class="mm-card mm-card-hover p-3 d-block text-decoration-none h-100" href="blog-details-6.html">
-                <span class="meta d-block mb-1">Next Article <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                <strong class="text-body">How we keep flour below 40 degrees C</strong>
-              </a>
-            </div>
+          <nav class="article-pager" aria-label="Previous and next posts">
+            <a class="article-pager-card" href="blog-details-4.html">
+              <span class="article-pager-label"><i class="bi bi-arrow-left" aria-hidden="true"></i> Previous</span>
+              <strong>Visiting farms behind our Sharbati wheat</strong>
+            </a>
+            <a class="article-pager-card article-pager-next" href="blog-details-6.html">
+              <span class="article-pager-label">Next <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+              <strong>How we keep flour below 40 degrees C</strong>
+            </a>
           </nav>
         </div>
 
-        <!-- Sidebar -->
         <div class="col-lg-4">
-          <aside aria-label="Blog sidebar" class="d-grid gap-4">
-
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Search the blog</h2>
-              <form role="search" data-demo-form data-demo-message="Search filters available on the main blog page." aria-label="Search posts">
-                <label for="side-search" class="visually-hidden">Search posts</label>
-                <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" id="side-search" class="form-control" placeholder="Search posts" required autocomplete="off"></div>
-              </form>
-              <p class="demo-note mt-2 mb-0">Front-end demo — search is active on the <a href="blog.html">main blog</a>.</p>
+          <aside class="article-rail" aria-label="Article sidebar">
+            <div class="rail-card">
+              <h2 class="rail-title">On this page</h2>
+              <ol class="toc-list">
+                <li><a href="#why-evening-delivery-was-tricky-to-engineer">Why evening delivery was tricky to engineer</a></li>
+                <li><a href="#available-delivery-slots-overview">Available delivery slots overview</a></li>
+                <li><a href="#how-to-switch-your-recurring-delivery-slot">How to switch your recurring delivery slot</a></li>
+                <li><a href="#eco-friendly-delivery-vans">Eco-friendly delivery vans</a></li>
+              </ol>
             </div>
 
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Categories</h2>
-              <ul class="list-clean">
+            <div class="rail-card">
+              <h2 class="rail-title">Browse by topic</h2>
+              <ul class="list-clean rail-topics">
                 <li class="d-flex justify-content-between py-1"><a href="blog.html">Milling</a><span class="text-muted">2</span></li>
                 <li class="d-flex justify-content-between py-1"><a href="blog.html">Nutrition</a><span class="text-muted">2</span></li>
                 <li class="d-flex justify-content-between py-1"><a href="blog.html">Recipes</a><span class="text-muted">2</span></li>
@@ -235,9 +223,16 @@
               </ul>
             </div>
 
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Recent stories</h2>
-              <ul class="list-clean d-grid gap-3">
+            <div class="rail-card rail-cta text-center">
+              <span class="icon-tile mb-3"><i class="bi bi-truck" aria-hidden="true"></i></span>
+              <h2 class="h5">Fresh atta at your door</h2>
+              <p class="text-muted small">Stone-ground this morning, delivered fresh tomorrow. Free delivery on every subscription plan.</p>
+              <a class="btn btn-primary w-100" href="delivery-plans.html">Explore delivery plans</a>
+            </div>
+
+            <div class="rail-card">
+              <h2 class="rail-title">Recent stories</h2>
+              <ul class="list-clean rail-posts d-grid gap-3">
                 <li class="d-flex gap-3 align-items-center">
                   <a href="blog-details-3.html" class="flex-shrink-0" aria-label="Read Soft phulka rotis">
                     <img src="assets/images/photo-067.jpg" alt="Phulka rotis on tawa" class="rounded object-fit-cover" width="60" height="60" loading="lazy">
@@ -267,21 +262,6 @@
                 </li>
               </ul>
             </div>
-
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Tags</h2>
-              <div class="d-flex flex-wrap gap-2">
-                <a class="tag" href="blog.html">Sharbati</a><a class="tag" href="blog.html">Chakki</a><a class="tag" href="blog.html">Whole grain</a><a class="tag" href="blog.html">Millets</a><a class="tag" href="blog.html">Rotis</a><a class="tag" href="blog.html">Stone cold</a>
-              </div>
-            </div>
-
-            <div class="mm-card p-4 text-center">
-              <span class="icon-tile mb-3"><i class="bi bi-truck" aria-hidden="true"></i></span>
-              <h2 class="h5">Fresh atta at your door</h2>
-              <p class="text-muted small">Stone-ground this morning, delivered fresh tomorrow. Free delivery on every subscription plan.</p>
-              <a class="btn btn-primary w-100" href="delivery-plans.html">Explore delivery plans</a>
-            </div>
-
           </aside>
         </div>
 

@@ -34,7 +34,7 @@ millstone-atta-template/
 ├── pricing.html               Monthly/annual toggle, plan cards, comparison table, add-ons, FAQ
 ├── blog.html                  Searchable + filterable blog listing, pagination
 ├── blog-details.html          Full article with sidebar, author box, comments form
-├── contact.html               Info cards, accessible form, labelled map placeholder, hours
+├── contact.html               Info cards, accessible form, live OpenStreetMap, hours
 ├── login.html · register.html Auth screens (demo)
 ├── dashboard.html             Overview: summary cards, next delivery, usage chart, orders
 ├── dashboard-schedule.html    Schedule grain grinding + deliveries
@@ -65,7 +65,7 @@ millstone-atta-template/
 | Replace photos | Update the relevant local image path in the page's `<img>` element. The `.ph` frame preserves the image crop; page-intro photos use `.page-feature-photo`. See `assets/images/credits.json` for source and licence details. |
 | Set the canonical URL / social card | Edit `docs/partials/head.html` (`https://www.example.com/millstone/…`) and add `assets/img/social-card.jpg` (1200×630). |
 | Enable RTL layout | The header/footer/dashboard controls toggle `dir="ltr"` ↔ `dir="rtl"` and swap Bootstrap's RTL stylesheet. The layout already mirrors via logical CSS; translate page copy yourself if you localise the template. |
-| Change the map | `contact.html` includes a live OpenStreetMap embed. Update the `bbox` and `marker` values in the `.map-embed` URL (or swap in your own embed) and update the directions link beside it. Dark mode tints the map automatically. |
+| Change the map | `contact.html` includes a live, no-API-key OpenStreetMap world map and an address-search link. For a precise location map, use verified coordinates to update the `.map-embed` URL's `bbox` and optional `marker`, then update the OpenStreetMap search link beside it. Dark mode tints the map automatically. |
 | Hook up forms | Every form is `<form data-demo-form>`. Remove that attribute, set `action`/`method`, and add your handler. |
 
 `python docs/sync-partials.py` (Python 3, no packages) rewrites only the regions between

@@ -43,7 +43,6 @@
 <!-- @head:end -->
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to main content</a>
 <!-- @header {"nav": "blog"} -->
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header sticky-top">
@@ -99,51 +98,49 @@
 
 <main id="main">
 
-  <!-- Hero section featuring the exact card front image -->
-  <section class="page-hero article-hero" style="background-image: linear-gradient(rgba(42, 26, 13, .75), rgba(42, 26, 13, .75)), url('assets/images/photo-017.jpg');" aria-labelledby="article-title">
+  <!-- Article header -->
+  <section class="article-header" aria-labelledby="article-title">
     <div class="container-xxl">
-      <nav aria-label="Breadcrumb" class="mb-3">
-        <a href="blog.html" class="hero-back-link text-decoration-none fw-semibold">
-          <i class="bi bi-arrow-left" aria-hidden="true"></i> Back to all articles
-        </a>
-      </nav>
-      <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-        <span class="badge-soft">Nutrition</span>
-        <span class="text-muted d-none d-sm-inline">•</span>
-        <span class="meta-item"><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>5 Oct 2026</span>
-        <span class="text-muted d-none d-sm-inline">•</span>
-        <span class="meta-item"><i class="bi bi-clock me-1" aria-hidden="true"></i>7 min read</span>
-      </div>
-      <h1 id="article-title" class="h-section mb-3">Bran, germ and endosperm: what is actually in your atta</h1>
-      <div class="meta d-flex align-items-center gap-3 mt-4 pt-3 border-top border-secondary-subtle">
-        <span class="avatar avatar-md" style="--c1:#5b7c4b;--c2:#2f4e22" aria-hidden="true">NL</span>
-        <div>
-          <div class="fw-bold">Noa Levi</div>
-          <small class="text-muted">Grain Sourcing & Nutrition Lead</small>
+      <div class="article-header-inner">
+        <nav class="article-crumbs" aria-label="Breadcrumb">
+          <a href="blog.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> All articles</a>
+          <span class="article-crumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">Nutrition</span>
+        </nav>
+        <p class="article-kicker"><span class="badge-soft">Nutrition</span><span class="article-kicker-text">From the journal</span></p>
+        <h1 id="article-title" class="article-title">Bran, germ and endosperm: what is actually in your atta</h1>
+        <p class="article-dek">When you buy supermarket flour, the ingredient list usually says 'whole wheat flour'. But under modern commercial milling standards, that term legally allows manufacturers to separate all three anatomical parts of the grain, strip out the delicate germ to prolong shelf life, and recombine only whatever proportions they choose. Here is what is truly inside a whole grain.</p>
+        <div class="article-byline">
+          <img class="avatar avatar-md" src="assets/images/photo-007.jpg" alt="" aria-hidden="true">
+          <span class="article-byline-copy">
+            <span class="article-author">Noa Levi</span>
+            <span class="article-role">Grain Sourcing & Nutrition Lead</span>
+          </span>
+          <span class="article-byline-sep" aria-hidden="true"></span>
+          <span class="article-date">5 Oct 2026</span>
+          <span class="article-byline-sep" aria-hidden="true"></span>
+          <span class="article-read">7 min read</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Article Body and Sidebar -->
-  <section class="section-sm" aria-label="Article content and blog sidebar">
+  <!-- Cover image -->
+  <div class="container-xxl">
+    <figure class="article-cover">
+      <div class="ph ph-wide rounded-4 overflow-hidden shadow-sm" role="img" aria-label="Top view of various seeds and grains displayed in ceramic bowls on a white background."><img class="ph-photo" src="assets/images/photo-017.jpg" alt="Top view of various seeds and grains displayed in ceramic bowls on a white background."></div>
+      <figcaption class="article-cover-caption">The complete wheat berry broken down into its three nutritional components: outer bran, vitamin-packed germ, and starchy endosperm.</figcaption>
+    </figure>
+  </div>
+
+  <!-- Article body and sidebar rail -->
+  <section class="section-sm article-layout" aria-label="Article content and blog sidebar">
     <div class="container-xxl">
-      <div class="row g-5">
+      <div class="row g-4 g-xl-5">
 
         <div class="col-lg-8">
-          <article class="article" aria-labelledby="article-title">
-            <p class="lead-lg">When you buy supermarket flour, the ingredient list usually says 'whole wheat flour'. But under modern commercial milling standards, that term legally allows manufacturers to separate all three anatomical parts of the grain, strip out the delicate germ to prolong shelf life, and recombine only whatever proportions they choose. Here is what is truly inside a whole grain.</p>
-
-            <!-- Prominently showcase the exact front container image as the featured photo -->
-            <figure class="featured-article-figure mb-5">
-              <div class="ph ph-wide rounded-4 overflow-hidden shadow-sm" role="img" aria-label="Top view of various seeds and grains displayed in ceramic bowls on a white background.">
-                <img class="ph-photo w-100 object-fit-cover" src="assets/images/photo-017.jpg" alt="Top view of various seeds and grains displayed in ceramic bowls on a white background." loading="eager" style="max-height: 500px;">
-              </div>
-              <figcaption class="meta mt-2 text-center text-muted">The complete wheat berry broken down into its three nutritional components: outer bran, vitamin-packed germ, and starchy endosperm.</figcaption>
-            </figure>
-
-            
-            <h2>The three distinct layers of a wheat berry</h2>
+          <article class="article article-prose" aria-labelledby="article-title">
+            <h2 id="the-three-distinct-layers-of-a-wheat-berry">The three distinct layers of a wheat berry</h2>
             <p>Every single kernel of Sharbati wheat is a self-contained biological seed, engineered by nature to protect, nourish, and sprout a new plant. It consists of three distinct parts:</p>
 
             <div class="row g-4 my-3">
@@ -169,11 +166,11 @@
 
             <blockquote>When you remove the germ to make flour last six months in a warehouse, you throw out 80% of the flavour and the heart of the nutrition.</blockquote>
 
-            <h2>Why commercial roller mills extract the germ</h2>
+            <h2 id="why-commercial-roller-mills-extract-the-germ">Why commercial roller mills extract the germ</h2>
             <p>Wheat germ oil is rich in polyunsaturated fats. The moment the germ is crushed, enzymes called lipases begin breaking down these fats, creating natural oxidation. In fresh stone-ground flour, this provides a delightful sweet hazelnut aroma for the first 3 to 4 weeks.</p>
             <p>However, industrial supply chains demand a 12-month shelf life. In roller mills, high-velocity fluted steel cylinders shatter the kernel, air sifters extract the oily germ, and white starch is separated. Even when packaged as 'whole wheat', the germ oil is usually either missing or heat-stabilized, losing its live enzyme activity.</p>
 
-            <h2>Nutritional comparison per 100g</h2>
+            <h2 id="nutritional-comparison-per-100g">Nutritional comparison per 100g</h2>
             <div class="table-responsive my-4">
               <table class="table compare-table">
                 <thead><tr><th scope="col">Nutrient</th><th scope="col">Millstone 100% Chakki Atta</th><th scope="col">Commercial Whole Wheat</th><th scope="col">Refined White Flour (Maida)</th></tr></thead>
@@ -186,23 +183,20 @@
               </table>
             </div>
 
-            <h2>How whole germ changes your cooking</h2>
+            <h2 id="how-whole-germ-changes-your-cooking">How whole germ changes your cooking</h2>
             <p>Because our stone mills rub the germ evenly across every starch particle, the dough absorbs water more gradually and forms an exceptionally pliable network. The rotis you roll will not turn leathery as they cool in your tiffin box.</p>
-        
           </article>
 
-          <!-- Share section -->
-          <div class="d-flex flex-wrap align-items-center gap-2 mt-5 pt-3 border-top">
-            <strong class="me-2">Share this story:</strong>
-            <button type="button" class="icon-btn" aria-label="Share on Facebook" data-demo-toast="Demo only: sharing is not connected."><i class="bi bi-facebook" aria-hidden="true"></i></button>
-            <button type="button" class="icon-btn" aria-label="Share on WhatsApp" data-demo-toast="Demo only: sharing is not connected."><i class="bi bi-whatsapp" aria-hidden="true"></i></button>
-            <button type="button" class="icon-btn" aria-label="Copy link to this story" data-demo-toast="Demo only: link not copied."><i class="bi bi-link-45deg" aria-hidden="true"></i></button>
-          </div>
+          <footer class="article-end">
+            <div class="article-tags">
+              <span class="article-end-label">Tagged</span>
+              <div class="article-tag-list"><a class="tag" href="blog.html">Sharbati</a><a class="tag" href="blog.html">Chakki</a><a class="tag" href="blog.html">Whole grain</a><a class="tag" href="blog.html">Millets</a><a class="tag" href="blog.html">Rotis</a><a class="tag" href="blog.html">Stone cold</a></div>
+            </div>
+          </footer>
 
-          <!-- Author Bio -->
-          <aside class="mm-card p-4 mt-4" aria-labelledby="author-title">
+          <aside class="author-bio" aria-labelledby="author-title">
             <div class="d-flex gap-3 align-items-start">
-              <span class="avatar avatar-lg flex-shrink-0" style="--c1:#5b7c4b;--c2:#2f4e22" aria-hidden="true">NL</span>
+              <img class="avatar avatar-lg flex-shrink-0" src="assets/images/photo-007.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async">
               <div>
                 <h2 id="author-title" class="h5 mb-1">About Noa Levi</h2>
                 <p class="text-muted mb-0">Noa holds a master's degree in food agronomy and heads grain sourcing at Millstone. She tests every incoming farm harvest for moisture, protein and mineral density.</p>
@@ -210,39 +204,33 @@
             </div>
           </aside>
 
-          <!-- Next & Previous Navigation Links -->
-          <nav class="row g-3 mt-4" aria-label="Previous and next posts">
-            <div class="col-sm-6">
-              <a class="mm-card mm-card-hover p-3 d-block text-decoration-none h-100" href="blog-details.html">
-                <span class="meta d-block mb-1"><i class="bi bi-arrow-left" aria-hidden="true"></i> Previous Article</span>
-                <strong class="text-body">Why we still dress our millstones by hand</strong>
-              </a>
-            </div>
-            <div class="col-sm-6">
-              <a class="mm-card mm-card-hover p-3 d-block text-decoration-none h-100" href="blog-details-3.html">
-                <span class="meta d-block mb-1">Next Article <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-                <strong class="text-body">Soft phulka rotis: the 70% hydration method</strong>
-              </a>
-            </div>
+          <nav class="article-pager" aria-label="Previous and next posts">
+            <a class="article-pager-card" href="blog-details.html">
+              <span class="article-pager-label"><i class="bi bi-arrow-left" aria-hidden="true"></i> Previous</span>
+              <strong>Why we still dress our millstones by hand</strong>
+            </a>
+            <a class="article-pager-card article-pager-next" href="blog-details-3.html">
+              <span class="article-pager-label">Next <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+              <strong>Soft phulka rotis: the 70% hydration method</strong>
+            </a>
           </nav>
         </div>
 
-        <!-- Sidebar -->
         <div class="col-lg-4">
-          <aside aria-label="Blog sidebar" class="d-grid gap-4">
-
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Search the blog</h2>
-              <form role="search" data-demo-form data-demo-message="Search filters available on the main blog page." aria-label="Search posts">
-                <label for="side-search" class="visually-hidden">Search posts</label>
-                <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" id="side-search" class="form-control" placeholder="Search posts" required autocomplete="off"></div>
-              </form>
-              <p class="demo-note mt-2 mb-0">Front-end demo — search is active on the <a href="blog.html">main blog</a>.</p>
+          <aside class="article-rail" aria-label="Article sidebar">
+            <div class="rail-card">
+              <h2 class="rail-title">On this page</h2>
+              <ol class="toc-list">
+                <li><a href="#the-three-distinct-layers-of-a-wheat-berry">The three distinct layers of a wheat berry</a></li>
+                <li><a href="#why-commercial-roller-mills-extract-the-germ">Why commercial roller mills extract the germ</a></li>
+                <li><a href="#nutritional-comparison-per-100g">Nutritional comparison per 100g</a></li>
+                <li><a href="#how-whole-germ-changes-your-cooking">How whole germ changes your cooking</a></li>
+              </ol>
             </div>
 
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Categories</h2>
-              <ul class="list-clean">
+            <div class="rail-card">
+              <h2 class="rail-title">Browse by topic</h2>
+              <ul class="list-clean rail-topics">
                 <li class="d-flex justify-content-between py-1"><a href="blog.html">Milling</a><span class="text-muted">2</span></li>
                 <li class="d-flex justify-content-between py-1"><a href="blog.html">Nutrition</a><span class="text-muted">2</span></li>
                 <li class="d-flex justify-content-between py-1"><a href="blog.html">Recipes</a><span class="text-muted">2</span></li>
@@ -251,9 +239,16 @@
               </ul>
             </div>
 
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Recent stories</h2>
-              <ul class="list-clean d-grid gap-3">
+            <div class="rail-card rail-cta text-center">
+              <span class="icon-tile mb-3"><i class="bi bi-truck" aria-hidden="true"></i></span>
+              <h2 class="h5">Fresh atta at your door</h2>
+              <p class="text-muted small">Stone-ground this morning, delivered fresh tomorrow. Free delivery on every subscription plan.</p>
+              <a class="btn btn-primary w-100" href="delivery-plans.html">Explore delivery plans</a>
+            </div>
+
+            <div class="rail-card">
+              <h2 class="rail-title">Recent stories</h2>
+              <ul class="list-clean rail-posts d-grid gap-3">
                 <li class="d-flex gap-3 align-items-center">
                   <a href="blog-details-3.html" class="flex-shrink-0" aria-label="Read Soft phulka rotis">
                     <img src="assets/images/photo-067.jpg" alt="Phulka rotis on tawa" class="rounded object-fit-cover" width="60" height="60" loading="lazy">
@@ -283,21 +278,6 @@
                 </li>
               </ul>
             </div>
-
-            <div class="mm-card p-4">
-              <h2 class="h5 mb-3">Tags</h2>
-              <div class="d-flex flex-wrap gap-2">
-                <a class="tag" href="blog.html">Sharbati</a><a class="tag" href="blog.html">Chakki</a><a class="tag" href="blog.html">Whole grain</a><a class="tag" href="blog.html">Millets</a><a class="tag" href="blog.html">Rotis</a><a class="tag" href="blog.html">Stone cold</a>
-              </div>
-            </div>
-
-            <div class="mm-card p-4 text-center">
-              <span class="icon-tile mb-3"><i class="bi bi-truck" aria-hidden="true"></i></span>
-              <h2 class="h5">Fresh atta at your door</h2>
-              <p class="text-muted small">Stone-ground this morning, delivered fresh tomorrow. Free delivery on every subscription plan.</p>
-              <a class="btn btn-primary w-100" href="delivery-plans.html">Explore delivery plans</a>
-            </div>
-
           </aside>
         </div>
 
