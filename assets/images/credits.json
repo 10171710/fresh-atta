@@ -558,5 +558,45 @@
     "creator": "See Unsplash source",
     "license": "Unsplash License",
     "licenseUrl": "https://unsplash.com/license"
+  },
+  {
+    "file": "team-harold.jpg",
+    "title": "Portrait of a serious male chef with a beard in uniform.",
+    "source": "https://www.pexels.com/photo/8477058/",
+    "creator": "See Pexels source page",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "team-meera.jpg",
+    "title": "Portrait of a female chef standing confidently in a professional kitchen.",
+    "source": "https://www.pexels.com/photo/16816198/",
+    "creator": "See Pexels source page",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "team-daniel.jpg",
+    "title": "Portrait of a confident male chef in a classic black uniform.",
+    "source": "https://www.pexels.com/photo/32224390/",
+    "creator": "See Pexels source page",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "team-layla.jpg",
+    "title": "Portrait of a female chef in a kitchen wearing an apron and hat.",
+    "source": "https://www.pexels.com/photo/16849843/",
+    "creator": "See Pexels source page",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "team-noa.jpg",
+    "title": "Portrait of a smiling female chef wearing a brown apron and headband with crossed arms.",
+    "source": "https://www.pexels.com/photo/5737830/",
+    "creator": "See Pexels source page",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/"
   }
 ]

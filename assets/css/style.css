@@ -1346,6 +1346,10 @@ html[dir="rtl"] .link-arrow:hover i {
   --ph-ratio: 16 / 9;
 }
 
+.history-photo {
+  max-width: 28rem;
+}
+
 .ph-square {
   --ph-ratio: 1 / 1;
 }
@@ -1484,7 +1488,7 @@ html[dir="rtl"] .link-arrow:hover i {
 .hero.home-two-hero {
   background:
     linear-gradient(90deg, rgba(42, 26, 13, .92) 0%, rgba(42, 26, 13, .72) 58%, rgba(42, 26, 13, .22) 100%),
-    url("../images/photo-002.jpg") center / cover no-repeat;
+    url("../images/photo-055.jpg") center / cover no-repeat;
 }
 
 .hero h1,
@@ -3597,9 +3601,48 @@ html[dir="rtl"] .bi-chevron-left {
   transform: scaleX(-1);
 }
 
+/* RTL: decorative light sources and gradients mirror with the layout so the
+   highlight stays on the leading edge of the block. */
+html[dir="rtl"] .cta-band {
+  background:
+    radial-gradient(30rem 16rem at 10% 0%, rgba(232, 177, 58, .4), transparent 70%),
+    linear-gradient(225deg, #5a3414, #2a1a0d);
+}
+
+html[dir="rtl"] .page-hero::before,
+html[dir="rtl"] .hero::before {
+  background: radial-gradient(ellipse at 25% 100%, rgba(232, 169, 58, .12), transparent 40%);
+}
+
+html[dir="rtl"] .utility-hero::before,
+html[dir="rtl"] .auth-aside::after {
+  background: radial-gradient(ellipse at 25% 100%, rgba(232, 169, 58, .12), transparent 55%);
+}
+
 html[dir="rtl"] .accordion-button::after {
   margin-inline-start: auto;
   margin-inline-end: 0;
+}
+
+/* RTL: start-aligned copy belongs against the right edge. plaintext gives
+   each English paragraph its natural LTR reading order (punctuation stays on
+   the right), while this inherited alignment places that line against the
+   layout's start edge. Centred blocks keep their own text-align and are not
+   affected. */
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+/* Components that set their own start alignment need the same RTL edge. */
+html[dir="rtl"] .compare-table th:first-child,
+html[dir="rtl"] .compare-table td:first-child,
+html[dir="rtl"] .article-byline-copy {
+  text-align: right;
+}
+
+html[dir="rtl"] :is(.app-content h1.text-start, .app-welcome-banner h1),
+html[dir="rtl"] :is(.app-content p.text-start, .app-welcome-banner p) {
+  text-align: right !important;
 }
 
 /* RTL: English sentences keep their normal reading order, so closing
@@ -3607,9 +3650,9 @@ html[dir="rtl"] .accordion-button::after {
    jumping to the left. Elements holding an inline icon are skipped because
    plaintext would flip the icon to the other side of the text. */
 html[dir="rtl"] :is(h1, h2, h3, h4, h5, h6, p, li, dt, dd, label, legend,
-  figcaption, blockquote, caption, td, th, .accordion-button, .modal-title,
-  .chat-bubble, .toast-body, .btn,
-  .form-check-label):not(:has(i, svg, img)) {
+  figcaption, blockquote, caption, td, th, .accordion-button, .accordion-body,
+  .modal-title, .chat-bubble, .toast-body, .btn, .form-check-label, address,
+  .footer-bottom span):not(:has(i, svg, img)) {
   unicode-bidi: plaintext;
 }
 

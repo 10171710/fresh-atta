@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-<!-- @head {"title": "Support & Help Centre | Millstone & Co.", "description": "Contact Millstone & Co. customer care, track open tickets, send a new support request and browse delivery, grind and billing answers. Front-end demo with sample data.", "file": "dashboard-support.html", "robots": "noindex"} -->
+<!-- @head {"title": "Support & Help Centre | Millstone & Co.", "description": "Contact Millstone & Co. customer care, track open tickets, send a new support request and browse delivery, grind and billing answers. Preview account with illustrative information.", "file": "dashboard-support.html", "robots": "noindex"} -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Support &amp; Help Centre | Millstone &amp; Co.</title>
-<meta name="description" content="Contact Millstone &amp; Co. customer care, track open tickets, send a new support request and browse delivery, grind and billing answers. Front-end demo with sample data.">
+<meta name="description" content="Contact Millstone &amp; Co. customer care, track open tickets, send a new support request and browse delivery, grind and billing answers. Preview account with illustrative information.">
 <meta name="theme-color" content="#9a5b0e">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%239a5b0e'/%3E%3Cpath d='M32 50V20' stroke='%23fff7e8' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='25' cy='28' rx='5' ry='9' transform='rotate(-25 25 28)' fill='%23fff7e8'/%3E%3Cellipse cx='39' cy='28' rx='5' ry='9' transform='rotate(25 39 28)' fill='%23fff7e8'/%3E%3Cellipse cx='32' cy='17' rx='4.5' ry='8' fill='%23fff7e8'/%3E%3C/svg%3E">
@@ -29,7 +29,7 @@
 })();
 </script>
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></noscript>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 <!-- @head:end -->
 </head>
 <body>
@@ -64,7 +64,7 @@
         <li><a href="login.html" class="text-danger"><i class="bi bi-box-arrow-left" aria-hidden="true"></i><span>Log out</span></a></li>
       </ul>
     </nav>
-    <div class="demo-banner mt-auto"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo: sample customer account.</span></div>
+    <div class="demo-banner mt-auto"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Preview account - example information; changes are not saved.</span></div>
   </div>
 </aside>
 <!-- @appnav:end -->
@@ -137,7 +137,7 @@
 </div>
 <!-- @apptop:end -->
     <main id="main" class="app-content">
-      <div class="demo-banner mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — sample data, nothing is saved or sent</span></div>
+      <div class="demo-banner mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Preview account: information shown is illustrative; changes are not saved or sent.</span></div>
 
       <div class="mb-4">
         <h1 class="display-font mb-1">Support</h1>
@@ -152,7 +152,7 @@
               <span class="icon-tile green mb-3" aria-hidden="true"><i class="bi bi-chat-dots"></i></span>
               <h3 class="h6">Live chat</h3>
               <p class="small text-muted">Average reply in under 5 minutes during opening hours.</p>
-              <button type="button" class="btn btn-primary btn-sm" data-demo-toast="Demo only: live chat is not connected."><i class="bi bi-chat-text" aria-hidden="true"></i> Start a chat</button>
+              <button type="button" class="btn btn-primary btn-sm" data-demo-toast="Live chat is not available right now. Please email our support team."><i class="bi bi-chat-text" aria-hidden="true"></i> Start a chat</button>
             </div>
           </div>
           <div class="col-md-4">
@@ -207,7 +207,7 @@
         <div class="col-lg-7">
           <section class="mm-card" aria-labelledby="new-h">
             <h2 class="h5 mb-3" id="new-h">New support request</h2>
-            <form data-demo-form data-demo-message="Demo only: your request was not sent." novalidate>
+            <form data-demo-form data-demo-message="Your request could not be sent. Please email our support team instead." novalidate>
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label" for="sr-topic">Topic</label>
@@ -257,11 +257,11 @@
                 <div class="col-12">
                   <label class="form-label" for="sr-file">Attach a photo (optional)</label>
                   <input type="file" class="form-control" id="sr-file" accept="image/*" aria-describedby="sr-file-help">
-                  <div class="form-text" id="sr-file-help">Demo only: files are not uploaded. In a live service we would accept JPG or PNG up to 5 MB.</div>
+                  <div class="form-text" id="sr-file-help">File uploads are not available yet. JPG or PNG files up to 5 MB will be supported.</div>
                 </div>
               </div>
               <button type="submit" class="btn btn-primary mt-4">Send request</button>
-              <p class="demo-note mt-3 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — nothing is sent or saved.</span></p>
+              <p class="demo-note mt-3 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>This preview does not send forms or save changes.</span></p>
             </form>
           </section>
         </div>
@@ -288,12 +288,12 @@
             <small>Wed 4 Nov 2026, 10:10 am</small>
           </div>
         </div>
-        <form data-demo-form data-demo-message="Demo only: your reply was not sent." novalidate>
+        <form data-demo-form data-demo-message="Your reply could not be sent. Please email our support team instead." novalidate>
           <label class="form-label" for="chat-reply">Your reply</label>
           <textarea class="form-control" id="chat-reply" rows="3" placeholder="Write a reply to Layla" required></textarea>
           <div class="invalid-feedback">Please write a reply first.</div>
           <button type="submit" class="btn btn-primary mt-3"><i class="bi bi-send" aria-hidden="true"></i> Send reply</button>
-          <p class="demo-note mt-3 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — nothing is sent or saved.</span></p>
+          <p class="demo-note mt-3 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>This preview does not send forms or save changes.</span></p>
         </form>
       </section>
 

@@ -31,6 +31,7 @@
                                   [data-estimate-out] receives the demo total
    [data-countdown="ISO date"]    children [data-cd="days|hours|mins|secs"]
    [data-password-toggle]         button with aria-controls="inputId": show/hide password
+   [data-add-to-basket]            product button: adds the card to the browser's saved basket
    [data-demo-toast="message"]    any button/link: shows a toast instead of navigating
    form[data-demo-form]           validated with Bootstrap classes; on success shows a toast
                                   (data-demo-message) and optionally data-redirect="page.html"
@@ -69,6 +70,115 @@
     t.lastChild.textContent = message;
     toastZone.appendChild(t);
     setTimeout(function () { t.remove(); }, 4200);
+  }
+
+  /* ---- Product basket ---------------------------------------------------- */
+  var basket = $('[data-basket]');
+  if (basket) {
+    var basketKey = 'mm-basket';
+    var basketItems = [];
+    var basketList = $('[data-basket-items]', basket);
+    var basketEmpty = $('[data-basket-empty]', basket);
+    var basketCount = $('[data-basket-count]', basket);
+    var basketTotal = $('[data-basket-total]', basket);
+    var clearBasket = $('[data-basket-clear]', basket);
+
+    try {
+      var savedBasket = localStorage.getItem(basketKey);
+      if (savedBasket) {
+        var parsedBasket = JSON.parse(savedBasket);
+        if (Array.isArray(parsedBasket) && parsedBasket.every(function (item) {
+          return item && typeof item.name === 'string' && item.name.length <= 120 &&
+            typeof item.price === 'number' && isFinite(item.price) && item.price >= 0 &&
+            typeof item.quantity === 'number' && isFinite(item.quantity) &&
+            Math.floor(item.quantity) === item.quantity && item.quantity > 0;
+        })) {
+          basketItems = parsedBasket;
+        } else {
+          toast('Your saved basket could not be read. Start a new basket below.');
+        }
+      }
+    } catch (e) {
+      toast('Your saved basket could not be read. Start a new basket below.');
+    }
+
+    function saveBasket() {
+      try {
+        localStorage.setItem(basketKey, JSON.stringify(basketItems));
+        return true;
+      } catch (e) {
+        toast('Basket changes could not be saved in this browser.');
+        return false;
+      }
+    }
+
+    function renderBasket() {
+      basketList.textContent = '';
+      var quantity = 0;
+      var subtotal = 0;
+      basketItems.forEach(function (item, index) {
+        quantity += item.quantity;
+        subtotal += item.price * item.quantity;
+
+        var row = document.createElement('li');
+        row.className = 'd-flex justify-content-between align-items-center gap-3 py-1';
+        var description = document.createElement('span');
+        description.textContent = item.name + ' × ' + item.quantity + ' — $' + (item.price * item.quantity).toFixed(2);
+        var remove = document.createElement('button');
+        remove.type = 'button';
+        remove.className = 'btn btn-ghost btn-sm';
+        remove.setAttribute('data-basket-remove', String(index));
+        remove.setAttribute('aria-label', 'Remove ' + item.name + ' from basket');
+        remove.textContent = 'Remove';
+        row.appendChild(description);
+        row.appendChild(remove);
+        basketList.appendChild(row);
+      });
+
+      basket.hidden = basketItems.length === 0;
+      basketEmpty.hidden = basketItems.length !== 0;
+      basketCount.textContent = '(' + quantity + (quantity === 1 ? ' item' : ' items') + ')';
+      basketTotal.textContent = '$' + subtotal.toFixed(2);
+      clearBasket.hidden = basketItems.length === 0;
+    }
+
+    $$('[data-add-to-basket]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var card = button.closest('.product-card');
+        var nameElement = card && $('h3', card);
+        var priceElement = card && $('.price', card);
+        var match = priceElement && priceElement.textContent.match(/\$([\d]+(?:\.\d{1,2})?)/);
+        if (!nameElement || !match) {
+          toast('This product could not be added. Please try again.');
+          return;
+        }
+
+        var name = nameElement.textContent.trim();
+        var price = Number(match[1]);
+        var item = basketItems.filter(function (entry) { return entry.name === name; })[0];
+        if (item) item.quantity += 1;
+        else basketItems.push({ name: name, price: price, quantity: 1 });
+
+        renderBasket();
+        if (saveBasket()) toast(name + ' added to your basket.');
+      });
+    });
+
+    basketList.addEventListener('click', function (e) {
+      var remove = e.target.closest ? e.target.closest('[data-basket-remove]') : null;
+      if (!remove) return;
+      basketItems.splice(Number(remove.getAttribute('data-basket-remove')), 1);
+      renderBasket();
+      saveBasket();
+    });
+
+    clearBasket.addEventListener('click', function () {
+      basketItems = [];
+      renderBasket();
+      saveBasket();
+    });
+
+    renderBasket();
   }
 
   /* ---- Theme -------------------------------------------------------------- */
@@ -272,7 +382,7 @@
         return;
       }
       form.classList.remove('was-validated');
-      toast(form.getAttribute('data-demo-message') || 'Demo only — nothing was sent.');
+      toast(form.getAttribute('data-demo-message') || 'This action is not available yet; nothing was sent or saved.');
       var modalEl = form.closest('.modal');
       if (modalEl && window.bootstrap) { var inst = bootstrap.Modal.getInstance(modalEl); if (inst) inst.hide(); }
       var go = form.getAttribute('data-redirect');
@@ -298,7 +408,7 @@
       var namePart = emailVal.split('@')[0];
       var displayName = emailVal.toLowerCase().indexOf('anita') > -1 ? 'Anita Sharma' : (namePart.charAt(0).toUpperCase() + namePart.slice(1));
 
-      toast('Login successful! Welcome back, ' + displayName + '.');
+      toast('Welcome back, ' + displayName + '. Your customer portal preview is ready.');
 
       var cardBody = document.getElementById('auth-card-body');
       if (cardBody) {

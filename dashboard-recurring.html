@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-<!-- @head {"title": "Recurring Orders | Millstone & Co.", "description": "Pause, resume, skip or edit your recurring Millstone & Co. atta and flour deliveries and review your Family plan details (front-end demo).", "file": "dashboard-recurring.html", "robots": "noindex"} -->
+<!-- @head {"title": "Recurring Orders | Millstone & Co.", "description": "Pause, resume, skip or edit your recurring Millstone & Co. atta and flour deliveries and review your Family plan details (preview account).", "file": "dashboard-recurring.html", "robots": "noindex"} -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Recurring Orders | Millstone &amp; Co.</title>
-<meta name="description" content="Pause, resume, skip or edit your recurring Millstone &amp; Co. atta and flour deliveries and review your Family plan details (front-end demo).">
+<meta name="description" content="Pause, resume, skip or edit your recurring Millstone &amp; Co. atta and flour deliveries and review your Family plan details (preview account).">
 <meta name="theme-color" content="#9a5b0e">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%239a5b0e'/%3E%3Cpath d='M32 50V20' stroke='%23fff7e8' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='25' cy='28' rx='5' ry='9' transform='rotate(-25 25 28)' fill='%23fff7e8'/%3E%3Cellipse cx='39' cy='28' rx='5' ry='9' transform='rotate(25 39 28)' fill='%23fff7e8'/%3E%3Cellipse cx='32' cy='17' rx='4.5' ry='8' fill='%23fff7e8'/%3E%3C/svg%3E">
@@ -29,7 +29,7 @@
 })();
 </script>
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></noscript>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 <!-- @head:end -->
 </head>
 <body>
@@ -64,7 +64,7 @@
         <li><a href="login.html" class="text-danger"><i class="bi bi-box-arrow-left" aria-hidden="true"></i><span>Log out</span></a></li>
       </ul>
     </nav>
-    <div class="demo-banner mt-auto"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo: sample customer account.</span></div>
+    <div class="demo-banner mt-auto"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Preview account - example information; changes are not saved.</span></div>
   </div>
 </aside>
 <!-- @appnav:end -->
@@ -137,7 +137,7 @@
 </div>
 <!-- @apptop:end -->
     <main id="main" class="app-content">
-      <div class="demo-banner mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — sample data, nothing is saved or sent.</span></div>
+      <div class="demo-banner mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Preview account: information shown is illustrative; changes are not saved or sent.</span></div>
       <h1 class="mb-1">Recurring orders</h1>
       <p class="text-muted mb-4">Pause, skip or edit your standing deliveries. Changes are accepted up to 6 pm the evening before.</p>
 
@@ -166,8 +166,8 @@
                 <li><i class="bi bi-tag" aria-hidden="true"></i><span>$12.50 per delivery</span></li>
               </ul>
               <div class="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only — Sharbati weekly order was not actually paused."><i class="bi bi-pause-circle" aria-hidden="true"></i> Pause</button>
-                <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only — Thu 5 Nov delivery was not actually skipped."><i class="bi bi-skip-forward" aria-hidden="true"></i> Skip next</button>
+                <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Pausing this order is not available yet; your schedule is unchanged."><i class="bi bi-pause-circle" aria-hidden="true"></i> Pause</button>
+                <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Skipping this delivery is not available yet; your schedule is unchanged."><i class="bi bi-skip-forward" aria-hidden="true"></i> Skip next</button>
                 <button type="button" class="btn btn-ghost btn-sm" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil" aria-hidden="true"></i> Edit</button>
                 <button type="button" class="btn btn-ghost btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash" aria-hidden="true"></i> Delete</button>
               </div>
@@ -185,8 +185,8 @@
                 <li><i class="bi bi-tag" aria-hidden="true"></i><span>$15.90 per delivery</span></li>
               </ul>
               <div class="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only — 7-Grain order was not actually paused."><i class="bi bi-pause-circle" aria-hidden="true"></i> Pause</button>
-                <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only — Thu 5 Nov delivery was not actually skipped."><i class="bi bi-skip-forward" aria-hidden="true"></i> Skip next</button>
+                <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Pausing this order is not available yet; your schedule is unchanged."><i class="bi bi-pause-circle" aria-hidden="true"></i> Pause</button>
+                <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Skipping this delivery is not available yet; your schedule is unchanged."><i class="bi bi-skip-forward" aria-hidden="true"></i> Skip next</button>
                 <button type="button" class="btn btn-ghost btn-sm" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil" aria-hidden="true"></i> Edit</button>
                 <button type="button" class="btn btn-ghost btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash" aria-hidden="true"></i> Delete</button>
               </div>
@@ -204,8 +204,8 @@
                 <li><i class="bi bi-tag" aria-hidden="true"></i><span>$5.90 per delivery</span></li>
               </ul>
               <div class="d-flex flex-wrap gap-2">
-                <button type="button" class="btn btn-primary btn-sm" data-demo-toast="Demo only — Ragi order was not actually resumed."><i class="bi bi-play-circle" aria-hidden="true"></i> Resume</button>
-                <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only — nothing was skipped." disabled><i class="bi bi-skip-forward" aria-hidden="true"></i> Skip next</button>
+                <button type="button" class="btn btn-primary btn-sm" data-demo-toast="Resuming this order is not available yet; your schedule is unchanged."><i class="bi bi-play-circle" aria-hidden="true"></i> Resume</button>
+                <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Skipping a delivery is not available yet; your schedule is unchanged." disabled><i class="bi bi-skip-forward" aria-hidden="true"></i> Skip next</button>
                 <button type="button" class="btn btn-ghost btn-sm" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil" aria-hidden="true"></i> Edit</button>
                 <button type="button" class="btn btn-ghost btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash" aria-hidden="true"></i> Delete</button>
               </div>
@@ -246,7 +246,7 @@
         </div>
       </div>
 
-      <p class="demo-note mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — nothing is sent or saved. Pausing, skipping, editing and deleting only show a message.</span></p>
+      <p class="demo-note mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>This preview does not send forms or save changes. Pausing, skipping, editing and deleting only show a message.</span></p>
     </main>
   </div>
 </div>
@@ -258,7 +258,7 @@
         <h2 class="modal-title h5" id="editModalLabel">Edit recurring order</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close edit dialog"></button>
       </div>
-      <form data-demo-form data-demo-message="Demo only — your recurring order was not actually changed.">
+      <form data-demo-form data-demo-message="Order updates are not available yet; your schedule is unchanged.">
         <div class="modal-body">
           <div class="row g-3">
             <div class="col-12">
@@ -304,7 +304,7 @@
               </select>
               <div class="invalid-feedback">Please choose a window.</div>
             </div>
-            <div class="col-12"><p class="demo-note mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — nothing is sent or saved.</span></p></div>
+            <div class="col-12"><p class="demo-note mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>This preview does not send forms or save changes.</span></p></div>
           </div>
         </div>
         <div class="modal-footer">
@@ -325,11 +325,11 @@
       </div>
       <div class="modal-body">
         <p class="mb-2">In the real portal this would stop all future deliveries of this order. You can pause instead if you plan to come back.</p>
-        <p class="demo-note mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — nothing is deleted.</span></p>
+        <p class="demo-note mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Deletion is not available here; no information was removed.</span></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Keep order</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-demo-toast="Demo only — nothing was deleted."><i class="bi bi-trash" aria-hidden="true"></i> Delete order</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-demo-toast="This action is not available yet; no changes were made."><i class="bi bi-trash" aria-hidden="true"></i> Delete order</button>
       </div>
     </div>
   </div>

@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-<!-- @head {"title": "Schedule Grinding & Delivery | Millstone & Co.", "description": "Book a custom grain grinding slot or schedule a fresh atta delivery from the Millstone & Co. customer dashboard (front-end demo, nothing is saved).", "file": "dashboard-schedule.html", "robots": "noindex"} -->
+<!-- @head {"title": "Schedule Grinding & Delivery | Millstone & Co.", "description": "Book a custom grain grinding slot or schedule a fresh atta delivery from the Millstone & Co. customer dashboard (preview account; changes are not saved).", "file": "dashboard-schedule.html", "robots": "noindex"} -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Schedule Grinding &amp; Delivery | Millstone &amp; Co.</title>
-<meta name="description" content="Book a custom grain grinding slot or schedule a fresh atta delivery from the Millstone &amp; Co. customer dashboard (front-end demo, nothing is saved).">
+<meta name="description" content="Book a custom grain grinding slot or schedule a fresh atta delivery from the Millstone &amp; Co. customer dashboard (preview account; changes are not saved).">
 <meta name="theme-color" content="#9a5b0e">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%239a5b0e'/%3E%3Cpath d='M32 50V20' stroke='%23fff7e8' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='25' cy='28' rx='5' ry='9' transform='rotate(-25 25 28)' fill='%23fff7e8'/%3E%3Cellipse cx='39' cy='28' rx='5' ry='9' transform='rotate(25 39 28)' fill='%23fff7e8'/%3E%3Cellipse cx='32' cy='17' rx='4.5' ry='8' fill='%23fff7e8'/%3E%3C/svg%3E">
@@ -29,7 +29,7 @@
 })();
 </script>
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></noscript>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 <!-- @head:end -->
 </head>
 <body>
@@ -64,7 +64,7 @@
         <li><a href="login.html" class="text-danger"><i class="bi bi-box-arrow-left" aria-hidden="true"></i><span>Log out</span></a></li>
       </ul>
     </nav>
-    <div class="demo-banner mt-auto"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo: sample customer account.</span></div>
+    <div class="demo-banner mt-auto"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Preview account - example information; changes are not saved.</span></div>
   </div>
 </aside>
 <!-- @appnav:end -->
@@ -137,7 +137,7 @@
 </div>
 <!-- @apptop:end -->
     <main id="main" class="app-content">
-      <div class="demo-banner mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — sample data, nothing is saved or sent.</span></div>
+      <div class="demo-banner mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Preview account: information shown is illustrative; changes are not saved or sent.</span></div>
       <h1 class="mb-1">Schedule grinding &amp; delivery</h1>
       <p class="text-muted mb-4">Book a mill slot for your own grain, or add an extra fresh-atta delivery on Tuesday, Thursday or Saturday.</p>
 
@@ -153,7 +153,7 @@
               <div class="tab-pane fade show active" id="pane-grind" role="tabpanel" aria-labelledby="tab-grind" tabindex="0">
                 <h3 class="h5">Schedule grain grinding</h3>
                 <p class="text-muted small">Bring your own grain and we stone-grind it. $0.45 per kg, minimum 5 kg.</p>
-                <form data-demo-form data-demo-message="Demo only — your grinding slot was not actually booked.">
+                <form data-demo-form data-demo-message="Grinding bookings are not available yet; no slot was booked.">
                   <div class="row g-3" data-estimate>
                     <div class="col-md-6">
                       <label for="g-grain" class="form-label">Grain type <span class="text-danger" aria-hidden="true">*</span></label>
@@ -211,7 +211,7 @@
                     </div>
                     <div class="col-12 d-flex flex-wrap gap-3 align-items-center">
                       <button type="submit" class="btn btn-primary"><i class="bi bi-calendar-check" aria-hidden="true"></i> Book grinding slot</button>
-                      <p class="demo-note mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — nothing is sent or saved.</span></p>
+                      <p class="demo-note mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>This preview does not send forms or save changes.</span></p>
                     </div>
                   </div>
                 </form>
@@ -220,7 +220,7 @@
               <div class="tab-pane fade" id="pane-delivery" role="tabpanel" aria-labelledby="tab-delivery" tabindex="0">
                 <h3 class="h5">Schedule a delivery</h3>
                 <p class="text-muted small">Free delivery on every plan. Change or cancel up to 6 pm the evening before.</p>
-                <form data-demo-form data-demo-message="Demo only — your delivery was not actually scheduled.">
+                <form data-demo-form data-demo-message="Delivery scheduling is not available yet; no delivery was scheduled.">
                   <div class="row g-3">
                     <div class="col-12">
                       <fieldset>
@@ -273,7 +273,7 @@
                     </div>
                     <div class="col-12 d-flex flex-wrap gap-3 align-items-center">
                       <button type="submit" class="btn btn-primary"><i class="bi bi-truck" aria-hidden="true"></i> Schedule delivery</button>
-                      <p class="demo-note mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — nothing is sent or saved.</span></p>
+                      <p class="demo-note mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>This preview does not send forms or save changes.</span></p>
                     </div>
                   </div>
                 </form>
@@ -287,9 +287,9 @@
             <section class="mm-card" aria-labelledby="up-h">
               <h2 id="up-h" class="h5">Upcoming bookings</h2>
               <ul class="list-clean">
-                <li><span class="date-chip"><b>5</b><small>Thu</small></span><div class="flex-grow-1"><strong>Delivery</strong><div class="small text-muted">Morning 7–10 am</div><span class="status status-ok mt-1">Confirmed</span></div><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only — nothing was cancelled." aria-label="Cancel delivery on Thu 5 Nov">Cancel</button></li>
-                <li><span class="date-chip"><b>10</b><small>Tue</small></span><div class="flex-grow-1"><strong>Grinding: 10 kg wheat</strong><div class="small text-muted">Drop off at mill</div><span class="status status-warn mt-1">Pending</span></div><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only — nothing was cancelled." aria-label="Cancel grinding on Tue 10 Nov">Cancel</button></li>
-                <li><span class="date-chip"><b>12</b><small>Thu</small></span><div class="flex-grow-1"><strong>Delivery</strong><div class="small text-muted">Morning 7–10 am</div><span class="status status-ok mt-1">Confirmed</span></div><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only — nothing was cancelled." aria-label="Cancel delivery on Thu 12 Nov">Cancel</button></li>
+                <li><span class="date-chip"><b>5</b><small>Thu</small></span><div class="flex-grow-1"><strong>Delivery</strong><div class="small text-muted">Morning 7–10 am</div><span class="status status-ok mt-1">Confirmed</span></div><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="This action is not available yet; no changes were made." aria-label="Cancel delivery on Thu 5 Nov">Cancel</button></li>
+                <li><span class="date-chip"><b>10</b><small>Tue</small></span><div class="flex-grow-1"><strong>Grinding: 10 kg wheat</strong><div class="small text-muted">Drop off at mill</div><span class="status status-warn mt-1">Pending</span></div><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="This action is not available yet; no changes were made." aria-label="Cancel grinding on Tue 10 Nov">Cancel</button></li>
+                <li><span class="date-chip"><b>12</b><small>Thu</small></span><div class="flex-grow-1"><strong>Delivery</strong><div class="small text-muted">Morning 7–10 am</div><span class="status status-ok mt-1">Confirmed</span></div><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="This action is not available yet; no changes were made." aria-label="Cancel delivery on Thu 12 Nov">Cancel</button></li>
               </ul>
             </section>
             <section class="mm-card" aria-labelledby="guide-h">

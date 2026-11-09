@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-<!-- @head {"title": "Order History | Millstone & Co.", "description": "Review Anita Sharma's past and upcoming Millstone & Co. orders, download sample invoices, reorder favourites and track each delivery. Front-end demo with sample data.", "file": "dashboard-orders.html", "robots": "noindex"} -->
+<!-- @head {"title": "Order History | Millstone & Co.", "description": "Review Anita Sharma's past and upcoming Millstone & Co. orders, download sample invoices, reorder favourites and track each delivery. Preview account with illustrative information.", "file": "dashboard-orders.html", "robots": "noindex"} -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Order History | Millstone &amp; Co.</title>
-<meta name="description" content="Review Anita Sharma&#x27;s past and upcoming Millstone &amp; Co. orders, download sample invoices, reorder favourites and track each delivery. Front-end demo with sample data.">
+<meta name="description" content="Review Anita Sharma&#x27;s past and upcoming Millstone &amp; Co. orders, download sample invoices, reorder favourites and track each delivery. Preview account with illustrative information.">
 <meta name="theme-color" content="#9a5b0e">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%239a5b0e'/%3E%3Cpath d='M32 50V20' stroke='%23fff7e8' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='25' cy='28' rx='5' ry='9' transform='rotate(-25 25 28)' fill='%23fff7e8'/%3E%3Cellipse cx='39' cy='28' rx='5' ry='9' transform='rotate(25 39 28)' fill='%23fff7e8'/%3E%3Cellipse cx='32' cy='17' rx='4.5' ry='8' fill='%23fff7e8'/%3E%3C/svg%3E">
@@ -29,7 +29,7 @@
 })();
 </script>
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></noscript>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 <!-- @head:end -->
 </head>
 <body>
@@ -64,7 +64,7 @@
         <li><a href="login.html" class="text-danger"><i class="bi bi-box-arrow-left" aria-hidden="true"></i><span>Log out</span></a></li>
       </ul>
     </nav>
-    <div class="demo-banner mt-auto"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo: sample customer account.</span></div>
+    <div class="demo-banner mt-auto"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Preview account - example information; changes are not saved.</span></div>
   </div>
 </aside>
 <!-- @appnav:end -->
@@ -137,14 +137,14 @@
 </div>
 <!-- @apptop:end -->
     <main id="main" class="app-content">
-      <div class="demo-banner mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — sample data, nothing is saved or sent</span></div>
+      <div class="demo-banner mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Preview account: information shown is illustrative; changes are not saved or sent.</span></div>
 
       <div class="d-flex flex-wrap align-items-start justify-content-between gap-3 mb-4">
         <div>
           <h1 class="display-font mb-1">Order history</h1>
           <p class="text-muted mb-0">Every bag we have milled and delivered for you, plus what is coming next. Customer MM-20418, Family plan.</p>
         </div>
-        <button type="button" class="btn btn-primary" data-demo-toast="Demo only: your last delivery (10 kg Sharbati + 5 kg 7-Grain) would be added to your next order."><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Reorder last delivery</button>
+        <button type="button" class="btn btn-primary" data-demo-toast="Reordering is not available yet; your next order was not changed."><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Reorder last delivery</button>
       </div>
 
       <section aria-labelledby="orders-summary-h" class="mb-4">
@@ -181,7 +181,7 @@
         <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
           <div>
             <h2 class="h4 mb-1" id="orders-list-h">Latest 12 orders</h2>
-            <p class="small text-muted mb-0">Type an order number, date, product or status to filter the table. Older orders are not included in this demo.</p>
+            <p class="small text-muted mb-0">Type an order number, date, product or status to filter the table. Older orders are not included in this preview.</p>
           </div>
           <div class="input-icon mw-form w-100">
             <i class="bi bi-search" aria-hidden="true"></i>
@@ -226,7 +226,7 @@
                 <td>1 kg Ragi Flour, 1 kg Fresh Besan</td>
                 <td>$12.30</td>
                 <td><span class="status status-ok">Delivered</span></td>
-                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0924 would download here." aria-label="Download invoice for order MM-20418-0924"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Invoice downloads are not available yet." aria-label="Download invoice for order MM-20418-0924"><i class="bi bi-download" aria-hidden="true"></i></button></td>
               </tr>
               <tr>
                 <th scope="row"><button type="button" class="btn btn-link p-0 fw-semibold" data-bs-toggle="modal" data-bs-target="#orderModal" aria-label="View details for order MM-20418-0923">MM-20418-0923</button></th>
@@ -234,7 +234,7 @@
                 <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
                 <td>$39.80</td>
                 <td><span class="status status-ok">Delivered</span></td>
-                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0923 would download here." aria-label="Download invoice for order MM-20418-0923"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Invoice downloads are not available yet." aria-label="Download invoice for order MM-20418-0923"><i class="bi bi-download" aria-hidden="true"></i></button></td>
               </tr>
               <tr>
                 <th scope="row">MM-20418-0922</th>
@@ -242,7 +242,7 @@
                 <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
                 <td>$39.80</td>
                 <td><span class="status status-ok">Delivered</span></td>
-                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0922 would download here." aria-label="Download invoice for order MM-20418-0922"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Invoice downloads are not available yet." aria-label="Download invoice for order MM-20418-0922"><i class="bi bi-download" aria-hidden="true"></i></button></td>
               </tr>
               <tr>
                 <th scope="row">MM-20418-0921</th>
@@ -258,7 +258,7 @@
                 <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
                 <td>$39.80</td>
                 <td><span class="status status-ok">Delivered</span></td>
-                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0920 would download here." aria-label="Download invoice for order MM-20418-0920"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Invoice downloads are not available yet." aria-label="Download invoice for order MM-20418-0920"><i class="bi bi-download" aria-hidden="true"></i></button></td>
               </tr>
               <tr>
                 <th scope="row">MM-20418-0919</th>
@@ -266,7 +266,7 @@
                 <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
                 <td>$39.80</td>
                 <td><span class="status status-ok">Delivered</span></td>
-                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0919 would download here." aria-label="Download invoice for order MM-20418-0919"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Invoice downloads are not available yet." aria-label="Download invoice for order MM-20418-0919"><i class="bi bi-download" aria-hidden="true"></i></button></td>
               </tr>
               <tr>
                 <th scope="row">MM-20418-0918</th>
@@ -274,7 +274,7 @@
                 <td>2 kg Khapli Emmer Wheat Atta, 1 kg Moong Dal Flour</td>
                 <td>$16.70</td>
                 <td><span class="status status-ok">Delivered</span></td>
-                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0918 would download here." aria-label="Download invoice for order MM-20418-0918"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Invoice downloads are not available yet." aria-label="Download invoice for order MM-20418-0918"><i class="bi bi-download" aria-hidden="true"></i></button></td>
               </tr>
               <tr>
                 <th scope="row">MM-20418-0917</th>
@@ -282,7 +282,7 @@
                 <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
                 <td>$39.80</td>
                 <td><span class="status status-ok">Delivered</span></td>
-                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0917 would download here." aria-label="Download invoice for order MM-20418-0917"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Invoice downloads are not available yet." aria-label="Download invoice for order MM-20418-0917"><i class="bi bi-download" aria-hidden="true"></i></button></td>
               </tr>
               <tr>
                 <th scope="row">MM-20418-0916</th>
@@ -290,7 +290,7 @@
                 <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
                 <td>$39.80</td>
                 <td><span class="status status-ok">Delivered</span></td>
-                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0916 would download here." aria-label="Download invoice for order MM-20418-0916"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Invoice downloads are not available yet." aria-label="Download invoice for order MM-20418-0916"><i class="bi bi-download" aria-hidden="true"></i></button></td>
               </tr>
               <tr>
                 <th scope="row">MM-20418-0915</th>
@@ -298,12 +298,12 @@
                 <td>10 kg Sharbati Whole Wheat, 5 kg 7-Grain Multigrain</td>
                 <td>$39.80</td>
                 <td><span class="status status-ok">Delivered</span></td>
-                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo only: invoice MM-20418-0915 would download here." aria-label="Download invoice for order MM-20418-0915"><i class="bi bi-download" aria-hidden="true"></i></button></td>
+                <td><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Invoice downloads are not available yet." aria-label="Download invoice for order MM-20418-0915"><i class="bi bi-download" aria-hidden="true"></i></button></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="demo-note mt-3"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — invoices do not download and reorders are not placed. Select order MM-20418-0923 to see the detail view.</span></p>
+        <p class="demo-note mt-3"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Invoice downloads and reorders are not available yet. Select order MM-20418-0923 to see the detail view.</span></p>
       </section>
     </main>
   </div>
@@ -354,7 +354,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-demo-toast="Demo only: this order would be added to your next delivery."><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Reorder</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-demo-toast="Reordering is not available yet; your next delivery was not changed."><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Reorder</button>
       </div>
     </div>
   </div>

@@ -39,7 +39,7 @@
 })();
 </script>
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></noscript>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 <!-- @head:end -->
 </head>
 <body>
@@ -100,7 +100,7 @@
   <section class="page-hero products-hero" aria-labelledby="products-title">
     <div class="container-xxl">
       <span class="eyebrow mb-3">Our flours</span>
-      <h1 id="products-title" class="h-section mb-3">Fourteen flours, all milled this morning.</h1>
+      <h1 id="products-title" class="h-section mb-3">Twelve flours, all milled this morning.</h1>
       <p class="lead-lg mb-0">Whole wheat, millets, pulses and ready-made blends. Stone-ground in small batches, packed the same day and delivered on Tuesday, Thursday or Saturday.</p>
     </div>
   </section>
@@ -122,165 +122,156 @@
           <input type="search" id="product-search" class="form-control" placeholder="Search flours, e.g. ragi" data-filter-search="products" autocomplete="off">
         </form>
       </div>
-      <p class="meta mb-2" role="status" aria-live="polite"><span data-filter-count="products">14 results</span></p>
-      <p class="demo-note mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — nothing is added to a real basket.</span></p>
+      <p class="meta mb-2" role="status" aria-live="polite"><span data-filter-count="products">12 results</span></p>
+      <p class="demo-note mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Basket preview: items are saved in this browser. Checkout is not available yet.</span></p>
+      <section class="mm-card p-3 mb-4" data-basket aria-labelledby="basket-title" aria-live="polite" hidden>
+        <div class="d-flex flex-wrap justify-content-between align-items-start gap-3">
+          <div class="flex-grow-1">
+            <h2 id="basket-title" class="h5 mb-2">Your basket <span class="text-muted small" data-basket-count></span></h2>
+            <p class="mb-2" data-basket-empty>Your basket is empty.</p>
+            <ul class="list-unstyled mb-0" data-basket-items></ul>
+          </div>
+          <div class="text-end">
+            <p class="mb-2">Subtotal: <strong data-basket-total>$0.00</strong></p>
+            <button type="button" class="btn btn-ghost btn-sm" data-basket-clear hidden>Clear basket</button>
+          </div>
+        </div>
+      </section>
 
       <div class="row g-4">
         <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="grain" data-search="sharbati whole wheat atta whole grain" data-reveal>
           <article class="mm-card mm-card-hover product-card position-relative">
             <span class="ribbon badge-soft badge-fresh">Best seller</span>
-            <div class="ph ph-wheat"><img class="ph-photo" src="assets/images/photo-054.jpg" alt="Flour scattered on a wooden table spelling &#x27;flour,&#x27; with a rolling pin and wheat stalks nearby." loading="lazy" decoding="async"></div>
+            <div class="ph ph-wheat" role="img" aria-label="Flour scattered on a wooden table spelling &#x27;flour,&#x27; with a rolling pin and wheat stalks nearby."><img class="ph-photo" src="assets/images/photo-054.jpg" alt="Flour scattered on a wooden table spelling &#x27;flour,&#x27; with a rolling pin and wheat stalks nearby." loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="meta mb-1">Whole grain</p>
               <h3 class="h5"><a href="product-details.html">Sharbati Whole Wheat Atta</a></h3>
-              <p class="text-muted small">Soft, sweet rotis from stone-ground whole wheat. 100% atta, nothing added.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$12.50 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
-            </div>
-          </article>
-        </div>
-        <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="grain" data-search="sharbati chakki atta (sifted) whole grain" data-reveal>
-          <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-sack"><img class="ph-photo" src="assets/images/photo-055.jpg" alt="High angle stainless kitchen shovel placed in craft bag with heaped fresh flour in dark kitchen" loading="lazy" decoding="async"></div>
-            <div class="card-body">
-              <p class="meta mb-1">Whole grain</p>
-              <h3 class="h5"><a href="product-details.html">Sharbati Chakki Atta (sifted)</a></h3>
-              <p class="text-muted small">Fine-sifted chakki atta with the coarse bran removed, for very soft phulkas.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$13.20 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
+              <p class="text-muted small">Sweet rotis from stone-ground whole wheat. 100% atta, nothing added.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$12.50 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
             </div>
           </article>
         </div>
         <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="grain" data-search="khapli emmer wheat atta whole grain" data-reveal>
           <article class="mm-card mm-card-hover product-card position-relative">
             <span class="ribbon badge-soft badge-fresh">Heritage grain</span>
-            <div class="ph ph-field"><img class="ph-photo" src="assets/images/photo-056.jpg" alt="Flour in a ceramic bowl on a wooden surface, perfect for baking and cooking concepts." loading="lazy" decoding="async"></div>
+            <div class="ph ph-field" role="img" aria-label="Flour in a ceramic bowl on a wooden surface, perfect for baking and cooking concepts."><img class="ph-photo" src="assets/images/photo-056.jpg" alt="Flour in a ceramic bowl on a wooden surface, perfect for baking and cooking concepts." loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="meta mb-1">Whole grain</p>
               <h3 class="h5"><a href="product-details.html">Khapli Emmer Wheat Atta</a></h3>
-              <p class="text-muted small">Ancient emmer wheat with a nutty flavour and a gentler glycaemic response.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$9.80 <small>/ 2 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
+              <p class="text-muted small">Emmer wheat with a nutty flavour and a gentler glycaemic response.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$9.80 <small>/ 2 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
             </div>
           </article>
         </div>
         <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="grain" data-search="whole wheat dalia (cracked) whole grain" data-reveal>
           <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-grain"><img class="ph-photo" src="assets/images/photo-057.jpg" alt="A rustic display of bread ingredients including wheat grains, flour, and fresh loaves on a wooden table." loading="lazy" decoding="async"></div>
+            <div class="ph ph-grain" role="img" aria-label="A rustic display of bread ingredients including wheat grains, flour, and fresh loaves on a wooden table."><img class="ph-photo" src="assets/images/photo-057.jpg" alt="A rustic display of bread ingredients including wheat grains, flour, and fresh loaves on a wooden table." loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="meta mb-1">Whole grain</p>
               <h3 class="h5"><a href="product-details.html">Whole Wheat Dalia (cracked)</a></h3>
               <p class="text-muted small">Coarsely cracked wheat for porridge, upma and khichdi. Cooks in 15 minutes.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$4.20 <small>/ 1 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$4.20 <small>/ 1 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
             </div>
           </article>
         </div>
         <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="millet" data-search="jowar flour millets" data-reveal>
           <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-mill"><img class="ph-photo" src="assets/images/photo-058.jpg" alt="Detailed view of two sorghum stalks with seeds against a clear blue sky in rural India." loading="lazy" decoding="async"></div>
+            <div class="ph ph-mill" role="img" aria-label="Detailed view of two sorghum stalks with seeds against a clear blue sky in rural India."><img class="ph-photo" src="assets/images/photo-058.jpg" alt="Detailed view of two sorghum stalks with seeds against a clear blue sky in rural India." loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="meta mb-1">Millets</p>
               <h3 class="h5"><a href="product-details.html">Jowar Flour</a></h3>
               <p class="text-muted small">Sorghum flour for gluten-free bhakri and rotis, milled fine and mild.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$7.20 <small>/ 2 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$7.20 <small>/ 2 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
             </div>
           </article>
         </div>
         <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="millet" data-search="bajra flour millets" data-reveal>
           <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-roti"><img class="ph-photo" src="assets/images/photo-059.jpg" alt="Detailed view of pearl millet plant in a lush green field during daytime." loading="lazy" decoding="async"></div>
+            <div class="ph ph-roti" role="img" aria-label="Rustic bajra flour in a bowl with pearl millet grains."><img class="ph-photo" src="assets/images/bajra-flour.jpg" alt="Rustic bajra flour in a bowl with pearl millet grains." loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="meta mb-1">Millets</p>
               <h3 class="h5"><a href="product-details.html">Bajra Flour</a></h3>
               <p class="text-muted small">Earthy pearl millet flour, a winter favourite for warm bajra rotis with ghee.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$6.80 <small>/ 2 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$6.80 <small>/ 2 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
             </div>
           </article>
         </div>
         <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="millet" data-search="ragi flour millets" data-reveal>
           <article class="mm-card mm-card-hover product-card position-relative">
             <span class="ribbon badge-soft badge-fresh">Gluten-free</span>
-            <div class="ph ph-night"><img class="ph-photo" src="assets/images/photo-060.jpg" alt="Detailed close-up of mixed millet seeds displaying a variety of golden hues, perfect for backgrounds." loading="lazy" decoding="async"></div>
+            <div class="ph ph-night" role="img" aria-label="Fresh stone-ground ragi flour with finger millet grains."><img class="ph-photo" src="assets/images/ragi-flour.jpg" alt="Fresh stone-ground ragi flour with finger millet grains." loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="meta mb-1">Millets</p>
               <h3 class="h5"><a href="product-details.html">Ragi Flour</a></h3>
               <p class="text-muted small">Calcium-rich finger millet. Great for porridge, dosa and baking.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$5.90 <small>/ 1 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$5.90 <small>/ 1 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
             </div>
           </article>
         </div>
         <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="millet" data-search="foxtail millet flour millets" data-reveal>
           <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-van"><img class="ph-photo" src="assets/images/photo-061.jpg" alt="Detailed view of millet sticks artistically arranged in a bamboo winnower basket." loading="lazy" decoding="async"></div>
+            <div class="ph ph-van" role="img" aria-label="Foxtail millet flour, finely milled for rotis and pancakes."><img class="ph-photo" src="assets/images/foxtail-millet-flour.jpg" alt="Foxtail millet flour, finely milled for rotis and pancakes." loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="meta mb-1">Millets</p>
               <h3 class="h5"><a href="product-details.html">Foxtail Millet Flour</a></h3>
-              <p class="text-muted small">Light, slightly sweet kangni flour for rotis, pancakes and fasting-day recipes.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$6.60 <small>/ 1 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
+              <p class="text-muted small">Slightly sweet kangni flour for rotis, pancakes and fasting-day recipes.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$6.60 <small>/ 1 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
             </div>
           </article>
         </div>
         <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="pulse" data-search="fresh besan pulses and gram" data-reveal>
           <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-flour"><img class="ph-photo" src="assets/images/photo-062.jpg" alt="A rustic metal container filled with organic chickpeas at a market stall in Tunisia." loading="lazy" decoding="async"></div>
+            <div class="ph ph-flour" role="img" aria-label="Fresh besan (chickpea flour), finely milled for pakoras, kadhi and batters."><img class="ph-photo" src="assets/images/besan.jpg" alt="Fresh besan (chickpea flour), finely milled for pakoras, kadhi and batters." loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="meta mb-1">Pulses &amp; gram</p>
               <h3 class="h5"><a href="product-details.html">Fresh Besan</a></h3>
               <p class="text-muted small">Fine, nutty chickpea flour for pakoras, kadhi, ladoo and batters.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$6.40 <small>/ 1 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
-            </div>
-          </article>
-        </div>
-        <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="pulse" data-search="moong dal flour pulses and gram" data-reveal>
-          <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-wheat"><img class="ph-photo" src="assets/images/photo-063.jpg" alt="Top view of assorted grains and seeds including mung beans, buckwheat, and rice on a beige surface." loading="lazy" decoding="async"></div>
-            <div class="card-body">
-              <p class="meta mb-1">Pulses &amp; gram</p>
-              <h3 class="h5"><a href="product-details.html">Moong Dal Flour</a></h3>
-              <p class="text-muted small">Skinned moong milled fine for chilla, halwa and light, protein-rich batters.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$6.90 <small>/ 1 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$6.40 <small>/ 1 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
             </div>
           </article>
         </div>
         <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="blend" data-search="7-grain multigrain atta flour blends" data-reveal>
           <article class="mm-card mm-card-hover product-card position-relative">
             <span class="ribbon badge-soft badge-fresh">Popular</span>
-            <div class="ph ph-grain"><img class="ph-photo" src="assets/images/photo-064.jpg" alt="Close-up of assorted raw grains and seeds in cups on a dark background, showcasing variety and texture." loading="lazy" decoding="async"></div>
+            <div class="ph ph-grain" role="img" aria-label="Close-up of assorted raw grains and seeds in cups on a dark background, showcasing variety and texture."><img class="ph-photo" src="assets/images/photo-064.jpg" alt="Close-up of assorted raw grains and seeds in cups on a dark background, showcasing variety and texture." loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="meta mb-1">Flour blends</p>
               <h3 class="h5"><a href="product-details.html">7-Grain Multigrain Atta</a></h3>
               <p class="text-muted small">Wheat, jowar, bajra, ragi, oats, barley and soy for extra fibre and flavour.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$15.90 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$15.90 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
             </div>
           </article>
         </div>
         <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="blend" data-search="high-fibre roti blend flour blends" data-reveal>
           <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-field"><img class="ph-photo" src="assets/images/photo-065.jpg" alt="Indian flatbread cooking over an open fire." loading="lazy" decoding="async"></div>
+            <div class="ph ph-field" role="img" aria-label="High-fibre roti blend flour made with whole wheat, oat bran and barley."><img class="ph-photo" src="assets/images/high-fibre-roti-blend.jpg" alt="High-fibre roti blend flour made with whole wheat, oat bran and barley." loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="meta mb-1">Flour blends</p>
               <h3 class="h5"><a href="product-details.html">High-Fibre Roti Blend</a></h3>
               <p class="text-muted small">Whole wheat with oat bran and barley for filling rotis with extra fibre.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$14.60 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$14.60 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
             </div>
           </article>
         </div>
         <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="blend" data-search="puri & paratha blend flour blends" data-reveal>
           <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-roti"><img class="ph-photo" src="assets/images/photo-066.jpg" alt="Golden brown paratha being cooked on a skillet, showcasing traditional flatbread preparation." loading="lazy" decoding="async"></div>
+            <div class="ph ph-roti" role="img" aria-label="Golden brown paratha being cooked on a skillet, showcasing traditional flatbread preparation."><img class="ph-photo" src="assets/images/photo-066.jpg" alt="Golden brown paratha being cooked on a skillet, showcasing traditional flatbread preparation." loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="meta mb-1">Flour blends</p>
               <h3 class="h5"><a href="product-details.html">Puri &amp; Paratha Blend</a></h3>
               <p class="text-muted small">Wheat tuned for flaky parathas and puris that puff and stay crisp.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$13.90 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$13.90 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
             </div>
           </article>
         </div>
         <div class="col-sm-6 col-lg-4 col-xl-3" data-filter-item="products" data-category="blend" data-search="soft phulka blend flour blends" data-reveal>
           <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-sack"><img class="ph-photo" src="assets/images/photo-067.jpg" alt="A cook preparing chapati on a pan in a home kitchen." loading="lazy" decoding="async"></div>
+            <div class="ph ph-sack" role="img" aria-label="A cook preparing chapati on a pan in a home kitchen."><img class="ph-photo" src="assets/images/photo-067.jpg" alt="A cook preparing chapati on a pan in a home kitchen." loading="lazy" decoding="async"></div>
             <div class="card-body">
               <p class="meta mb-1">Flour blends</p>
               <h3 class="h5"><a href="product-details.html">Soft Phulka Blend</a></h3>
               <p class="text-muted small">Sifted wheat with a little sooji for pillowy phulkas that stay soft for hours.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$13.50 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-demo-toast="Added to your demo basket.">Add</button></div>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$13.50 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
             </div>
           </article>
         </div>
@@ -296,7 +287,7 @@
     <div class="container-xxl">
       <div class="row g-5 align-items-center">
         <div class="col-lg-6" data-reveal>
-          <div class="ph ph-mill ph-wide"><img class="ph-photo" src="assets/images/photo-068.jpg" alt="Hanging corn cobs and mill in a traditional Turkish setting, showcasing local culture." loading="lazy" decoding="async"><span class="ph-tag">Bring your own grain</span></div>
+          <div class="ph ph-mill ph-wide" role="img" aria-label="Hanging corn cobs and mill in a traditional Turkish setting, showcasing local culture."><img class="ph-photo" src="assets/images/photo-068.jpg" alt="Hanging corn cobs and mill in a traditional Turkish setting, showcasing local culture." loading="lazy" decoding="async"><span class="ph-tag">Bring your own grain</span></div>
         </div>
         <div class="col-lg-6" data-reveal>
           <span class="eyebrow mb-3">Custom grinding</span>
@@ -339,8 +330,8 @@
     <div class="container-xxl">
       <div class="cta-band text-center text-lg-start">
         <div class="row align-items-center g-4">
-          <div class="col-lg-8"><h2 id="cta-title" class="h-section mb-2">Never run out of fresh atta.</h2><p class="mb-0">Put your favourite flours on a plan: free delivery, one free swap, and you can pause until 6 pm the evening before.</p></div>
-          <div class="col-lg-4 text-lg-end"><a class="btn btn-light btn-lg me-2 mb-2" href="delivery-plans.html">See delivery plans</a><a class="btn btn-outline-light btn-lg mb-2" href="contact.html">Talk to us</a></div>
+          <div class="col-lg-6"><h2 id="cta-title" class="h-section mb-2">Never run out of fresh atta.</h2><p class="mb-0">Put your favourite flours on a plan: free delivery, one free swap, and you can pause until 6 pm the evening before.</p></div>
+          <div class="col-lg-6"><div class="d-flex flex-wrap flex-lg-nowrap justify-content-center justify-content-lg-end gap-2"><a class="btn btn-light btn-lg" href="delivery-plans.html">See delivery plans</a><a class="btn btn-outline-light btn-lg" href="contact.html">Talk to us</a></div></div>
         </div>
       </div>
     </div>
@@ -387,7 +378,7 @@
       <div class="col-lg-3">
         <h2>Newsletter</h2>
         <p class="text-muted small">One email a month: seasonal grain news and a new atta recipe.</p>
-        <form data-demo-form data-demo-message="Thanks!" class="d-flex gap-2" aria-label="Newsletter sign-up">
+        <form data-demo-form data-demo-message="Thanks for your interest. Newsletter sign-up is not available here yet; your email was not saved." class="d-flex gap-2" aria-label="Newsletter sign-up">
           <label for="footer-email" class="visually-hidden">Email address</label>
           <input type="email" id="footer-email" class="form-control" placeholder="you@example.com" required autocomplete="email">
           <button type="submit" class="btn btn-primary">Join</button>
@@ -396,7 +387,7 @@
     </div>
     <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
       <span>© <span data-year>2026</span> Millstone &amp; Co. All rights reserved.</span>
-      <span class="text-muted">Front-end demo template — no real backend, payments or accounts.</span>
+      <span class="text-muted">Preview notice: orders, payments, and account updates are not processed on this site.</span>
     </div>
   </div>
 </footer>

@@ -39,7 +39,7 @@
 })();
 </script>
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></noscript>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 <!-- @head:end -->
 </head>
 <body>
@@ -220,7 +220,7 @@
           </ul>
         </div>
         <div class="col-lg-8" data-reveal>
-          <form class="mm-card" data-demo-form data-demo-message="Slot picked. (Demo only — nothing was booked.)" aria-label="Sample delivery slot picker">
+          <form class="mm-card" data-demo-form data-demo-message="Slot selection is not available yet; no delivery was booked." aria-label="Sample delivery slot picker">
             <fieldset class="mb-0">
               <legend class="h6 mb-3">Pick your next delivery slot</legend>
               <div class="row g-3">
@@ -240,9 +240,9 @@
             </fieldset>
             <div class="d-flex flex-wrap align-items-center gap-3 mt-4">
               <button type="submit" class="btn btn-primary">Confirm slot</button>
-              <button type="button" class="btn btn-ghost" data-demo-toast="Sample app: your pick would be saved as a recurring slot.">Repeat every week</button>
+              <button type="button" class="btn btn-ghost" data-demo-toast="Slot selection is not available yet; no delivery was scheduled.">Repeat every week</button>
             </div>
-            <p class="demo-note mt-3 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Front-end demo — nothing is sent or saved. Tue 10 Nov Evening is shown as full on purpose.</span></p>
+            <p class="demo-note mt-3 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i><span>This preview does not send forms or save changes. Tue 10 Nov Evening is shown as full on purpose.</span></p>
           </form>
         </div>
       </div>
@@ -258,7 +258,7 @@
           <h2 id="dash-title" class="h-section mb-3">Everything in one place.</h2>
           <p class="lead-lg mb-4">See your next delivery, past orders and plan usage at a glance, then pause or reschedule without calling anyone.</p>
           <div class="d-flex flex-wrap gap-3">
-            <a class="btn btn-primary" href="dashboard.html">Explore the demo dashboard</a>
+            <a class="btn btn-primary" href="dashboard.html">Explore the customer portal</a>
             <a class="btn btn-ghost" href="register.html">Create account</a>
           </div>
         </div>
@@ -280,36 +280,111 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section section-alt" aria-labelledby="faq-title">
+  <!-- POPULAR PRODUCTS -->
+  <section class="section section-alt" aria-labelledby="products-title">
     <div class="container-xxl">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow mb-3">Questions</span>
-        <h2 id="faq-title" class="h-section mb-0">Ordering and subscriptions, answered.</h2>
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4" data-reveal>
+        <div><span class="eyebrow mb-3">Popular products</span><h2 id="products-title" class="h-section mb-0">Add flour to your plan.</h2></div>
+        <a class="link-arrow" href="products.html">See all products <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
       </div>
-      <div class="row justify-content-center" data-reveal><div class="col-lg-9 col-xl-8"><div class="accordion" id="faqHome2">
-        <div class="accordion-item">
-          <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#h2-faq1" aria-expanded="true" aria-controls="h2-faq1">How fresh is the atta when it arrives?</button></h3>
-          <div id="h2-faq1" class="accordion-collapse collapse show" data-bs-parent="#faqHome2"><div class="accordion-body">We mill in small batches and deliver within 24 hours of milling. The milling date and lot code are printed on every bag, and we grind below 40 °C so the flour keeps its natural oils.</div></div>
+      <div class="row g-4">
+        <div class="col-sm-6 col-xl-3" data-reveal>
+          <article class="mm-card mm-card-hover product-card position-relative">
+            <span class="ribbon badge-soft badge-fresh">Winter favourite</span>
+            <div class="ph ph-roti" role="img" aria-label="Rustic bajra flour in a bowl with pearl millet grains."><img class="ph-photo" src="assets/images/bajra-flour.jpg" alt="Rustic bajra flour in a bowl with pearl millet grains." loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <p class="meta mb-1">Millets</p>
+              <h3 class="h5"><a href="product-details.html">Bajra Flour</a></h3>
+              <p class="text-muted small">Earthy pearl millet flour, a winter favourite for warm bajra rotis with ghee.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$6.80 <small>/ 2 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
+            </div>
+          </article>
         </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h2-faq2" aria-expanded="false" aria-controls="h2-faq2">Can I skip or pause a delivery?</button></h3>
-          <div id="h2-faq2" class="accordion-collapse collapse" data-bs-parent="#faqHome2"><div class="accordion-body">Yes. Pause, skip or change any delivery up to 6 pm the evening before. After that, the batch is already being milled for you.</div></div>
+        <div class="col-sm-6 col-xl-3" data-reveal>
+          <article class="mm-card mm-card-hover product-card">
+            <div class="ph ph-van" role="img" aria-label="Foxtail millet flour, finely milled for rotis and pancakes."><img class="ph-photo" src="assets/images/foxtail-millet-flour.jpg" alt="Foxtail millet flour, finely milled for rotis and pancakes." loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <p class="meta mb-1">Millets</p>
+              <h3 class="h5"><a href="product-details.html">Foxtail Millet Flour</a></h3>
+              <p class="text-muted small">Slightly sweet kangni flour for rotis, pancakes and fasting-day recipes.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$6.60 <small>/ 1 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
+            </div>
+          </article>
         </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h2-faq3" aria-expanded="false" aria-controls="h2-faq3">Is delivery really free?</button></h3>
-          <div id="h2-faq3" class="accordion-collapse collapse" data-bs-parent="#faqHome2"><div class="accordion-body">Delivery is free on every plan and on any one-off order over $20. Smaller one-off orders pay a flat fee shown at checkout.</div></div>
+        <div class="col-sm-6 col-xl-3" data-reveal>
+          <article class="mm-card mm-card-hover product-card">
+            <div class="ph ph-field" role="img" aria-label="High-fibre roti blend flour made with whole wheat, oat bran and barley."><img class="ph-photo" src="assets/images/high-fibre-roti-blend.jpg" alt="High-fibre roti blend flour made with whole wheat, oat bran and barley." loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <p class="meta mb-1">Flour blends</p>
+              <h3 class="h5"><a href="product-details.html">High-Fibre Roti Blend</a></h3>
+              <p class="text-muted small">Whole wheat with oat bran and barley for filling rotis with extra fibre.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$14.60 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
+            </div>
+          </article>
         </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h2-faq4" aria-expanded="false" aria-controls="h2-faq4">Can I swap products between deliveries?</button></h3>
-          <div id="h2-faq4" class="accordion-collapse collapse" data-bs-parent="#faqHome2"><div class="accordion-body">Household includes one free swap. Family includes one multigrain or millet swap per delivery. You can swap any 5 kg atta for Ragi, Jowar, Bajra or a blend from your dashboard.</div></div>
+        <div class="col-sm-6 col-xl-3" data-reveal>
+          <article class="mm-card mm-card-hover product-card">
+            <div class="ph ph-mill" role="img" aria-label="Detailed view of two sorghum stalks with seeds against a clear blue sky."><img class="ph-photo" src="assets/images/photo-058.jpg" alt="Detailed view of two sorghum stalks with seeds against a clear blue sky in rural India." loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <p class="meta mb-1">Millets</p>
+              <h3 class="h5"><a href="product-details.html">Jowar Flour</a></h3>
+              <p class="text-muted small">Sorghum flour for gluten-free bhakri and rotis, milled fine and mild.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$7.20 <small>/ 2 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
+            </div>
+          </article>
         </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h2-faq5" aria-expanded="false" aria-controls="h2-faq5">What happens to the empty bags?</button></h3>
-          <div id="h2-faq5" class="accordion-collapse collapse" data-bs-parent="#faqHome2"><div class="accordion-body">Hand clean, dry bags back to the driver and you receive a bag-return credit on your next order. Family and Kitchen plans include free bag returns.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FROM THE JOURNAL -->
+  <section class="section" aria-labelledby="journal-title">
+    <div class="container-xxl">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4" data-reveal>
+        <div><span class="eyebrow mb-3">From the journal</span><h2 id="journal-title" class="h-section mb-0">Read before your next order.</h2></div>
+        <a class="link-arrow" href="blog.html">Read the blog <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-4" data-reveal>
+          <article class="mm-card mm-card-hover blog-card">
+            <a href="blog-details-5.html" class="d-block" aria-label="Read full article: Saturday evening windows are now open">
+              <div class="ph ph-van ph-wide" role="img" aria-label="A white delivery van parked under a tree on a sunny day in an urban area."><img class="ph-photo" src="assets/images/photo-020.jpg" alt="A white delivery van parked under a tree on a sunny day in an urban area." loading="lazy" decoding="async"></div>
+            </a>
+            <div class="card-body">
+              <p class="meta mb-2"><span class="badge-soft">Company news</span><span>10 Sep 2026</span><span>3 min read</span></p>
+              <h3 class="h5"><a href="blog-details-5.html">Saturday evening windows are now open</a></h3>
+              <p class="text-muted small">From 7 November you can choose the Evening 5-8 pm window on Saturdays as well as Tuesdays and Thursdays.</p>
+              <p class="meta mt-auto mb-0"><img class="avatar" src="assets/images/photo-006.jpg" alt="" loading="lazy" decoding="async"> By Daniel Okafor</p>
+            </div>
+          </article>
         </div>
-      </div></div></div>
-      <p class="text-center mt-4 mb-0"><a class="link-arrow" href="delivery-plans.html">Read the full delivery rules <i class="bi bi-arrow-right" aria-hidden="true"></i></a></p>
+        <div class="col-md-6 col-xl-4" data-reveal>
+          <article class="mm-card mm-card-hover blog-card">
+            <a href="blog-details-6.html" class="d-block" aria-label="Read full article: How we keep flour below 40 degrees C">
+              <div class="ph ph-flour ph-wide" role="img" aria-label="Fresh wheat flour in a paper-lined container with a scoop."><img class="ph-photo" src="assets/images/photo-051.jpg" alt="Fresh wheat flour in a paper-lined container with a scoop." loading="lazy" decoding="async"></div>
+            </a>
+            <div class="card-body">
+              <p class="meta mb-2"><span class="badge-soft">Milling</span><span>2 Sep 2026</span><span>6 min read</span></p>
+              <h3 class="h5"><a href="blog-details-6.html">How we keep flour below 40 degrees C</a></h3>
+              <p class="text-muted small">Heat is the enemy of flavour. A look at the stone speed, feed rate and cooling steps that protect the natural oils during milling.</p>
+              <p class="meta mt-auto mb-0"><img class="avatar" src="assets/images/photo-005.jpg" alt="" loading="lazy" decoding="async"> By Meera Kapoor</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-xl-4" data-reveal>
+          <article class="mm-card mm-card-hover blog-card">
+            <a href="blog-details-8.html" class="d-block" aria-label="Read full article: Millets: jowar, bajra and ragi">
+              <div class="ph ph-wheat ph-wide" role="img" aria-label="A close-up view of wheat grains on a wooden spoon with wheat stalks on a light background."><img class="ph-photo" src="assets/images/photo-023.jpg" alt="A close-up view of wheat grains on a wooden spoon with wheat stalks on a light background." loading="lazy" decoding="async"></div>
+            </a>
+            <div class="card-body">
+              <p class="meta mb-2"><span class="badge-soft">Nutrition</span><span>15 Aug 2026</span><span>7 min read</span></p>
+              <h3 class="h5"><a href="blog-details-8.html">Millets: jowar, bajra and ragi</a></h3>
+              <p class="text-muted small">Which millet suits which dish, how much to blend with wheat, and how to avoid dense, crumbly rotis.</p>
+              <p class="meta mt-auto mb-0"><img class="avatar" src="assets/images/photo-007.jpg" alt="" loading="lazy" decoding="async"> By Noa Levi</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -318,8 +393,8 @@
     <div class="container-xxl">
       <div class="cta-band text-center text-lg-start">
         <div class="row align-items-center g-4">
-          <div class="col-lg-8"><h2 id="cta-title" class="h-section mb-2">Put your atta on autopilot.</h2><p class="mb-0">Set up your plan in two minutes. Your first delivery ships free, and you can pause or cancel any time.</p></div>
-          <div class="col-lg-4 text-lg-end"><a class="btn btn-light btn-lg me-2 mb-2" href="register.html">Create account</a><a class="btn btn-outline-light btn-lg mb-2" href="pricing.html">View pricing</a></div>
+          <div class="col-lg-6"><h2 id="cta-title" class="h-section mb-2">Put your atta on autopilot.</h2><p class="mb-0">Set up your plan in two minutes. Your first delivery ships free, and you can pause or cancel any time.</p></div>
+          <div class="col-lg-6"><div class="d-flex flex-wrap flex-lg-nowrap justify-content-center justify-content-lg-end gap-2"><a class="btn btn-light btn-lg" href="register.html">Create account</a><a class="btn btn-outline-light btn-lg" href="pricing.html">View pricing</a></div></div>
         </div>
       </div>
     </div>
@@ -367,7 +442,7 @@
       <div class="col-lg-3">
         <h2>Newsletter</h2>
         <p class="text-muted small">One email a month: seasonal grain news and a new atta recipe.</p>
-        <form data-demo-form data-demo-message="Thanks!" class="d-flex gap-2" aria-label="Newsletter sign-up">
+        <form data-demo-form data-demo-message="Thanks for your interest. Newsletter sign-up is not available here yet; your email was not saved." class="d-flex gap-2" aria-label="Newsletter sign-up">
           <label for="footer-email" class="visually-hidden">Email address</label>
           <input type="email" id="footer-email" class="form-control" placeholder="you@example.com" required autocomplete="email">
           <button type="submit" class="btn btn-primary">Join</button>
@@ -376,7 +451,7 @@
     </div>
     <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
       <span>© <span data-year>2026</span> Millstone &amp; Co. All rights reserved.</span>
-      <span class="text-muted">Front-end demo template — no real backend, payments or accounts.</span>
+      <span class="text-muted">Preview notice: orders, payments, and account updates are not processed on this site.</span>
     </div>
   </div>
 </footer>
