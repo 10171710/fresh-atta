@@ -2796,6 +2796,19 @@ html[dir="rtl"] .site-footer h2 {
   background: #140e08 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   color: #ffffff !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem !important;
+}
+
+@media (min-width: 992px) {
+  .app-sidebar.offcanvas-lg .offcanvas-header {
+    display: flex !important;
+  }
+  .app-sidebar.offcanvas-lg .offcanvas-header .btn-close {
+    display: none !important;
+  }
 }
 
 .app-sidebar .offcanvas-header #appSidebarLabel {
@@ -2804,6 +2817,11 @@ html[dir="rtl"] .site-footer h2 {
 
 .app-sidebar .offcanvas-header .btn-close {
   filter: invert(1) grayscale(100%) brightness(200%);
+  opacity: 0.85;
+}
+
+.app-sidebar .offcanvas-header .btn-close:hover {
+  opacity: 1;
 }
 
 .app-sidebar .offcanvas-body {
@@ -2814,7 +2832,7 @@ html[dir="rtl"] .site-footer h2 {
   background: #140e08 !important;
 }
 
-/* Sidebar Brand Header: Consistent White / Gold on Dark */
+/* Sidebar Brand Header: Consistent White / Gold on Dark across 360px, 768px, 1024px & Desktop */
 .app-sidebar .navbar-brand,
 .app-sidebar .navbar-brand:hover,
 .app-sidebar .navbar-brand:focus,
@@ -2822,6 +2840,36 @@ html[dir="rtl"] .site-footer h2 {
 .app-sidebar .navbar-brand .brand-text.text-white,
 [data-bs-theme="light"] .app-sidebar .navbar-brand .brand-text,
 [data-bs-theme="dark"] .app-sidebar .navbar-brand .brand-text {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #ffffff !important;
+}
+
+.app-sidebar .navbar-brand .brand-mark {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  border-radius: 50% !important;
+  display: grid !important;
+  place-items: center !important;
+  flex: none !important;
+  background: linear-gradient(135deg, #e8b13a, #c77b18) !important;
+  color: #2b1d12 !important;
+}
+
+.app-sidebar .navbar-brand .brand-mark svg {
+  width: 1.45rem !important;
+  height: 1.45rem !important;
+}
+
+.app-sidebar .navbar-brand .brand-text {
+  display: flex !important;
+  flex-direction: column !important;
+  font-family: var(--mm-font-display) !important;
+  font-weight: 800 !important;
+  font-size: 1.25rem !important;
+  line-height: 1 !important;
   color: #ffffff !important;
 }
 
@@ -2829,8 +2877,70 @@ html[dir="rtl"] .site-footer h2 {
 .app-sidebar .navbar-brand .brand-text small.text-white,
 [data-bs-theme="light"] .app-sidebar .navbar-brand .brand-text small,
 [data-bs-theme="dark"] .app-sidebar .navbar-brand .brand-text small {
+  display: block !important;
+  font-family: var(--mm-font-body) !important;
+  font-weight: 600 !important;
+  font-size: 0.62rem !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
   color: #ffffff !important;
-  opacity: 0.95;
+  opacity: 0.95 !important;
+  margin-top: 0.25rem !important;
+  white-space: nowrap !important;
+}
+
+/* Dashboard Topbar Brand for Mobile & Tablet */
+.app-topbar .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--mm-text);
+  line-height: 1;
+}
+
+.app-topbar .navbar-brand .brand-mark {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: none;
+  background: linear-gradient(135deg, #e8b13a, #c77b18);
+  color: #2b1d12;
+}
+
+.app-topbar .navbar-brand .brand-mark svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.app-topbar .navbar-brand .brand-text {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--mm-font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--mm-text);
+}
+
+.app-topbar .navbar-brand .brand-text small {
+  display: block;
+  font-family: var(--mm-font-body);
+  font-weight: 600;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mm-muted);
+  margin-top: 0.2rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .app-topbar .navbar-brand .brand-text small {
+    display: none;
+  }
 }
 
 /* Standing-order cards: equal headers and bottom-aligned action rows. */
