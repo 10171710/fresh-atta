@@ -561,8 +561,8 @@
   },
   {
     "file": "team-harold.jpg",
-    "title": "Portrait of a serious male chef with a beard in uniform.",
-    "source": "https://www.pexels.com/photo/8477058/",
+    "title": "Portrait of a male chef in a black uniform in a professional kitchen, with a calm, straight expression.",
+    "source": "https://www.pexels.com/photo/portrait-of-man-12291879/",
     "creator": "See Pexels source page",
     "license": "Pexels License",
     "licenseUrl": "https://www.pexels.com/license/"
@@ -598,5 +598,37 @@
     "creator": "See Pexels source page",
     "license": "Pexels License",
     "licenseUrl": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "about-mill.jpg",
+    "title": "Rustic Bread with Wheat Sprig on Floury Surface",
+    "source": "https://www.pexels.com/photo/30816582/",
+    "creator": "Beyza Yalçın",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/"
+  },
+  {
+    "file": "customer-1.jpg",
+    "title": "Portrait of a smiling professional customer.",
+    "source": "https://unsplash.com/photos/photo-1573496359142-b8d87734a5a2",
+    "creator": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license"
+  },
+  {
+    "file": "customer-2.jpg",
+    "title": "Portrait of a smiling professional café owner and subscriber.",
+    "source": "https://unsplash.com/photos/photo-1507003211169-0a1dd7228f2d",
+    "creator": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license"
+  },
+  {
+    "file": "customer-3.jpg",
+    "title": "Portrait of a smiling household plan customer.",
+    "source": "https://unsplash.com/photos/photo-1580489944761-15a19d654956",
+    "creator": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license"
   }
 ]

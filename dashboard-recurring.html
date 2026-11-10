@@ -8,7 +8,10 @@
 <meta name="description" content="Pause, resume, skip or edit your recurring Millstone &amp; Co. atta and flour deliveries and review your Family plan details (preview account).">
 <meta name="theme-color" content="#9a5b0e">
 <meta name="robots" content="noindex,nofollow">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%239a5b0e'/%3E%3Cpath d='M32 50V20' stroke='%23fff7e8' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='25' cy='28' rx='5' ry='9' transform='rotate(-25 25 28)' fill='%23fff7e8'/%3E%3Cellipse cx='39' cy='28' rx='5' ry='9' transform='rotate(25 39 28)' fill='%23fff7e8'/%3E%3Cellipse cx='32' cy='17' rx='4.5' ry='8' fill='%23fff7e8'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap">
@@ -29,7 +32,7 @@
 })();
 </script>
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></noscript>
-<link rel="stylesheet" href="assets/css/style.css?v=6">
+<link rel="stylesheet" href="assets/css/style.css?v=13">
 <!-- @head:end -->
 </head>
 <body>
@@ -46,7 +49,7 @@
   <div class="offcanvas-body">
     <a class="navbar-brand d-none d-lg-inline-flex" href="index.html" aria-label="Millstone &amp; Co. — back to website">
       <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 29V10"/><ellipse cx="11" cy="15" rx="3" ry="5" transform="rotate(-25 11 15)" fill="currentColor"/><ellipse cx="21" cy="15" rx="3" ry="5" transform="rotate(25 21 15)" fill="currentColor"/><ellipse cx="16" cy="7" rx="2.6" ry="4.6" fill="currentColor"/><ellipse cx="11.5" cy="23" rx="2.6" ry="4" transform="rotate(-25 11.5 23)" fill="currentColor"/><ellipse cx="20.5" cy="23" rx="2.6" ry="4" transform="rotate(25 20.5 23)" fill="currentColor"/></svg></span>
-      <span class="brand-text">Millstone<small>Customer portal</small></span>
+      <span class="brand-text text-white">Millstone<small class="text-white">&amp; Co. Fresh Atta</small></span>
     </a>
     <nav aria-label="Dashboard">
       <ul class="app-nav">
@@ -64,7 +67,7 @@
         <li><a href="login.html" class="text-danger"><i class="bi bi-box-arrow-left" aria-hidden="true"></i><span>Log out</span></a></li>
       </ul>
     </nav>
-    <div class="demo-banner mt-auto"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Preview account - example information; changes are not saved.</span></div>
+    <div class="demo-banner mt-auto"><i class="bi bi-info-circle" aria-hidden="true"></i><span>Preview account - the information shown is illustrative and changes are not saved.</span></div>
   </div>
 </aside>
 <!-- @appnav:end -->
@@ -155,8 +158,8 @@
         <h2 id="orders-h" class="h5">Your standing orders</h2>
         <div class="row g-4">
           <div class="col-lg-6 col-xl-4">
-            <article class="mm-card" aria-labelledby="r1-h">
-              <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+            <article class="mm-card recurring-card" aria-labelledby="r1-h">
+              <div class="recurring-card-head">
                 <div><h3 id="r1-h" class="h6 mb-1">Sharbati Whole Wheat Atta</h3><p class="small text-muted mb-0">5 kg · Weekly Fresh</p></div>
                 <span class="status status-ok">Active</span>
               </div>
@@ -165,7 +168,7 @@
                 <li><i class="bi bi-calendar-event" aria-hidden="true"></i><span>Next: Thu 5 Nov 2026</span></li>
                 <li><i class="bi bi-tag" aria-hidden="true"></i><span>$12.50 per delivery</span></li>
               </ul>
-              <div class="d-flex flex-wrap gap-2">
+              <div class="recurring-card-actions">
                 <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Pausing this order is not available yet; your schedule is unchanged."><i class="bi bi-pause-circle" aria-hidden="true"></i> Pause</button>
                 <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Skipping this delivery is not available yet; your schedule is unchanged."><i class="bi bi-skip-forward" aria-hidden="true"></i> Skip next</button>
                 <button type="button" class="btn btn-ghost btn-sm" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil" aria-hidden="true"></i> Edit</button>
@@ -174,8 +177,8 @@
             </article>
           </div>
           <div class="col-lg-6 col-xl-4">
-            <article class="mm-card" aria-labelledby="r2-h">
-              <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+            <article class="mm-card recurring-card" aria-labelledby="r2-h">
+              <div class="recurring-card-head">
                 <div><h3 id="r2-h" class="h6 mb-1">7-Grain Multigrain Atta</h3><p class="small text-muted mb-0">5 kg · Fortnightly Fill</p></div>
                 <span class="status status-ok">Active</span>
               </div>
@@ -184,7 +187,7 @@
                 <li><i class="bi bi-calendar-event" aria-hidden="true"></i><span>Next: Thu 5 Nov 2026</span></li>
                 <li><i class="bi bi-tag" aria-hidden="true"></i><span>$15.90 per delivery</span></li>
               </ul>
-              <div class="d-flex flex-wrap gap-2">
+              <div class="recurring-card-actions">
                 <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Pausing this order is not available yet; your schedule is unchanged."><i class="bi bi-pause-circle" aria-hidden="true"></i> Pause</button>
                 <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Skipping this delivery is not available yet; your schedule is unchanged."><i class="bi bi-skip-forward" aria-hidden="true"></i> Skip next</button>
                 <button type="button" class="btn btn-ghost btn-sm" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil" aria-hidden="true"></i> Edit</button>
@@ -193,17 +196,17 @@
             </article>
           </div>
           <div class="col-lg-6 col-xl-4">
-            <article class="mm-card" aria-labelledby="r3-h">
-              <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+            <article class="mm-card recurring-card" aria-labelledby="r3-h">
+              <div class="recurring-card-head">
                 <div><h3 id="r3-h" class="h6 mb-1">Ragi Flour</h3><p class="small text-muted mb-0">1 kg · Monthly Pantry</p></div>
                 <span class="status status-muted">Paused</span>
               </div>
               <ul class="list-clean small mb-3">
-                <li><i class="bi bi-arrow-repeat" aria-hidden="true"></i><span>Second Saturday of the month, Midday 11 am–2 pm</span></li>
+                <li><i class="bi bi-arrow-repeat" aria-hidden="true"></i><span>Second Saturday, 11 am–2 pm</span></li>
                 <li><i class="bi bi-calendar-event" aria-hidden="true"></i><span>Next: Sat 14 Nov 2026 (once resumed)</span></li>
                 <li><i class="bi bi-tag" aria-hidden="true"></i><span>$5.90 per delivery</span></li>
               </ul>
-              <div class="d-flex flex-wrap gap-2">
+              <div class="recurring-card-actions">
                 <button type="button" class="btn btn-primary btn-sm" data-demo-toast="Resuming this order is not available yet; your schedule is unchanged."><i class="bi bi-play-circle" aria-hidden="true"></i> Resume</button>
                 <button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Skipping a delivery is not available yet; your schedule is unchanged." disabled><i class="bi bi-skip-forward" aria-hidden="true"></i> Skip next</button>
                 <button type="button" class="btn btn-ghost btn-sm" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil" aria-hidden="true"></i> Edit</button>
@@ -337,7 +340,7 @@
 
 <!-- @scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/main.js?v=2"></script>
+<script src="assets/js/main.js?v=3"></script>
 <!-- @scripts:end -->
 </body>
 </html>

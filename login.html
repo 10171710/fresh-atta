@@ -8,7 +8,10 @@
 <meta name="description" content="Log in to the Millstone &amp; Co. customer portal to manage atta deliveries, view past orders and review invoices.">
 <meta name="theme-color" content="#9a5b0e">
 <meta name="robots" content="noindex,nofollow">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%239a5b0e'/%3E%3Cpath d='M32 50V20' stroke='%23fff7e8' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='25' cy='28' rx='5' ry='9' transform='rotate(-25 25 28)' fill='%23fff7e8'/%3E%3Cellipse cx='39' cy='28' rx='5' ry='9' transform='rotate(25 39 28)' fill='%23fff7e8'/%3E%3Cellipse cx='32' cy='17' rx='4.5' ry='8' fill='%23fff7e8'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap">
@@ -29,22 +32,23 @@
 })();
 </script>
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></noscript>
-<link rel="stylesheet" href="assets/css/style.css?v=6">
+<link rel="stylesheet" href="assets/css/style.css?v=13">
 <!-- @head:end -->
 </head>
 <body>
 <div class="auth-page login-page">
-  <div class="auth-page-bg" aria-hidden="true"></div>
 
-  <!-- Minimal Top Header: ONLY Theme + RTL (NO NAVBAR, NO BACK LINK) -->
+  <!-- Top Header Bar: Theme & RTL toggles on right -->
   <header class="auth-topbar">
-    <div class="auth-topbar-inner">
-      <button type="button" class="icon-btn" data-dir-toggle aria-label="Text direction: left-to-right (LTR). Switch to right-to-left (RTL)" title="Switch to RTL layout">
-        <i class="bi bi-text-left dir-icon-ltr" aria-hidden="true"></i><i class="bi bi-text-right dir-icon-rtl" aria-hidden="true"></i><span class="dir-code" data-dir-code aria-hidden="true">LTR</span>
-      </button>
-      <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
-        <i class="bi bi-moon-stars-fill theme-icon-moon" aria-hidden="true"></i><i class="bi bi-sun-fill theme-icon-sun" aria-hidden="true"></i>
-      </button>
+    <div class="container-xxl d-flex align-items-center justify-content-end">
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" class="icon-btn" data-dir-toggle aria-label="Text direction: left-to-right (LTR). Switch to right-to-left (RTL)" title="Switch to RTL layout">
+          <i class="bi bi-text-left dir-icon-ltr" aria-hidden="true"></i><i class="bi bi-text-right dir-icon-rtl" aria-hidden="true"></i><span class="dir-code" data-dir-code aria-hidden="true">LTR</span>
+        </button>
+        <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
+          <i class="bi bi-moon-stars-fill theme-icon-moon" aria-hidden="true"></i><i class="bi bi-sun-fill theme-icon-sun" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -52,18 +56,40 @@
   <main id="main" class="auth-main">
     <div class="auth-portal-card">
       
-      <!-- Brand Logo same as in navbar and footer -->
+      <!-- Centered Brand Logo (Calmara Style) -->
       <div class="text-center mb-4">
-        <a class="navbar-brand d-inline-flex align-items-center justify-content-center gap-2 mb-3" href="index.html" aria-label="Millstone &amp; Co. — home">
-          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 29V10"/><ellipse cx="11" cy="15" rx="3" ry="5" transform="rotate(-25 11 15)" fill="currentColor"/><ellipse cx="21" cy="15" rx="3" ry="5" transform="rotate(25 21 15)" fill="currentColor"/><ellipse cx="16" cy="7" rx="2.6" ry="4.6" fill="currentColor"/><ellipse cx="11.5" cy="23" rx="2.6" ry="4" transform="rotate(-25 11.5 23)" fill="currentColor"/><ellipse cx="20.5" cy="23" rx="2.6" ry="4" transform="rotate(25 20.5 23)" fill="currentColor"/></svg></span>
-          <span class="brand-text">Millstone<small>&amp; Co. Fresh Atta</small></span>
+        <a class="auth-card-brand d-inline-flex align-items-center justify-content-center gap-3 mb-3 text-decoration-none" href="index.html" aria-label="Millstone &amp; Co. — home">
+          <span class="auth-card-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 29V10"/><ellipse cx="11" cy="15" rx="3" ry="5" transform="rotate(-25 11 15)" fill="currentColor"/><ellipse cx="21" cy="15" rx="3" ry="5" transform="rotate(25 21 15)" fill="currentColor"/><ellipse cx="16" cy="7" rx="2.6" ry="4.6" fill="currentColor"/><ellipse cx="11.5" cy="23" rx="2.6" ry="4" transform="rotate(-25 11.5 23)" fill="currentColor"/><ellipse cx="20.5" cy="23" rx="2.6" ry="4" transform="rotate(25 20.5 23)" fill="currentColor"/></svg>
+          </span>
+          <span class="auth-card-copy d-flex flex-column text-start">
+            <span class="auth-card-title">Millstone</span>
+            <span class="auth-card-sub">&amp; CO. FRESH ATTA</span>
+          </span>
         </a>
-        <h1 class="h-section mb-2">Customer Portal Login</h1>
-        <p class="text-muted mb-0">Sign in to manage your delivery schedule, orders and billing.</p>
+        <h1 class="h-section mb-2 text-white">Customer Login</h1>
+        <p class="auth-card-desc mb-0">Sign in to manage your delivery schedule, orders and billing.</p>
       </div>
 
       <!-- Form Body Container / In-Place Success Target -->
       <div id="auth-card-body">
+        
+        <!-- Social One-Click Auth CTAs -->
+        <div class="d-grid gap-2 mb-3">
+          <button type="button" class="btn btn-social-auth btn-google w-100" data-auth-provider="Google" aria-label="Sign in with Google">
+            <svg class="social-icon-svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.7 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3 0-.8.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2c0 2.8.7 5.4 1.9 7.8l3.7-2.9z"/><path fill="#34A853" d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2-6.4-4.8L1.9 16.9C3.7 20.6 7.5 23.5 12 23.5z"/></svg>
+            <span>Sign in with Google</span>
+          </button>
+          <button type="button" class="btn btn-social-auth btn-apple w-100" data-auth-provider="Apple" aria-label="Sign in with Apple">
+            <i class="bi bi-apple fs-5" aria-hidden="true"></i>
+            <span>Sign in with Apple</span>
+          </button>
+        </div>
+
+        <div class="auth-divider my-3">
+          <span>or sign in with email</span>
+        </div>
+
         <p class="demo-banner mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i><span><strong>Preview sign-in</strong> - use any email and password to explore the customer portal.</span></p>
 
         <form data-auth-login aria-label="Log in">
@@ -115,7 +141,7 @@
 </div>
 <!-- @scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/main.js?v=2"></script>
+<script src="assets/js/main.js?v=3"></script>
 <!-- @scripts:end -->
 </body>
 </html>

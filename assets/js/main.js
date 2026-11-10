@@ -144,7 +144,7 @@
 
     $$('[data-add-to-basket]').forEach(function (button) {
       button.addEventListener('click', function () {
-        var card = button.closest('.product-card');
+        var card = button.closest('.product-card') || button.closest('.ed-product');
         var nameElement = card && $('h3', card);
         var priceElement = card && $('.price', card);
         var match = priceElement && priceElement.textContent.match(/\$([\d]+(?:\.\d{1,2})?)/);
@@ -371,6 +371,21 @@
     toast(el.getAttribute('data-demo-toast'));
   });
 
+  /* ---- Person-name fields: reject digits even without HTML pattern support */
+  var nameRe = null;
+  try { nameRe = new RegExp('^[\\p{L}\\p{M}][\\p{L}\\p{M} .\'’\\-]*$', 'u'); } catch (err) { nameRe = null; }
+  if (nameRe) {
+    $$('#c-name, #r-name').forEach(function (input) {
+      var validateName = function () {
+        var v = input.value.trim();
+        input.setCustomValidity(v && !nameRe.test(v) ? 'Please use letters, spaces, hyphens and apostrophes only.' : '');
+      };
+      input.addEventListener('input', validateName);
+      input.addEventListener('blur', validateName);
+      validateName();
+    });
+  }
+
   /* ---- Demo forms: validate, never submit anywhere ----------------------- */
   $$('form[data-demo-form]').forEach(function (form) {
     form.setAttribute('novalidate', '');
@@ -414,41 +429,195 @@
       if (cardBody) {
         cardBody.innerHTML =
           '<div class="auth-success-state text-center py-2">' +
-            '<div class="auth-success-badge mb-3">' +
-              '<i class="bi bi-check-circle-fill" aria-hidden="true"></i>' +
-            '</div>' +
-            '<div class="auth-pill-status mb-2">' +
-              '<span class="pulse-dot"></span> Customer Session Active' +
-            '</div>' +
-            '<h2 class="h3 fw-bold mb-2">Login Successful!</h2>' +
-            '<p class="text-muted mb-4">Welcome back, <strong>' + displayName + '</strong>.</p>' +
-            '<div class="auth-session-details text-start mb-4">' +
-              '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
-                '<span class="text-muted small">Account Email</span>' +
-                '<span class="fw-semibold small font-monospace">' + emailVal + '</span>' +
-              '</div>' +
-              '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
-                '<span class="text-muted small">Account Role</span>' +
-                '<span class="badge text-bg-success">Customer (Family Plan)</span>' +
-              '</div>' +
-              '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
-                '<span class="text-muted small">Customer Record ID</span>' +
-                '<span class="font-monospace small">#MM-20418</span>' +
-              '</div>' +
-              '<div class="d-flex justify-content-between align-items-center py-2">' +
-                '<span class="text-muted small">Session Status</span>' +
-                '<span class="text-success fw-bold small d-inline-flex align-items-center gap-1">' +
-                  '<i class="bi bi-shield-check" aria-hidden="true"></i> Authenticated (Same Page)' +
-                '</span>' +
-              '</div>' +
-            '</div>' +
-            '<div class="d-grid gap-2">' +
-              '<button type="button" class="btn btn-outline-secondary" onclick="window.location.reload()">' +
-                '<i class="bi bi-box-arrow-left me-1" aria-hidden="true"></i> Sign in as a different user' +
-              '</button>' +
-            '</div>' +
+          '<div class="auth-success-badge mb-3">' +
+          '<i class="bi bi-check-circle-fill" aria-hidden="true"></i>' +
+          '</div>' +
+          '<div class="auth-pill-status mb-2">' +
+          '<span class="pulse-dot"></span> Customer Session Active' +
+          '</div>' +
+          '<h2 class="h3 fw-bold mb-2">Login Successful!</h2>' +
+          '<p class="text-muted mb-4">Welcome back, <strong>' + displayName + '</strong>.</p>' +
+          '<div class="auth-session-details text-start mb-4">' +
+          '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
+          '<span class="text-muted small">Account Email</span>' +
+          '<span class="fw-semibold small font-monospace">' + emailVal + '</span>' +
+          '</div>' +
+          '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
+          '<span class="text-muted small">Account Role</span>' +
+          '<span class="badge text-bg-success">Customer (Family Plan)</span>' +
+          '</div>' +
+          '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
+          '<span class="text-muted small">Customer Record ID</span>' +
+          '<span class="font-monospace small">#MM-20418</span>' +
+          '</div>' +
+          '<div class="d-flex justify-content-between align-items-center py-2">' +
+          '<span class="text-muted small">Session Status</span>' +
+          '<span class="text-success fw-bold small d-inline-flex align-items-center gap-1">' +
+          '<i class="bi bi-shield-check" aria-hidden="true"></i> Authenticated (Same Page)' +
+          '</span>' +
+          '</div>' +
+          '</div>' +
+          '<div class="d-grid gap-2">' +
+          '<button type="button" class="btn btn-outline-secondary" onclick="window.location.reload()">' +
+          '<i class="bi bi-box-arrow-left me-1" aria-hidden="true"></i> Sign in as a different user' +
+          '</button>' +
+          '</div>' +
           '</div>';
       }
+    });
+  }
+
+  /* ---- In-place Customer Account Registration (stays on same page, gives success) - */
+  var authRegisterForm = $('form[data-auth-register]');
+  if (authRegisterForm) {
+    authRegisterForm.setAttribute('novalidate', '');
+    authRegisterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!authRegisterForm.checkValidity()) {
+        authRegisterForm.classList.add('was-validated');
+        var bad = $(':invalid', authRegisterForm); if (bad) bad.focus();
+        return;
+      }
+      authRegisterForm.classList.remove('was-validated');
+      var nameEl = $('#r-name', authRegisterForm);
+      var displayName = (nameEl && nameEl.value.trim()) || 'Anita Sharma';
+      var emailEl = $('#r-email', authRegisterForm);
+      var emailVal = (emailEl && emailEl.value.trim()) || 'anita@example.com';
+      var postcodeEl = $('#r-postcode', authRegisterForm);
+      var postcodeVal = (postcodeEl && postcodeEl.value.trim()) || '40012';
+      var planEl = $('input[name="plan"]:checked', authRegisterForm);
+      var planVal = (planEl && planEl.value) || 'Family';
+
+      toast('Account created! Welcome to Millstone & Co., ' + displayName + '.');
+
+      var cardBody = document.getElementById('auth-card-body');
+      if (cardBody) {
+        cardBody.innerHTML =
+          '<div class="auth-success-state text-center py-2">' +
+          '<div class="auth-success-badge mb-3">' +
+          '<i class="bi bi-check-circle-fill" aria-hidden="true"></i>' +
+          '</div>' +
+          '<div class="auth-pill-status mb-2">' +
+          '<span class="pulse-dot"></span> Account Created & Plan Active' +
+          '</div>' +
+          '<h2 class="h3 fw-bold mb-2">Registration Successful!</h2>' +
+          '<p class="text-muted mb-4">Welcome to Millstone &amp; Co., <strong>' + displayName + '</strong>.</p>' +
+          '<div class="auth-session-details text-start mb-4">' +
+          '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
+          '<span class="text-muted small">Account Name</span>' +
+          '<span class="fw-semibold small">' + displayName + '</span>' +
+          '</div>' +
+          '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
+          '<span class="text-muted small">Email Address</span>' +
+          '<span class="fw-semibold small font-monospace">' + emailVal + '</span>' +
+          '</div>' +
+          '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
+          '<span class="text-muted small">Selected Plan</span>' +
+          '<span class="badge text-bg-success">' + planVal + ' Plan</span>' +
+          '</div>' +
+          '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
+          '<span class="text-muted small">Delivery Postcode</span>' +
+          '<span class="font-monospace small">' + postcodeVal + ' (Covered)</span>' +
+          '</div>' +
+          '<div class="d-flex justify-content-between align-items-center py-2">' +
+          '<span class="text-muted small">First Delivery</span>' +
+          '<span class="text-success fw-bold small d-inline-flex align-items-center gap-1">' +
+          '<i class="bi bi-truck" aria-hidden="true"></i> Free Delivery Scheduled' +
+          '</span>' +
+          '</div>' +
+          '</div>' +
+          '<div class="d-grid gap-2">' +
+          '<a href="login.html" class="btn btn-primary">' +
+          '<i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i> Log in to Customer Portal' +
+          '</a>' +
+          '<button type="button" class="btn btn-outline-secondary" onclick="window.location.reload()">' +
+          '<i class="bi bi-person-plus me-1" aria-hidden="true"></i> Register another account' +
+          '</button>' +
+          '</div>' +
+          '</div>';
+      }
+    });
+  }
+
+  /* ---- Social One-Click Auth (Google / Apple) - Login Successful & stay on same page ---- */
+  var socialAuthBtns = $$('[data-auth-provider]');
+  if (socialAuthBtns.length) {
+    socialAuthBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var provider = btn.getAttribute('data-auth-provider') || 'Google';
+        var isRegister = !!$('form[data-auth-register]');
+        var email = provider.toLowerCase() === 'google' ? 'anita.sharma@gmail.com' : 'anita.sharma@icloud.com';
+        var displayName = 'Anita Sharma';
+
+        toast((isRegister ? 'Account created' : 'Login successful') + ' with ' + provider + '! Welcome, ' + displayName + '.');
+
+        var cardBody = document.getElementById('auth-card-body');
+        if (cardBody) {
+          cardBody.innerHTML =
+            '<div class="auth-success-state text-center py-2">' +
+            '<div class="auth-success-badge mb-3">' +
+            '<i class="bi bi-check-circle-fill" aria-hidden="true"></i>' +
+            '</div>' +
+            '<div class="auth-pill-status mb-2">' +
+            '<span class="pulse-dot"></span> Authenticated via ' + provider +
+            '</div>' +
+            '<h2 class="h3 fw-bold mb-2">' + (isRegister ? 'Registration Successful!' : 'Login Successful!') + '</h2>' +
+            '<p class="text-muted mb-4">Welcome back, <strong>' + displayName + '</strong>. Your session is active.</p>' +
+            '<div class="auth-session-details text-start mb-4">' +
+            '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
+            '<span class="text-muted small">Account Email</span>' +
+            '<span class="fw-semibold small font-monospace">' + email + '</span>' +
+            '</div>' +
+            '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
+            '<span class="text-muted small">Sign-in Method</span>' +
+            '<span class="badge text-bg-primary d-inline-flex align-items-center gap-1">' +
+            (provider === 'Google' ? '<i class="bi bi-google"></i> Google Account' : '<i class="bi bi-apple"></i> Apple ID') +
+            '</span>' +
+            '</div>' +
+            '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
+            '<span class="text-muted small">Account Role</span>' +
+            '<span class="badge text-bg-success">Customer (Family Plan)</span>' +
+            '</div>' +
+            '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
+            '<span class="text-muted small">Customer Record ID</span>' +
+            '<span class="font-monospace small">#MM-20418</span>' +
+            '</div>' +
+            '<div class="d-flex justify-content-between align-items-center py-2">' +
+            '<span class="text-muted small">Session Status</span>' +
+            '<span class="text-success fw-bold small d-inline-flex align-items-center gap-1">' +
+            '<i class="bi bi-shield-check" aria-hidden="true"></i> Authenticated (Same Page)' +
+            '</span>' +
+            '</div>' +
+            '</div>' +
+            '<div class="d-grid gap-2">' +
+            '<button type="button" class="btn btn-outline-secondary" onclick="window.location.reload()">' +
+            '<i class="bi bi-box-arrow-left me-1" aria-hidden="true"></i> Sign in as a different user' +
+            '</button>' +
+            '</div>' +
+            '</div>';
+        }
+      });
+    });
+  }
+
+  /* ---- Live delivery slot preview updater ---------------------------------- */
+  var slotRadios = $$('input[name="slot"]');
+  var slotSummary = document.getElementById('delivery-slot-summary');
+  if (slotRadios.length && slotSummary) {
+    slotRadios.forEach(function (radio) {
+      radio.addEventListener('change', function () {
+        var card = radio.closest('.slot-choice') || radio.closest('.choice');
+        var dayGroup = radio.closest('.day-slot-group');
+        var dayText = '';
+        if (dayGroup) {
+          var dayHeader = dayGroup.querySelector('.text-primary');
+          if (dayHeader) dayText = dayHeader.textContent.trim() + ' · ';
+        }
+        var strongEl = card ? card.querySelector('strong') : null;
+        var smallEl = card ? card.querySelector('small') : null;
+        var timeText = strongEl ? strongEl.textContent.trim() + (smallEl ? ' (' + smallEl.textContent.replace(/·.*/, '').trim() + ')' : '') : radio.value;
+        slotSummary.textContent = dayText + timeText;
+      });
     });
   }
 

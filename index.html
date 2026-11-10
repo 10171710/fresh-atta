@@ -18,7 +18,10 @@
 <meta name="twitter:title" content="Fresh Stone-Ground Atta Delivered to Your Door | Millstone &amp; Co.">
 <meta name="twitter:description" content="Millstone &amp; Co. stone-grinds whole wheat atta and millet flours in small batches and delivers within 24 hours of milling. Choose a plan, schedule delivery, and taste the difference.">
 <meta name="twitter:image" content="https://www.example.com/millstone/assets/img/social-card.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%239a5b0e'/%3E%3Cpath d='M32 50V20' stroke='%23fff7e8' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='25' cy='28' rx='5' ry='9' transform='rotate(-25 25 28)' fill='%23fff7e8'/%3E%3Cellipse cx='39' cy='28' rx='5' ry='9' transform='rotate(25 39 28)' fill='%23fff7e8'/%3E%3Cellipse cx='32' cy='17' rx='4.5' ry='8' fill='%23fff7e8'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap">
@@ -39,7 +42,7 @@
 })();
 </script>
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></noscript>
-<link rel="stylesheet" href="assets/css/style.css?v=6">
+<link rel="stylesheet" href="assets/css/style.css?v=13">
 <!-- @head:end -->
 </head>
 <body>
@@ -52,23 +55,23 @@
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 29V10"/><ellipse cx="11" cy="15" rx="3" ry="5" transform="rotate(-25 11 15)" fill="currentColor"/><ellipse cx="21" cy="15" rx="3" ry="5" transform="rotate(25 21 15)" fill="currentColor"/><ellipse cx="16" cy="7" rx="2.6" ry="4.6" fill="currentColor"/><ellipse cx="11.5" cy="23" rx="2.6" ry="4" transform="rotate(-25 11.5 23)" fill="currentColor"/><ellipse cx="20.5" cy="23" rx="2.6" ry="4" transform="rotate(25 20.5 23)" fill="currentColor"/></svg>
         </span>
-        <span class="brand-text">Millstone<small>&amp; Co. Fresh Atta</small></span>
+        <span class="brand-text text-white">Millstone<small class="text-white">&amp; Co. Fresh Atta</small></span>
       </a>
 
       <!-- Always-visible controls (stay outside the collapse so they work on mobile) -->
       <div class="d-flex align-items-center gap-2 order-xl-last">
-        <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
-          <i class="bi bi-moon-stars-fill theme-icon-moon" aria-hidden="true"></i>
-          <i class="bi bi-sun-fill theme-icon-sun" aria-hidden="true"></i>
-        </button>
-        <button type="button" class="icon-btn" data-dir-toggle aria-label="Text direction: left-to-right (LTR). Switch to right-to-left (RTL)" title="Switch to RTL layout">
-          <i class="bi bi-text-left dir-icon-ltr" aria-hidden="true"></i><i class="bi bi-text-right dir-icon-rtl" aria-hidden="true"></i><span class="dir-code" data-dir-code aria-hidden="true">LTR</span>
-        </button>
         <a class="btn btn-primary btn-login d-none d-md-inline-flex align-items-center gap-2" href="login.html">
           <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i><span>Login Portal</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle main menu">
           <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="icon-btn" data-dir-toggle aria-label="Text direction: left-to-right (LTR). Switch to right-to-left (RTL)" title="Switch to RTL layout">
+          <i class="bi bi-text-left dir-icon-ltr" aria-hidden="true"></i><i class="bi bi-text-right dir-icon-rtl" aria-hidden="true"></i><span class="dir-code" data-dir-code aria-hidden="true">LTR</span>
+        </button>
+        <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
+          <i class="bi bi-moon-stars-fill theme-icon-moon" aria-hidden="true"></i>
+          <i class="bi bi-sun-fill theme-icon-sun" aria-hidden="true"></i>
         </button>
       </div>
 
@@ -124,258 +127,467 @@
     </div>
   </section>
 
-  <!-- GRAIN QUALITY -->
-  <section class="section" aria-labelledby="quality-title">
+  <!-- 1. GRAIN QUALITY -->
+  <section class="section section-grain-quality" aria-labelledby="quality-title">
     <div class="container-xxl">
       <div class="row g-5 align-items-center">
-        <div class="col-lg-5" data-reveal>
-          <div class="ph ph-field ph-tall" role="img" aria-label="Close-up of ripe golden wheat ready for harvest in a summer field."><img class="ph-photo" src="assets/images/photo-037.jpg" alt="Close-up of ripe golden wheat ready for harvest in a summer field." loading="lazy" decoding="async"><span class="ph-tag">Sharbati wheat, harvest 2026</span></div>
+        <div class="col-lg-6 order-lg-2" data-reveal>
+          <div class="ed-media">
+            <div class="ph ph-field" role="img" aria-label="Close-up of ripe golden wheat ready for harvest in a summer field."><img class="ph-photo" src="assets/images/photo-037.jpg" alt="Close-up of ripe golden wheat ready for harvest in a summer field." loading="lazy" decoding="async"></div>
+            <div class="ed-media-note">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="badge-fresh"><i class="bi bi-patch-check-fill" aria-hidden="true"></i> Direct from Farm</span>
+              </div>
+              <strong>Harvest 2026</strong>
+              <span>Sharbati wheat direct from twelve family farms in Sehore.</span>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-7" data-reveal>
-          <span class="eyebrow mb-3">Grain quality</span>
+        <div class="col-lg-6" data-reveal>
+          <span class="eyebrow mb-3"><i class="bi bi-shield-check" aria-hidden="true"></i> Grain quality &amp; origin</span>
           <h2 id="quality-title" class="h-section mb-3">Good atta starts in the field.</h2>
-          <p class="lead-lg mb-4">We buy directly from twelve family farms and test every lot for moisture, protein and purity before a single grain enters the mill.</p>
-          <div class="row g-4">
-            <div class="col-sm-6"><div class="feature-row"><span class="icon-tile"><i class="bi bi-search" aria-hidden="true"></i></span><div><h3 class="h6 mb-1">Hand-sorted lots</h3><p class="mb-0 text-muted small">Stones, husk and broken grain removed twice before milling.</p></div></div></div>
-            <div class="col-sm-6"><div class="feature-row"><span class="icon-tile green"><i class="bi bi-droplet-half" aria-hidden="true"></i></span><div><h3 class="h6 mb-1">Moisture checked</h3><p class="mb-0 text-muted small">Every batch held at 11–12% so flour stays fresh and soft.</p></div></div></div>
-            <div class="col-sm-6"><div class="feature-row"><span class="icon-tile blue"><i class="bi bi-clipboard2-check" aria-hidden="true"></i></span><div><h3 class="h6 mb-1">Lab-tested protein</h3><p class="mb-0 text-muted small">12%+ protein wheat for rotis that puff and stay soft for hours.</p></div></div></div>
-            <div class="col-sm-6"><div class="feature-row"><span class="icon-tile"><i class="bi bi-geo-alt" aria-hidden="true"></i></span><div><h3 class="h6 mb-1">Traceable origin</h3><p class="mb-0 text-muted small">Scan the lot code on your pack to meet the farm it came from.</p></div></div></div>
+          <p class="lead-lg mb-4">We buy direct from twelve family farms and test every lot for moisture, protein and purity before a single grain reaches our granite chakki.</p>
+          <div class="ed-ledger mb-4">
+            <div class="cell">
+              <span class="cell-icon" aria-hidden="true"><i class="bi bi-droplet-half"></i></span>
+              <dt>Moisture</dt>
+              <dd>11–12%</dd>
+              <span class="sub">Optimal for stone-grinding</span>
+            </div>
+            <div class="cell">
+              <span class="cell-icon" aria-hidden="true"><i class="bi bi-award"></i></span>
+              <dt>Protein</dt>
+              <dd>12%+</dd>
+              <span class="sub">Natural gluten strength</span>
+            </div>
+            <div class="cell">
+              <span class="cell-icon" aria-hidden="true"><i class="bi bi-geo-alt"></i></span>
+              <dt>Partner farms</dt>
+              <dd>12</dd>
+              <span class="sub">Dedicated grower partners</span>
+            </div>
+            <div class="cell">
+              <span class="cell-icon" aria-hidden="true"><i class="bi bi-qr-code-scan"></i></span>
+              <dt>Traceability</dt>
+              <dd>Lot-level</dd>
+              <span class="sub">Bag QR traces harvest batch</span>
+            </div>
           </div>
+          <a class="btn btn-outline-primary" href="about.html">How we source our grain <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MILLING PROCESS -->
-  <section class="section section-alt" aria-labelledby="process-title">
-    <div class="container-xxl">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-7" data-reveal>
-          <span class="eyebrow mb-3">The milling process</span>
+  <!-- 2. MILLING PROCESS -->
+  <section class="section section-alt section-process" aria-labelledby="process-title">
+    <div class="container-xxl container-narrow">
+      <div class="ed-head ed-head--center" data-reveal>
+        <div class="ed-head-copy text-center">
+          <span class="eyebrow mb-3"><i class="bi bi-gear-wide-connected" aria-hidden="true"></i> Traditional stone milling</span>
           <h2 id="process-title" class="h-section mb-3">Slow-milled, never rushed.</h2>
-          <p class="lead-lg mb-4">Our granite chakki turns at a gentle pace, so the flour never overheats and keeps its natural oils, fibre and flavour.</p>
-          <div class="row g-4">
-            <div class="col-sm-6"><div class="feature-row"><span class="icon-tile"><i class="bi bi-funnel" aria-hidden="true"></i></span><div><h3 class="h6 mb-1">Clean &amp; sort</h3><p class="mb-0 text-muted small">Grain is air-cleaned, sieved and washed of dust and stones.</p></div></div></div>
-            <div class="col-sm-6"><div class="feature-row"><span class="icon-tile green"><i class="bi bi-wind" aria-hidden="true"></i></span><div><h3 class="h6 mb-1">Rest &amp; temper</h3><p class="mb-0 text-muted small">Wheat rests to the perfect moisture for a soft, even grind.</p></div></div></div>
-            <div class="col-sm-6"><div class="feature-row"><span class="icon-tile blue"><i class="bi bi-gear-wide-connected" aria-hidden="true"></i></span><div><h3 class="h6 mb-1">Stone-grind</h3><p class="mb-0 text-muted small">Granite stones crush the whole grain slowly, below 40 °C.</p></div></div></div>
-            <div class="col-sm-6"><div class="feature-row"><span class="icon-tile"><i class="bi bi-box-seam" aria-hidden="true"></i></span><div><h3 class="h6 mb-1">Pack &amp; dispatch</h3><p class="mb-0 text-muted small">Sealed in breathable bags and on the van the same day.</p></div></div></div>
+          <p class="lead-lg mb-0 mx-auto" style="max-width: 44rem;">Our granite chakki turns at a gentle pace below 40 °C, preserving the grain's natural germ oils, delicate aroma and nutrition.</p>
+        </div>
+      </div>
+      <div class="ed-process mt-5">
+        <div class="item" data-reveal>
+          <div class="step-top">
+            <span class="num">Step 01</span>
           </div>
-          <a class="btn btn-ghost mt-4" href="about.html">Read our milling story <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+          <div class="step-media">
+            <img src="assets/images/step-01-clean-sort.jpg" alt="Pure golden wheat grains thoroughly sorted and cleaned for stone milling." class="step-thumb" loading="lazy" decoding="async">
+          </div>
+          <h3>Clean &amp; sort</h3>
+          <p>Grain is triple air-cleaned, mechanically sieved, and washed free of dust, chaff and micro-stones.</p>
+          <div class="step-tag"><i class="bi bi-check2-circle" aria-hidden="true"></i> 99.9% Purity tested</div>
         </div>
-        <div class="col-lg-5" data-reveal>
-          <div class="ph ph-mill ph-tall" role="img" aria-label="Vintage industrial milling machinery with a grain hopper."><img class="ph-photo" src="assets/images/photo-015.jpg" alt="Vintage industrial gear and hopper machinery used for milling grain." loading="lazy" decoding="async"><span class="ph-tag">Granite stones since 1987</span></div>
+        <div class="item" data-reveal>
+          <div class="step-top">
+            <span class="num">Step 02</span>
+          </div>
+          <div class="step-media">
+            <img src="assets/images/step-02-rest-temper.jpg" alt="Sun-ripened wheat resting in climate silos to balance grain core moisture." class="step-thumb" loading="lazy" decoding="async">
+          </div>
+          <h3>Rest &amp; temper</h3>
+          <p>Cleaned wheat rests in climate silos for 24 hours to balance core moisture for a silky, uniform grind.</p>
+          <div class="step-tag"><i class="bi bi-check2-circle" aria-hidden="true"></i> 24-hr moisture cure</div>
         </div>
+        <div class="item" data-reveal>
+          <div class="step-top">
+            <span class="num">Step 03</span>
+          </div>
+          <div class="step-media">
+            <img src="assets/images/step-03-stone-grind.jpg" alt="Hand-dressed natural granite chakki millstone for gentle cold-temperature grain milling." class="step-thumb" loading="lazy" decoding="async">
+          </div>
+          <h3>Stone-grind</h3>
+          <p>Hand-dressed natural granite stones crush the whole grain gently at low RPM, keeping temperatures below 40 °C.</p>
+          <div class="step-tag"><i class="bi bi-check2-circle" aria-hidden="true"></i> Cold milled &lt; 40 °C</div>
+        </div>
+        <div class="item" data-reveal>
+          <div class="step-top">
+            <span class="num">Step 04</span>
+          </div>
+          <div class="step-media">
+            <img src="assets/images/step-04-pack-dispatch.jpg" alt="Heavy multi-ply breathable kraft paper bags packed with fresh atta and dispatched same afternoon." class="step-thumb" loading="lazy" decoding="async">
+          </div>
+          <h3>Pack &amp; dispatch</h3>
+          <p>Aero-cooled and packed into breathable multi-ply paper bags, loaded onto climate delivery vans the same afternoon.</p>
+          <div class="step-tag"><i class="bi bi-check2-circle" aria-hidden="true"></i> Same-day dispatch</div>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mt-5 pt-3 border-top" data-reveal>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge-fresh"><i class="bi bi-snow" aria-hidden="true"></i> Cold-ground promise</span>
+          <p class="mb-0 text-muted small">Every batch is milled strictly below 40 °C with bran and germ intact.</p>
+        </div>
+        <a class="link-arrow" href="about.html">Read our full milling story <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
       </div>
     </div>
   </section>
 
-  <!-- POPULAR PRODUCTS -->
+  <!-- 3. POPULAR PRODUCTS -->
   <section class="section" aria-labelledby="products-title">
     <div class="container-xxl">
-      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
-        <div><span class="eyebrow mb-3">Popular products</span><h2 id="products-title" class="h-section mb-0">Our family's favourites</h2></div>
-        <a class="link-arrow" href="products.html">See all products <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5" data-reveal>
+        <div>
+          <span class="eyebrow mb-2"><i class="bi bi-bag-check" aria-hidden="true"></i> Fresh flour shelf</span>
+          <h2 id="products-title" class="h-section mb-0">Our family's favourites</h2>
+        </div>
+        <a class="btn btn-outline-primary" href="products.html">See all products <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
       </div>
-      <div class="row g-4">
-        <div class="col-sm-6 col-xl-3" data-reveal>
-          <article class="mm-card mm-card-hover product-card position-relative">
-            <span class="ribbon badge-soft badge-fresh">Best seller</span>
-            <div class="ph ph-wheat" role="img" aria-label="Flour scattered on a wooden table with a rolling pin and wheat stalks."><img class="ph-photo" src="assets/images/photo-054.jpg" alt="Flour scattered on a wooden table spelling 'flour,' with a rolling pin and wheat stalks nearby." loading="lazy" decoding="async"></div>
-            <div class="card-body">
-              <p class="meta mb-1">Whole grain</p>
-              <h3 class="h5"><a href="product-details.html">Sharbati Whole Wheat Atta</a></h3>
-              <p class="text-muted small">Sweet rotis from stone-ground whole wheat. 100% atta, nothing added.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$12.50 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
+      <div class="ed-shelf">
+        <article class="ed-product" data-reveal>
+          <div class="ph ph-wheat" role="img" aria-label="Flour scattered on a wooden table spelling 'flour,' with a rolling pin and wheat stalks nearby."><img class="ph-photo" src="assets/images/photo-054.jpg" alt="Flour scattered on a wooden table spelling 'flour,' with a rolling pin and wheat stalks nearby." loading="lazy" decoding="async"></div>
+          <div class="body">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge-soft">Best seller</span>
+              <span class="badge-soft">Whole grain</span>
             </div>
-          </article>
-        </div>
-        <div class="col-sm-6 col-xl-3" data-reveal>
-          <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-grain" role="img" aria-label="Close-up of assorted raw grains and seeds in cups on a dark background."><img class="ph-photo" src="assets/images/photo-064.jpg" alt="Close-up of assorted raw grains and seeds in cups on a dark background, showcasing variety and texture." loading="lazy" decoding="async"></div>
-            <div class="card-body">
-              <p class="meta mb-1">Flour blend</p>
-              <h3 class="h5"><a href="product-details.html">7-Grain Multigrain Atta</a></h3>
-              <p class="text-muted small">Wheat, jowar, bajra, ragi, oats, barley and soy for extra fibre and flavour.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$15.90 <small>/ 5 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
+            <h3><a href="product-details.html">Sharbati Whole Wheat Atta</a></h3>
+            <p class="note">Sweet, golden rotis from 100% stone-ground Madhya Pradesh whole wheat. Nothing extracted, nothing added.</p>
+            <div class="buy">
+              <div class="price">$12.50 <small>/ 5 kg</small></div>
+              <button class="btn btn-sm btn-primary d-inline-flex align-items-center gap-1" type="button" data-add-to-basket><i class="bi bi-cart-plus" aria-hidden="true"></i><span>Add</span></button>
             </div>
-          </article>
-        </div>
-        <div class="col-sm-6 col-xl-3" data-reveal>
-          <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-roti" role="img" aria-label="Fresh stone-ground ragi flour with finger millet grains."><img class="ph-photo" src="assets/images/ragi-flour.jpg" alt="Fresh stone-ground ragi flour with finger millet grains." loading="lazy" decoding="async"></div>
-            <div class="card-body">
-              <p class="meta mb-1">Millets</p>
-              <h3 class="h5"><a href="product-details.html">Ragi (Finger Millet) Flour</a></h3>
-              <p class="text-muted small">Calcium-rich and naturally gluten-free. Great for porridge, dosa and baking.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$5.90 <small>/ 1 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
+          </div>
+        </article>
+        <article class="ed-product" data-reveal>
+          <div class="ph ph-grain" role="img" aria-label="Close-up of assorted raw grains and seeds in cups on a dark background, showcasing variety and texture."><img class="ph-photo" src="assets/images/photo-064.jpg" alt="Close-up of assorted raw grains and seeds in cups on a dark background, showcasing variety and texture." loading="lazy" decoding="async"></div>
+          <div class="body">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge-soft">Flour blend</span>
+              <span class="badge-soft">Multigrain</span>
             </div>
-          </article>
-        </div>
-        <div class="col-sm-6 col-xl-3" data-reveal>
-          <article class="mm-card mm-card-hover product-card">
-            <div class="ph ph-flour" role="img" aria-label="Fresh besan (chickpea flour), finely milled for pakoras, kadhi and batters."><img class="ph-photo" src="assets/images/besan.jpg" alt="Fresh besan (chickpea flour), finely milled for pakoras, kadhi and batters." loading="lazy" decoding="async"></div>
-            <div class="card-body">
-              <p class="meta mb-1">Pulses &amp; gram</p>
-              <h3 class="h5"><a href="product-details.html">Fresh Besan (Chickpea Flour)</a></h3>
-              <p class="text-muted small">Fine, nutty and aromatic — for pakoras, kadhi, ladoo and batters.</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto"><span class="price">$6.40 <small>/ 1 kg</small></span><button class="btn btn-sm btn-outline-primary" type="button" data-add-to-basket>Add</button></div>
+            <h3><a href="product-details.html">7-Grain Multigrain Atta</a></h3>
+            <p class="note">Stone-ground blend of wheat, jowar, bajra, ragi, oats, barley and roasted soy for rich nutty flavour and dietary fibre.</p>
+            <div class="buy">
+              <div class="price">$15.90 <small>/ 5 kg</small></div>
+              <button class="btn btn-sm btn-primary d-inline-flex align-items-center gap-1" type="button" data-add-to-basket><i class="bi bi-cart-plus" aria-hidden="true"></i><span>Add</span></button>
             </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FROM THE JOURNAL -->
-  <section class="section section-alt" aria-labelledby="journal-title">
-    <div class="container-xxl">
-      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4" data-reveal>
-        <div><span class="eyebrow mb-3">From the journal</span><h2 id="journal-title" class="h-section mb-0">Notes from the mill.</h2></div>
-        <a class="link-arrow" href="blog.html">Read the blog <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-xl-4" data-reveal>
-          <article class="mm-card mm-card-hover blog-card">
-            <a href="blog-details.html" class="d-block" aria-label="Read full article: Why we still dress our millstones by hand">
-              <div class="ph ph-mill ph-wide" role="img" aria-label="A traditional stone mill used for grinding grains in a rural mill room."><img class="ph-photo" src="assets/images/photo-025.jpg" alt="A traditional stone mill used for grinding grains in a rural mill room." loading="lazy" decoding="async"></div>
-            </a>
-            <div class="card-body">
-              <p class="meta mb-2"><span class="badge-soft">Milling</span><span>12 Oct 2026</span><span>6 min read</span></p>
-              <h3 class="h5"><a href="blog-details.html">Why we still carefully dress our millstones by hand</a></h3>
-              <p class="text-muted small">Every few weeks Meera re-cuts the furrows in our granite stones. Here is why that slow job decides how cool and soft your flour is.</p>
-              <p class="meta mt-auto mb-0"><img class="avatar" src="assets/images/team-meera.jpg" alt="" loading="lazy" decoding="async"> By Meera Kapoor</p>
+          </div>
+        </article>
+        <article class="ed-product" data-reveal>
+          <div class="ph ph-roti" role="img" aria-label="Fresh stone-ground ragi flour with finger millet grains."><img class="ph-photo" src="assets/images/ragi-flour.jpg" alt="Fresh stone-ground ragi flour with finger millet grains." loading="lazy" decoding="async"></div>
+          <div class="body">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge-soft">Millets</span>
+              <span class="badge-soft">Gluten-free</span>
             </div>
-          </article>
-        </div>
-        <div class="col-md-6 col-xl-4" data-reveal>
-          <article class="mm-card mm-card-hover blog-card">
-            <a href="blog-details-2.html" class="d-block" aria-label="Read full article: Bran, germ and endosperm: what is actually in your atta">
-              <div class="ph ph-grain ph-wide" role="img" aria-label="Top view of various seeds and grains displayed in ceramic bowls on a white background."><img class="ph-photo" src="assets/images/photo-017.jpg" alt="Top view of various seeds and grains displayed in ceramic bowls on a white background." loading="lazy" decoding="async"></div>
-            </a>
-            <div class="card-body">
-              <p class="meta mb-2"><span class="badge-soft">Nutrition</span><span>5 Oct 2026</span><span>7 min read</span></p>
-              <h3 class="h5"><a href="blog-details-2.html">Bran, germ and endosperm: what is actually in your atta</a></h3>
-              <p class="text-muted small">A plain-language look at the three parts of a wheat berry and what each one adds to a roti, from fibre to B vitamins.</p>
-              <p class="meta mt-auto mb-0"><img class="avatar" src="assets/images/photo-007.jpg" alt="" loading="lazy" decoding="async"> By Noa Levi</p>
+            <h3><a href="product-details.html">Ragi (Finger Millet) Flour</a></h3>
+            <p class="note">Calcium-rich, iron-dense and naturally gluten-free. Freshly milled for crispy fermented dosas, idlis and mudde.</p>
+            <div class="buy">
+              <div class="price">$5.90 <small>/ 1 kg</small></div>
+              <button class="btn btn-sm btn-primary d-inline-flex align-items-center gap-1" type="button" data-add-to-basket><i class="bi bi-cart-plus" aria-hidden="true"></i><span>Add</span></button>
             </div>
-          </article>
-        </div>
-        <div class="col-md-6 col-xl-4" data-reveal>
-          <article class="mm-card mm-card-hover blog-card">
-            <a href="blog-details-4.html" class="d-block" aria-label="Read full article: Visiting farms behind our Sharbati wheat">
-              <div class="ph ph-field ph-wide" role="img" aria-label="A wide rural landscape of wheat fields beneath a blue sky."><img class="ph-photo" src="assets/images/photo-019.jpg" alt="A wide rural landscape of wheat fields beneath a blue sky." loading="lazy" decoding="async"></div>
-            </a>
-            <div class="card-body">
-              <p class="meta mb-2"><span class="badge-soft">Sourcing</span><span>19 Sep 2026</span><span>8 min read</span></p>
-              <h3 class="h5"><a href="blog-details-4.html">Visiting farms behind our Sharbati wheat</a></h3>
-              <p class="text-muted small">Noa spent harvest week on three of our twelve partner farms. What she tested, tasted and learned about this year's crop.</p>
-              <p class="meta mt-auto mb-0"><img class="avatar" src="assets/images/photo-007.jpg" alt="" loading="lazy" decoding="async"> By Noa Levi</p>
+          </div>
+        </article>
+        <article class="ed-product" data-reveal>
+          <div class="ph ph-flour" role="img" aria-label="Fresh besan (chickpea flour), finely milled for pakoras, kadhi and batters."><img class="ph-photo" src="assets/images/besan.jpg" alt="Fresh besan (chickpea flour), finely milled for pakoras, kadhi and batters." loading="lazy" decoding="async"></div>
+          <div class="body">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge-soft">Pulses &amp; gram</span>
+              <span class="badge-soft">Fine mill</span>
             </div>
-          </article>
-        </div>
+            <h3 class="text-nowrap"><a href="product-details.html">Fresh Besan (Chickpea Flour)</a></h3>
+            <p class="note">Cold-milled from 100% de-husked Bengal gram. Exceptionally fine, fragrant and lump-free for kadhi and pakoras.</p>
+            <div class="buy">
+              <div class="price">$6.40 <small>/ 1 kg</small></div>
+              <button class="btn btn-sm btn-primary d-inline-flex align-items-center gap-1" type="button" data-add-to-basket><i class="bi bi-cart-plus" aria-hidden="true"></i><span>Add</span></button>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- DELIVERY BENEFITS -->
-  <section class="section section-dark" aria-labelledby="delivery-title">
+  <!-- 4. FRESHNESS MANIFESTO -->
+  <section class="section ed-manifesto" aria-labelledby="fresh-title">
     <div class="container-xxl">
       <div class="row g-5 align-items-center">
         <div class="col-lg-6" data-reveal>
-          <span class="eyebrow mb-3" style="color:var(--mm-wheat)">Delivery benefits</span>
-          <h2 id="delivery-title" class="h-section mb-3">Fresh flour on your schedule.</h2>
-          <p class="lead-lg mb-4" style="color:#d9c7aa">Choose the days and time window that suit you. Our insulated vans keep every bag cool, and we drop it right at your kitchen door.</p>
-          <ul class="check-list mb-4">
-            <li>Delivery on Tuesday, Thursday and Saturday in three time windows</li>
-            <li>Free delivery on orders over $20, no minimum on subscriptions</li>
-            <li>Skip, pause or change your plan with one tap — up to the evening before</li>
-            <li>Recyclable paper-lined bags and a bag-return credit</li>
-          </ul>
-          <a class="btn btn-primary btn-lg" href="delivery-plans.html">See delivery plans</a>
+          <span class="eyebrow mb-3 text-warning"><i class="bi bi-clock-history me-1" aria-hidden="true"></i> Milled this morning</span>
+          <h2 id="fresh-title" class="h-section mb-3 text-white">Freshness you can smell through the bag.</h2>
+          <p class="ed-quote mb-4">Flour is a fresh food. We treat it that way — <em>milled to order, never warehoused.</em></p>
+          <div class="ed-promises">
+            <div class="ed-promise">
+              <span class="promise-num">01</span>
+              <div>
+                <h3>Ground in small batches</h3>
+                <p>We mill only to that day's verified orders, packing immediately in breathable kraft sacks.</p>
+              </div>
+            </div>
+            <div class="ed-promise">
+              <span class="promise-num">02</span>
+              <div>
+                <h3>Kept below 40 °C</h3>
+                <p>Gentle stone revolutions shield the live wheat germ oils, vitamin E and authentic aroma.</p>
+              </div>
+            </div>
+            <div class="ed-promise">
+              <span class="promise-num">03</span>
+              <div>
+                <h3>At your door in 24 hours</h3>
+                <p>Our dedicated insulated vans deliver across Sunridge within 24 hours of grinding.</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-lg-6" data-reveal>
-          <div class="row g-3">
-            <div class="col-6"><div class="ph ph-van ph-square" role="img" aria-label="Courier loading cardboard boxes into a delivery van outside a warehouse."><img class="ph-photo" src="assets/images/photo-042.jpg" alt="Courier loading cardboard boxes into a delivery van outside a warehouse." loading="lazy" decoding="async"></div></div>
-            <div class="col-6 pt-4"><div class="ph ph-sack ph-square" role="img" aria-label="Open delivery van filled with boxes, ready for logistics and transport."><img class="ph-photo" src="assets/images/photo-043.jpg" alt="Open delivery van filled with boxes, ready for logistics and transport services." loading="lazy" decoding="async"></div></div>
+          <div class="ed-mosaic">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="ph ph-mill ph-tall" role="img" aria-label="Elderly man grinding spices using a traditional mill in a rustic setting."><img class="ph-photo" src="assets/images/photo-034.jpg" alt="Elderly man grinding spices using a traditional mill in a rustic setting." loading="lazy" decoding="async"><span class="ph-tag">Stone, not steel</span></div>
+              </div>
+              <div class="col-6 pt-4">
+                <div class="ph ph-van ph-tall" role="img" aria-label="Courier loading cardboard boxes into a delivery van outside a warehouse."><img class="ph-photo" src="assets/images/photo-042.jpg" alt="Courier loading cardboard boxes into a delivery van outside a warehouse." loading="lazy" decoding="async"><span class="ph-tag">Next-day delivery</span></div>
+              </div>
+            </div>
+            <div class="ed-mosaic-badge d-flex align-items-center gap-3">
+              <i class="bi bi-shield-fill-check fs-2 text-warning" aria-hidden="true"></i>
+              <div>
+                <strong class="d-block text-white">100% Freshness Guarantee</strong>
+                <small class="text-white-50">Notice the difference in taste or we replace your bag free within 14 days.</small>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- 5. FROM THE JOURNAL -->
+  <section class="section section-alt section-journal" aria-labelledby="journal-title">
+    <div class="container-xxl container-narrow">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5" data-reveal>
+        <div>
+          <span class="eyebrow mb-2"><i class="bi bi-journal-text me-1" aria-hidden="true"></i> From the journal</span>
+          <h2 id="journal-title" class="h-section mb-0">Notes from the mill.</h2>
+        </div>
+        <a class="btn btn-outline-primary" href="blog.html">Read the blog <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+      </div>
+      <div class="ed-journal-grid">
+        <!-- 1. Hand dressing stones -->
+        <article class="ed-journal-card" data-reveal>
+          <a href="blog-details.html" class="d-block" aria-label="Read full article: Why we still carefully dress our millstones by hand">
+            <div class="ph ph-mill ph-wide" role="img" aria-label="Traditional stone mill used for grinding grains."><img class="ph-photo" src="assets/images/photo-010.jpg" alt="Traditional stone mill used for grinding grains." loading="lazy" decoding="async"></div>
+          </a>
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge-soft">Milling</span>
+              <span class="text-muted small">12 Oct 2026</span>
+              <span class="text-muted small">· 6 min read</span>
+            </div>
+            <h3><a href="blog-details.html">Why we still carefully dress our millstones by hand</a></h3>
+            <p class="note mb-3">Every few weeks Meera re-cuts the spiral furrows in our granite chakki stones. Here is why that slow craft decides how cool and velvety soft your flour is.</p>
+            <div class="d-flex align-items-center gap-2 mt-auto pt-2 border-top">
+              <img class="avatar" src="assets/images/team-meera.jpg" alt="" loading="lazy" decoding="async">
+              <span class="small fw-semibold">By Meera Kapoor <span class="text-muted fw-normal">· Head Miller</span></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Bran, germ and endosperm -->
+        <article class="ed-journal-card" data-reveal>
+          <a href="blog-details-2.html" class="d-block" aria-label="Read full article: Bran, germ and endosperm: what is actually in your atta">
+            <div class="ph ph-grain ph-wide" role="img" aria-label="Top view of various seeds and grains displayed in ceramic bowls on a white background."><img class="ph-photo" src="assets/images/photo-017.jpg" alt="Top view of various seeds and grains displayed in ceramic bowls on a white background." loading="lazy" decoding="async"></div>
+          </a>
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge-soft">Nutrition</span>
+              <span class="text-muted small">5 Oct 2026</span>
+              <span class="text-muted small">· 7 min read</span>
+            </div>
+            <h3><a href="blog-details-2.html">Bran, germ and endosperm: what is actually in your atta</a></h3>
+            <p class="note mb-3">A clear look at the anatomy of a whole wheat grain, and what each layer adds to digestion, protein absorption, and roti puffing.</p>
+            <div class="d-flex align-items-center gap-2 mt-auto pt-2 border-top">
+              <img class="avatar" src="assets/images/team-noa.jpg" alt="" loading="lazy" decoding="async">
+              <span class="small fw-semibold">By Noa Levi <span class="text-muted fw-normal">· Nutrition Lead</span></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Visiting farms -->
+        <article class="ed-journal-card" data-reveal>
+          <a href="blog-details-4.html" class="d-block" aria-label="Read full article: Visiting farms behind our Sharbati wheat">
+            <div class="ph ph-field ph-wide" role="img" aria-label="A wide rural landscape of wheat fields beneath a blue sky."><img class="ph-photo" src="assets/images/photo-019.jpg" alt="A wide rural landscape of wheat fields beneath a blue sky." loading="lazy" decoding="async"></div>
+          </a>
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge-soft">Sourcing</span>
+              <span class="text-muted small">19 Sep 2026</span>
+              <span class="text-muted small">· 8 min read</span>
+            </div>
+            <h3><a href="blog-details-4.html">Visiting farms behind our Sharbati wheat</a></h3>
+            <p class="note mb-3">Harvest week on the Sehore black soil plateau with our grower partners. Moisture checks, grain testing, and why direct sourcing matters.</p>
+            <div class="d-flex align-items-center gap-2 mt-auto pt-2 border-top">
+              <img class="avatar" src="assets/images/team-daniel.jpg" alt="" loading="lazy" decoding="async">
+              <span class="small fw-semibold">By Daniel Okafor <span class="text-muted fw-normal">· Sourcing Lead</span></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. TESTIMONIALS -->
   <section class="section" aria-labelledby="reviews-title">
     <div class="container-xxl">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow mb-3">Kind words</span>
-        <h2 id="reviews-title" class="h-section mb-0">Rotis that stay soft till dinner.</h2>
+      <div class="ed-head ed-head--center" data-reveal>
+        <div class="ed-head-copy text-center">
+          <span class="eyebrow mb-3"><i class="bi bi-chat-heart me-1" aria-hidden="true"></i> Kind words</span>
+          <h2 id="reviews-title" class="h-section mb-3">What our customers say.</h2>
+          <p class="lead-lg mb-0 mx-auto" style="max-width: 42rem;">Over 3,200 households trust our daily fresh mill. Here is what cooks across Sunridge experience.</p>
+        </div>
       </div>
-      <div class="row g-4">
-        <div class="col-md-4" data-reveal>
-          <figure class="mm-card quote-card mb-0">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>“The aroma when I open the bag is incredible — just like the chakki back home. My rotis puff up every single time.”</blockquote>
-            <figcaption class="person mt-auto"><span class="avatar" aria-hidden="true">AS</span><span><strong>Anita Sharma</strong><span>Family plan · 2 years</span></span></figcaption>
-          </figure>
-        </div>
-        <div class="col-md-4" data-reveal>
-          <figure class="mm-card quote-card mb-0">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>“We run a small café and switched our paratha flour to Millstone. Customers noticed within a week. Delivery is always on time.”</blockquote>
-            <figcaption class="person mt-auto"><span class="avatar" style="--c1:#6f9b5f;--c2:#2f5a3a" aria-hidden="true">DO</span><span><strong>Daniel Okafor</strong><span>Kitchen plan · café owner</span></span></figcaption>
-          </figure>
-        </div>
-        <div class="col-md-4" data-reveal>
-          <figure class="mm-card quote-card mb-0">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>“The ragi and multigrain blends changed our breakfasts. Scheduling is easy and they never forget the pause when we travel.”</blockquote>
-            <figcaption class="person mt-auto"><span class="avatar" style="--c1:#c97a5a;--c2:#7a3a28" aria-hidden="true">LH</span><span><strong>Layla Haddad</strong><span>Household plan · 8 months</span></span></figcaption>
-          </figure>
-        </div>
+      <div class="ed-quotes mt-5">
+        <figure class="ed-quote-item" data-reveal>
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+            </div>
+            <span class="badge-fresh small"><i class="bi bi-patch-check-fill" aria-hidden="true"></i> Verified</span>
+          </div>
+          <blockquote>“You can see the bran in the dough and the rotis stay soft all day. We cancelled our supermarket flour subscription within a fortnight.”</blockquote>
+          <figcaption class="person">
+            <img class="avatar" src="assets/images/customer-1.jpg" alt="Anita Sharma" loading="lazy" decoding="async">
+            <div>
+              <strong class="d-block text-dark-emphasis">Anita Sharma</strong>
+              <small class="text-muted">Family plan · 2 years</small>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="ed-quote-item" data-reveal>
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+            </div>
+            <span class="badge-fresh small"><i class="bi bi-patch-check-fill" aria-hidden="true"></i> Verified</span>
+          </div>
+          <blockquote>“We run a 40-seat lunch café. Fresh atta once a week changed our parathas. Harold and Daniel never miss a Tuesday morning drop.”</blockquote>
+          <figcaption class="person">
+            <img class="avatar" src="assets/images/customer-2.jpg" alt="Daniel Okafor" loading="lazy" decoding="async">
+            <div>
+              <strong class="d-block text-dark-emphasis">Daniel Okafor</strong>
+              <small class="text-muted">Kitchen plan · 14 months</small>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="ed-quote-item" data-reveal>
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+            </div>
+            <span class="badge-fresh small"><i class="bi bi-patch-check-fill" aria-hidden="true"></i> Verified</span>
+          </div>
+          <blockquote>“The ragi and multigrain blends changed our breakfasts. Scheduling is easy and they never forget the pause when we travel.”</blockquote>
+          <figcaption class="person">
+            <img class="avatar" src="assets/images/customer-3.jpg" alt="Layla Haddad" loading="lazy" decoding="async">
+            <div>
+              <strong class="d-block text-dark-emphasis">Layla Haddad</strong>
+              <small class="text-muted">Household plan · 8 months</small>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- 7. FAQ -->
   <section class="section section-alt" aria-labelledby="faq-title">
     <div class="container-xxl">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow mb-3">Questions</span>
-        <h2 id="faq-title" class="h-section mb-0">Everything you might ask.</h2>
+      <div class="ed-faq-grid">
+        <div class="ed-faq-intro" data-reveal>
+          <span class="eyebrow mb-3"><i class="bi bi-question-circle me-1" aria-hidden="true"></i> Frequently asked</span>
+          <h2 id="faq-title" class="h-section mb-3">Everything you might ask.</h2>
+          <p class="text-muted mb-4">Still unsure about stone grind, delivery schedules or grain storage? Our team answers every question directly.</p>
+          <div class="mm-card p-4 mb-4 border shadow-sm">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <span class="icon-tile green" aria-hidden="true"><i class="bi bi-headset"></i></span>
+              <div>
+                <strong class="d-block">Direct Miller Support</strong>
+                <small class="text-muted">Mon–Sat 7:00 am – 7:00 pm</small>
+              </div>
+            </div>
+            <p class="small text-muted mb-3">Reach Meera, Harold or Layla anytime for grain recommendations.</p>
+            <a class="btn btn-outline-primary w-100" href="contact.html">Ask us anything <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="ed-faq" data-reveal>
+          <div class="accordion" id="faqHome1">
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#h1-faq1" aria-expanded="true" aria-controls="h1-faq1">How fresh is the atta when it arrives?</button></h3>
+              <div id="h1-faq1" class="accordion-collapse collapse show" data-bs-parent="#faqHome1"><div class="accordion-body">We mill in small batches and deliver within 24 hours of milling. The milling date and lot code are printed on every bag, and we grind below 40 °C so the flour keeps its natural oils.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h1-faq2" aria-expanded="false" aria-controls="h1-faq2">Where do you deliver?</button></h3>
+              <div id="h1-faq2" class="accordion-collapse collapse" data-bs-parent="#faqHome1"><div class="accordion-body">We deliver across Sunridge and within twenty miles of the mill every Tuesday, Thursday and Saturday, in Morning (7–10 am), Midday (11 am–2 pm) and Evening (5–8 pm) windows.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h1-faq3" aria-expanded="false" aria-controls="h1-faq3">Can I pause or skip a delivery?</button></h3>
+              <div id="h1-faq3" class="accordion-collapse collapse" data-bs-parent="#faqHome1"><div class="accordion-body">Yes. Pause, skip or change any delivery up to 6 pm the evening before through your online dashboard. After that cut-off, your batch is already being milled and packed.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h1-faq4" aria-expanded="false" aria-controls="h1-faq4">Is it 100% whole wheat?</button></h3>
+              <div id="h1-faq4" class="accordion-collapse collapse" data-bs-parent="#faqHome1"><div class="accordion-body">Our Sharbati atta is 100% whole grain, stone-ground with the outer bran and germ intact. Nothing is added, chemically bleached or removed.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h1-faq5" aria-expanded="false" aria-controls="h1-faq5">What if I do not like it?</button></h3>
+              <div id="h1-faq5" class="accordion-collapse collapse" data-bs-parent="#faqHome1"><div class="accordion-body">Tell us within fourteen days and we will replace the bag or refund it in full. Your first delivery ships free, so trying the mill costs nothing but the flour.</div></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row justify-content-center" data-reveal><div class="col-lg-9 col-xl-8"><div class="accordion" id="faqHome1">
-        <div class="accordion-item">
-          <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#h1-faq1" aria-expanded="true" aria-controls="h1-faq1">How fresh is the atta when it arrives?</button></h3>
-          <div id="h1-faq1" class="accordion-collapse collapse show" data-bs-parent="#faqHome1"><div class="accordion-body">We mill in small batches and deliver within 24 hours of milling. The milling date and lot code are printed on every bag, and we grind below 40 °C so the flour keeps its natural oils.</div></div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h1-faq2" aria-expanded="false" aria-controls="h1-faq2">Where do you deliver?</button></h3>
-          <div id="h1-faq2" class="accordion-collapse collapse" data-bs-parent="#faqHome1"><div class="accordion-body">We deliver across Sunridge and within twenty miles of the mill every Tuesday, Thursday and Saturday, in Morning, Midday and Evening windows.</div></div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h1-faq3" aria-expanded="false" aria-controls="h1-faq3">Can I pause or skip a delivery?</button></h3>
-          <div id="h1-faq3" class="accordion-collapse collapse" data-bs-parent="#faqHome1"><div class="accordion-body">Yes. Pause, skip or change any delivery up to 6 pm the evening before. After that, your batch is already being milled.</div></div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h1-faq4" aria-expanded="false" aria-controls="h1-faq4">Is it 100% whole wheat?</button></h3>
-          <div id="h1-faq4" class="accordion-collapse collapse" data-bs-parent="#faqHome1"><div class="accordion-body">Our Sharbati atta is the whole grain, stone-ground with the bran and germ left in. Nothing is added, removed or bleached.</div></div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#h1-faq5" aria-expanded="false" aria-controls="h1-faq5">What if I do not like it?</button></h3>
-          <div id="h1-faq5" class="accordion-collapse collapse" data-bs-parent="#faqHome1"><div class="accordion-body">Tell us within fourteen days and we will replace the bag or refund it. Your first delivery ships free, so trying the mill costs nothing but the flour.</div></div>
-        </div>
-      </div></div></div>
-      <p class="text-center mt-4 mb-0"><a class="link-arrow" href="contact.html">Ask us anything <i class="bi bi-arrow-right" aria-hidden="true"></i></a></p>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- 8. CTA -->
   <section class="section-sm pb-5" aria-labelledby="cta-title">
     <div class="container-xxl">
-      <div class="cta-band text-center text-lg-start">
+      <div class="cta-band text-center text-lg-start" data-reveal>
         <div class="row align-items-center g-4">
-          <div class="col-lg-6"><h2 id="cta-title" class="h-section mb-2">Taste the difference this week.</h2><p class="mb-0">Your first delivery ships free, and you can cancel any time. Pick a plan in under two minutes.</p></div>
-          <div class="col-lg-6"><div class="d-flex flex-wrap flex-lg-nowrap justify-content-center justify-content-lg-end gap-2"><a class="btn btn-light btn-lg" href="register.html">Create account</a><a class="btn btn-outline-light btn-lg" href="contact.html">Talk to us</a></div></div>
+          <div class="col-lg-7">
+            <span class="badge-soft text-warning bg-white-10 mb-3"><i class="bi bi-sparkles me-1" aria-hidden="true"></i> First delivery ships free</span>
+            <h2 id="cta-title" class="h-section mb-2 text-white">Taste the difference this week.</h2>
+            <p class="mb-0 text-white-50">Join over 3,200 households getting fresh, stone-ground atta delivered weekly. Pick a plan in under two minutes.</p>
+          </div>
+          <div class="col-lg-5">
+            <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center justify-content-lg-end gap-3">
+              <a class="btn btn-light btn-lg px-4" href="register.html"><i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i> Create account</a>
+              <a class="btn btn-outline-light btn-lg px-4" href="contact.html">Talk to us</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -390,7 +602,7 @@
       <div class="col-lg-4">
         <a class="navbar-brand mb-3" href="index.html" aria-label="Millstone &amp; Co. — home">
           <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 29V10"/><ellipse cx="11" cy="15" rx="3" ry="5" transform="rotate(-25 11 15)" fill="currentColor"/><ellipse cx="21" cy="15" rx="3" ry="5" transform="rotate(25 21 15)" fill="currentColor"/><ellipse cx="16" cy="7" rx="2.6" ry="4.6" fill="currentColor"/><ellipse cx="11.5" cy="23" rx="2.6" ry="4" transform="rotate(-25 11.5 23)" fill="currentColor"/><ellipse cx="20.5" cy="23" rx="2.6" ry="4" transform="rotate(25 20.5 23)" fill="currentColor"/></svg></span>
-          <span class="brand-text">Millstone<small>&amp; Co. Fresh Atta</small></span>
+          <span class="brand-text text-white">Millstone<small class="text-white">&amp; Co. Fresh Atta</small></span>
         </a>
         <p class="text-muted mt-3 pe-lg-4">A family flour mill since 1987. We stone-grind whole wheat and millets in small batches and deliver the atta while it is still fresh — within 24 hours of milling.</p>
         <div class="social" aria-label="Social media">
@@ -440,7 +652,7 @@
 <!-- @footer:end -->
 <!-- @scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/main.js?v=2"></script>
+<script src="assets/js/main.js?v=3"></script>
 <!-- @scripts:end -->
 </body>
 </html>

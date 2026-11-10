@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Millstone &amp; Co.">
+  <defs>
+    <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8b13a"/>
+      <stop offset="1" stop-color="#c77b18"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="32" fill="url(#badge)"/>
+  <g stroke="#2b1d12" stroke-width="4" stroke-linecap="round" fill="#2b1d12">
+    <path d="M32 58V20" fill="none"/>
+    <ellipse cx="22" cy="30" rx="6" ry="10" transform="rotate(-25 22 30)" stroke="none"/>
+    <ellipse cx="42" cy="30" rx="6" ry="10" transform="rotate(25 42 30)" stroke="none"/>
+    <ellipse cx="32" cy="14" rx="5.2" ry="9.2" stroke="none"/>
+    <ellipse cx="23" cy="46" rx="5.2" ry="8" transform="rotate(-25 23 46)" stroke="none"/>
+    <ellipse cx="41" cy="46" rx="5.2" ry="8" transform="rotate(25 41 46)" stroke="none"/>
+  </g>
+</svg>
